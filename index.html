@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10263d">
+  <title>PSAD Correl 1 | Phone Reviewer</title>
+  <style>
+    :root{--ink:#17283a;--muted:#607184;--paper:#f3f6f8;--card:#fff;--line:#dbe3e9;--navy:#10263d;--blue:#1e5c83;--teal:#147a70;--gold:#f3c85b;--soft:#eaf3f8;--warn:#fff4db;--shadow:0 8px 28px #10263d0d}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:76px}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%}
+    header.hero{padding:24px 18px 20px;background:linear-gradient(145deg,#10263d,#1d5273);color:white;border-bottom:4px solid var(--gold)}
+    .hero-inner,main{width:min(880px,100% - 24px);margin:auto}
+    .eyebrow,.kicker{margin:0 0 6px;color:#a7d5e2;font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    h1{font-size:clamp(1.65rem,6vw,2.5rem);line-height:1.12;margin:.15rem 0 .5rem;letter-spacing:-.035em}
+    .hero p{margin:.35rem 0;color:#e0ebf2}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .pill{display:inline-block;border:1px solid #a7c9d6;border-radius:99px;padding:4px 10px;font-size:.78rem;font-weight:700;color:#eff9ff}
+    .sticky{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px #10263d0b}
+    nav{width:min(880px,100% - 14px);margin:auto;display:flex;gap:5px;overflow:auto;padding:8px 0;scrollbar-width:none}
+    nav::-webkit-scrollbar{display:none}
+    nav a{white-space:nowrap;padding:7px 10px;border-radius:8px;color:var(--blue);font-size:.8rem;font-weight:750;text-decoration:none}
+    nav a:active,nav a:hover{background:var(--soft)}
+    main{padding:14px 0 48px}
+    section.topic,section.subject{scroll-margin-top:70px;margin:18px 0 28px}
+    .intro,.card,.callout,.topic-head,.subject-head{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+    .intro{border-left:4px solid var(--gold)}
+    h2{font-size:1.45rem;line-height:1.2;margin:.15rem 0 .4rem;letter-spacing:-.02em}
+    h3{font-size:1.05rem;line-height:1.25;margin:.2rem 0 .6rem}
+    p{margin:.45rem 0 .7rem}
+    .lede,.lead,.subject-head>p:last-child{color:var(--muted);margin-bottom:0}
+    .quick-grid{display:grid;grid-template-columns:1fr;gap:10px;margin:10px 0}
+    .card{padding:14px}
+    .card p:last-child{margin-bottom:0}
+    .small,figcaption{color:var(--muted);font-size:.84rem}
+    .tag{display:inline-block;border-radius:99px;background:var(--soft);color:var(--blue);padding:3px 8px;font-size:.72rem;font-weight:800;letter-spacing:.02em}
+    .tag.easy{background:#fff1c8;color:#6e4b00}
+    .example-title{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:7px}
+    .answer,.takeaway{border-left:3px solid var(--teal);padding:8px 10px;background:#eaf6f2;border-radius:4px 8px 8px 4px;font-weight:700}
+    .callout{margin:10px 0;background:var(--warn);border-color:#efdfa9;box-shadow:none}
+    .callout h3{margin-top:0}
+    .callout.caution{background:#fff5e7;border-color:#f0d5ab}
+    .eq{overflow-x:auto;text-align:center;padding:4px 0;max-width:100%}
+    mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%;padding:3px 0}
+    .diagram-wrap,.diagram{max-width:100%;overflow:hidden}
+    svg.diagram{display:block;width:100%;height:auto;max-height:260px;color:#243b53;background:#f9fbfc;border-radius:10px;margin:8px auto}
+    svg text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;fill:#34495e}
+    figure{margin:8px 0}
+    ol.steps,.solution{padding-left:1.3rem}
+    ol.steps li,.solution li{padding:2px 0 4px}
+    details{background:#fff;border:1px solid var(--line);border-radius:12px;margin:9px 0;overflow:hidden}
+    summary{cursor:pointer;list-style:none;font-weight:750;padding:13px 14px;color:var(--navy)}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"＋";float:right;color:var(--teal);font-size:1.1rem}
+    details[open] summary:after{content:"−"}
+    .work-body{padding:0 14px 14px}
+    .formula-list{display:grid;gap:12px}
+    .formula-list>div{border-top:1px solid var(--line);padding-top:9px}
+    .formula-list span{display:block;color:var(--muted);font-size:.8rem;font-weight:750}
+    .recall-grid{display:grid;grid-template-columns:1fr;gap:8px}
+    .recall-grid>div{padding:9px;background:#f5f8fa;border-radius:8px}
+    .quick-list{padding-left:1.2rem;margin:.4rem 0}
+    .quick-list li{padding:3px 0}
+    .topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .backtop{color:var(--blue);font-size:.8rem;text-decoration:none;font-weight:700}
+    footer{text-align:center;color:var(--muted);font-size:.78rem;padding:10px 14px 24px}
+    @media(min-width:640px){.hero-inner,main{width:min(880px,100% - 40px)}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.recall-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.intro,.card,.callout,.topic-head,.subject-head{padding:18px}.card{padding:16px}}
+    @media print{.sticky,nav{display:none}body{background:white;font-size:11pt}.hero{background:white!important;color:#111!important;border-bottom:2px solid #333}.hero p,.eyebrow{color:#333!important}.intro,.card,.callout{box-shadow:none;break-inside:avoid}details:not([open])>.work-body{display:block}main{width:100%;padding:0}.topic,.subject{break-before:page}}
+  </style>
+  <script>
+    window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"],["$$","$$"]],processEscapes:true},chtml:{scale:1},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">CVE 405 · Correlation 1</p>
+      <h1>PSAD Phone Reviewer</h1>
+      <p>Engineering Mechanics · Strength of Materials · Theory of Structures · Materials Testing</p>
+      <div class="meta"><span class="pill">75 multiple-choice questions</span><span class="pill">6 hours</span><span class="pill">Quick review for exam morning</span></div>
+    </div>
+  </header>
+  <div class="sticky"><nav aria-label="Reviewer sections"><a href="#quick-start">Easy points</a><a href="#mechanics">Mechanics</a><a href="#strength">Strength + Testing</a><a href="#structures">Structures</a></nav></div>
+  <main>
+    <section id="quick-start" class="intro">
+      <p class="kicker" style="color:#8a6309">Start with the easy marks</p>
+      <h2>Five-minute recall</h2>
+      <ul class="quick-list">
+        <li><b>Before calculating:</b> sketch the body, show loads/reactions, mark dimensions, then write equilibrium.</li>
+        <li><b>Units:</b> <code>1 N/mm² = 1 MPa</code>; <code>1 kN·m = 1,000 N·m</code>. Convert force and length before substituting.</li>
+        <li><b>Statics:</b> a pin has two planar reactions; a roller has one normal reaction; a fixed support also resists moment.</li>
+        <li><b>Friction:</b> static friction adjusts up to its maximum. Use <code>Fs,max = μsN</code> only at impending slip.</li>
+        <li><b>Trusses:</b> at an unloaded joint with two non-collinear members, both are zero-force members.</li>
+        <li><b>Materials tests:</b> cylinder compression → concrete strength; sieve analysis → gradation; tensile test → stress–strain properties; slump → fresh-concrete workability.</li>
+        <li><b>Beam patterns:</b> point load gives a shear jump; a uniform load gives a sloped shear line and a curved moment diagram. A peak/minimum moment often occurs where <code>V = 0</code>.</li>
+        <li><b>Code questions:</b> identify the code edition and design method, separate service loads from factored loads, then apply the matching resistance or safety factor. Don’t mix LRFD and ASD steps.</li>
+      </ul>
+      <p class="small"><b>Scope note:</b> this follows the Correl 1 reviewer outline. It does not replace your instructor’s code edition, tables, or class-specific sign convention.</p>
+    </section>
+    <section class="topic" id="mechanics">
+      <header class="topic-head">
+        <p class="eyebrow">01 · Start here</p>
+        <h2>Engineering Mechanics</h2>
+        <p class="lede">Fast points: draw the free-body diagram first, choose a moment center that removes unknowns, and keep units consistent.</p>
+      </header>
+
+      <div class="quick-grid">
+        <article class="card">
+          <h3>Equilibrium</h3>
+          <p>A body at rest has zero net force and zero net moment.</p>
+          <div class="eq">\[\sum F_x=0,\qquad \sum F_y=0,\qquad \sum M_O=0\]</div>
+          <p class="small">Use a separate equation for each independent direction. In 2D, there are at most three independent equilibrium equations.</p>
+        </article>
+        <article class="card">
+          <h3>Friction: easy trap</h3>
+          <div class="eq">\[0\le F_s\le \mu_sN,\qquad F_{s,\max}=\mu_sN,\qquad F_k=\mu_kN\]</div>
+          <p>Static friction is not automatically at its maximum. It adjusts to match the needed resistance, up to \(\mu_sN\).</p>
+        </article>
+        <article class="card">
+          <h3>Motion shortcuts</h3>
+          <p>For constant acceleration:</p>
+          <div class="eq">\[v=v_0+at,\qquad s=v_0t+\tfrac12at^2,\qquad v^2=v_0^2+2as\]</div>
+          <p class="small">For projectile motion, treat horizontal and vertical motion separately. At the top, \(v_y=0\); horizontal velocity stays constant if air resistance is ignored.</p>
+        </article>
+        <article class="card">
+          <h3>Work and energy</h3>
+          <div class="eq">\[U=Fs\cos\phi,\qquad T_1+U_{1\to2}=T_2,\qquad T=\tfrac12mv^2\]</div>
+          <p class="small">Only the component of force along the displacement does work. Impulse changes momentum: \(\mathbf J=\int\mathbf F\,dt=m(\mathbf v_2-\mathbf v_1)\).</p>
+        </article>
+      </div>
+
+      <article class="card example">
+        <div class="example-title"><span class="tag">Worked 1 · reactions</span><span class="tag easy">Easy points</span></div>
+        <h3>A centered point load on a simple span</h3>
+        <div class="diagram-wrap">
+          <svg viewBox="0 0 520 150" role="img" aria-labelledby="beam-title beam-desc" class="diagram">
+            <title id="beam-title">Simply supported beam with a centered point load</title>
+            <desc id="beam-desc">A beam of span L has a pin at A, a roller at B, and a downward point load P at midspan. Equal upward reactions act at the supports.</desc>
+            <defs><marker id="m-arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
+            <line x1="80" y1="76" x2="440" y2="76" stroke="currentColor" stroke-width="5"/>
+            <path d="M80 80 L62 108 L98 108 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="425" cy="96" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="440" cy="96" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="432" y1="101" x2="432" y2="109" stroke="currentColor" stroke-width="2"/><line x1="411" y1="110" x2="453" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="260" y1="20" x2="260" y2="64" stroke="currentColor" stroke-width="2.5" marker-end="url(#m-arrow)"/>
+            <line x1="80" y1="132" x2="80" y2="91" stroke="currentColor" stroke-width="2.5" marker-end="url(#m-arrow)"/>
+            <line x1="440" y1="132" x2="440" y2="91" stroke="currentColor" stroke-width="2.5" marker-end="url(#m-arrow)"/>
+            <text x="270" y="34" font-size="17">P</text><text x="89" y="130" font-size="16">R<tspan baseline-shift="sub" font-size="12">A</tspan></text><text x="449" y="130" font-size="16">R<tspan baseline-shift="sub" font-size="12">B</tspan></text>
+            <text x="69" y="126" font-size="14">A</text><text x="442" y="126" font-size="14">B</text>
+            <line x1="80" y1="53" x2="440" y2="53" stroke="currentColor" stroke-width="1.4"/><line x1="80" y1="48" x2="80" y2="58" stroke="currentColor" stroke-width="1.4"/><line x1="440" y1="48" x2="440" y2="58" stroke="currentColor" stroke-width="1.4"/><text x="253" y="47" font-size="15">L</text>
+          </svg>
+        </div>
+        <p><strong>Question.</strong> A simply supported beam carries \(P=12\,\text{kN}\) at midspan. Find the vertical reactions.</p>
+        <ol class="steps">
+          <li><strong>Draw the FBD.</strong> Replace the pin and roller by reactions \(R_A\) and \(R_B\).</li>
+          <li><strong>Take moments about A.</strong> \(R_B L-P(L/2)=0\), so \(R_B=P/2=6\,\text{kN}\).</li>
+          <li><strong>Use vertical equilibrium.</strong> \(R_A+R_B-P=0\), hence \(R_A=6\,\text{kN}\).</li>
+        </ol>
+        <p class="answer">Answer: \(R_A=R_B=6\,\text{kN}\), upward.</p>
+      </article>
+
+      <article class="card example">
+        <div class="example-title"><span class="tag">Worked 2 · friction</span><span class="tag easy">Common concept check</span></div>
+        <h3>Static friction adjusts to the applied force</h3>
+        <p><strong>Question.</strong> A \(20\,\text{kg}\) block rests on a level floor. Let \(g=9.81\,\text{m/s}^2\), \(\mu_s=0.40\), and apply a horizontal force of \(50\,\text{N}\). Does it move?</p>
+        <ol class="steps">
+          <li>Vertical equilibrium gives \(N=mg=20(9.81)=196.2\,\text{N}\).</li>
+          <li>The maximum static friction is \(F_{s,\max}=\mu_sN=0.40(196.2)=78.5\,\text{N}\).</li>
+          <li>Since \(50<78.5\), friction can balance the applied force: \(F_s=50\,\text{N}\), opposite the push.</li>
+        </ol>
+        <p class="answer">Answer: It stays at rest. Do not set friction to \(78.5\,\text{N}\) unless impending slip is stated.</p>
+      </article>
+
+      <article class="card example">
+        <div class="example-title"><span class="tag">Worked 3 · trusses</span><span class="tag easy">Zero-force member</span></div>
+        <h3>Spot zero-force members before calculating</h3>
+        <div class="diagram-wrap">
+          <svg viewBox="0 0 360 155" role="img" aria-labelledby="joint-title joint-desc" class="diagram">
+            <title id="joint-title">Unloaded truss joint with two non-collinear members</title>
+            <desc id="joint-desc">Two members meet at joint J, one horizontal and one diagonal. No external load or support reaction acts at J, so both member forces are zero.</desc>
+            <line x1="45" y1="112" x2="180" y2="112" stroke="currentColor" stroke-width="4"/>
+            <line x1="180" y1="112" x2="294" y2="38" stroke="currentColor" stroke-width="4"/>
+            <circle cx="180" cy="112" r="7" fill="currentColor"/>
+            <text x="189" y="135" font-size="16">J</text><text x="92" y="101" font-size="15">member 1</text><text x="218" y="63" font-size="15">member 2</text>
+            <text x="90" y="145" font-size="13">No load or reaction at J</text>
+          </svg>
+        </div>
+        <p>At an unloaded joint with exactly two non-collinear members, both member forces are zero. This rule is a quick check; it does not apply if an external force or support reaction acts at that joint.</p>
+        <p class="answer">Here: \(F_1=F_2=0\).</p>
+      </article>
+
+      <aside class="callout caution">
+        <h3>Remember the sign and location</h3>
+        <ul>
+          <li>For a section cut, assume unknown member forces are in tension; a negative answer means compression.</li>
+          <li>In a moment equation, use perpendicular distance to the force's line of action.</li>
+          <li>Range formula \(R=v_0^2\sin(2\theta)/g\) assumes launch and landing elevations are equal and air resistance is neglected.</li>
+        </ul>
+      </aside>
+    </section>
+    <section class="topic" id="strength">
+      <div class="topic-kicker">02 · Strength of Materials + Materials Testing</div>
+      <h2>Strength of Materials</h2>
+      <p class="lead">For most quick problems, identify the load, the resisting area or section property, then keep units consistent. Stress is force per area; strain is dimensionless.</p>
+
+      <div class="quick-grid">
+        <article class="card easy">
+          <h3>Easy points to lock in</h3>
+          <ul>
+            <li><b>Stress:</b> internal force intensity. Axial normal stress is (\sigma=P/A).</li>
+            <li><b>Strain:</b> deformation per original length, (\varepsilon=\Delta L/L). No units.</li>
+            <li><b>Hooke's law:</b> within the linear elastic range, (\sigma=E\varepsilon).</li>
+            <li><b>Modulus:</b> (E) is the slope of the initial straight part of the stress–strain curve.</li>
+            <li><b>Stiffness vs strength:</b> high (E) means less elastic strain for a given stress; it does not by itself mean higher failure strength.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Stress–strain picture</h3>
+          <svg class="diagram" viewBox="0 0 340 190" role="img" aria-label="Schematic stress strain curve showing the linear elastic region, yield, and ultimate strength">
+            <line x1="48" y1="154" x2="315" y2="154" stroke="#64748b" stroke-width="2"/>
+            <line x1="48" y1="154" x2="48" y2="20" stroke="#64748b" stroke-width="2"/>
+            <path d="M48 154 L107 72 L144 58 L202 58 L267 36 L294 43" fill="none" stroke="#0f766e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="107" y1="72" x2="107" y2="154" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+            <line x1="267" y1="36" x2="267" y2="154" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+            <circle cx="107" cy="72" r="4" fill="#0f766e"/><circle cx="144" cy="58" r="4" fill="#0f766e"/><circle cx="267" cy="36" r="4" fill="#0f766e"/>
+            <text x="10" y="26" font-size="12" fill="#334155">stress σ</text><text x="278" y="178" font-size="12" fill="#334155">strain ε</text>
+            <text x="58" y="105" font-size="11" fill="#334155">linear elastic</text><text x="112" y="48" font-size="11" fill="#334155">yield</text><text x="239" y="22" font-size="11" fill="#334155">ultimate</text>
+          </svg>
+          <p class="small">Schematic only. Exact curve shape and yield behavior depend on the material.</p>
+        </article>
+      </div>
+
+      <article class="card formula-card">
+        <h3>Core formulas</h3>
+        <div class="formula-list">
+          <div><span>Axial stress and elastic deformation</span>\[\sigma=\frac{P}{A},\qquad \varepsilon=\frac{\Delta L}{L}=\frac{\sigma}{E},\qquad \Delta L=\frac{PL}{AE}\]</div>
+          <div><span>Free thermal expansion</span>\[\Delta L=\alpha L\Delta T\]</div>
+          <div><span>Solid circular shaft in torsion</span>\[\tau=\frac{T\rho}{J},\qquad J=\frac{\pi d^4}{32},\qquad \theta=\frac{TL}{GJ}\]</div>
+          <div><span>Close-coiled helical spring</span>\[\delta=\frac{8PD^3n}{Gd^4},\qquad \tau_{\max}=K_w\frac{8PD}{\pi d^3},\qquad K_w=\frac{4C-1}{4C-4}+\frac{0.615}{C},\quad C=\frac{D}{d}\]</div>
+          <div><span>Axial load plus bending</span>\[\sigma_x=\frac{P}{A}\pm\frac{My}{I}\]</div>
+          <div><span>Plane-stress principal stresses</span>\[\sigma_{1,2}=\frac{\sigma_x+\sigma_y}{2}\pm\sqrt{\left(\frac{\sigma_x-\sigma_y}{2}\right)^2+\tau_{xy}^2}\]</div>
+          <div><span>Maximum shear stress (Tresca)</span>\[\tau_{\max}=\frac{\sigma_1-\sigma_3}{2}\]</div>
+        </div>
+        <p class="small"><b>Symbols:</b> <code>P</code> axial force or spring load, <code>A</code> area, <code>L</code> original length, <code>E</code> Young's modulus, <code>α</code> thermal expansion coefficient, <code>T</code> torque, <code>ρ</code> radial position, <code>J</code> polar moment, <code>G</code> shear modulus. For a spring, <code>D</code> is mean coil diameter, <code>d</code> is wire diameter, and <code>n</code> is active coils. In combined stress, select the plus or minus sign from the point's location and loading direction.</p>
+      </article>
+
+      <div class="worked-set">
+        <h3>Worked checks</h3>
+        <details class="worked" open>
+          <summary>1 · Axial stress and elongation <span class="tag">easy</span></summary>
+          <div class="work-body">
+            <p>A steel rod has (P=50\,\text{kN}), (A=500\,\text{mm}^2), (L=2\,\text{m}), and (E=200\,\text{GPa}). Find the stress and elastic elongation.</p>
+            <ol>
+              <li>Use (1\,\text{MPa}=1\,\text{N/mm}^2): \[\sigma=\frac{50{,}000}{500}=100\,\text{N/mm}^2=100\,\text{MPa}.\]</li>
+              <li>Convert (E=200\,\text{GPa}=200{,}000\,\text{N/mm}^2), (L=2{,}000\,\text{mm}): \[\Delta L=\frac{(50{,}000)(2{,}000)}{(500)(200{,}000)}=1.0\,\text{mm}.\]</li>
+            </ol>
+            <p class="answer">Answer: (\sigma=100\,\text{MPa}); elongation (=1.0\,\text{mm}).</p>
+          </div>
+        </details>
+        <details class="worked">
+          <summary>2 · Thermal expansion <span class="tag">easy</span></summary>
+          <div class="work-body">
+            <p>A (12\,\text{m}) bar is free to expand. Take (\alpha=12\times10^{-6}/^\circ\text{C}) and temperature rise (\Delta T=30^\circ\text{C}). Find (\Delta L).</p>
+            <p>\[\Delta L=\alpha L\Delta T=(12\times10^{-6})(12)(30)=0.00432\,\text{m}=4.32\,\text{mm}.\]</p>
+            <p class="answer">Answer: (4.32\,\text{mm}) expansion. If restrained, this free-expansion result is not the final displacement; restraint creates thermal force/stress.</p>
+          </div>
+        </details>
+        <details class="worked">
+          <summary>3 · Concrete cylinder compressive strength <span class="tag">testing</span></summary>
+          <div class="work-body">
+            <p>A (150\,\text{mm})-diameter cylinder fails at (530\,\text{kN}). Find its compressive strength.</p>
+            <ol>
+              <li>Area: \[A=\frac{\pi d^2}{4}=\frac{\pi(150)^2}{4}=17{,}671\,\text{mm}^2.\]</li>
+              <li>Convert (530\,\text{kN}=530{,}000\,\text{N}), then divide: \[f'_c=\frac{P_{\max}}{A}=\frac{530{,}000}{17{,}671}=30.0\,\text{N/mm}^2=30.0\,\text{MPa}.\]</li>
+            </ol>
+            <p class="answer">Answer: (30.0\,\text{MPa}). Strength is maximum load divided by the loaded cross-sectional area.</p>
+          </div>
+        </details>
+      </div>
+
+      <article class="card easy-tests">
+        <h3>Materials-testing recall: quick marks</h3>
+        <div class="recall-grid">
+          <div><b>Concrete compression test</b><br>Record maximum load; calculate (f'_c=P_{\max}/A). Keep diameter/area and force units consistent.</div>
+          <div><b>Tensile test</b><br>Load a specimen in tension; use the stress–strain response to identify elastic modulus, yield behavior, and tensile strength.</div>
+          <div><b>Aggregate grading</b><br>Sieve analysis gives particle-size distribution; percent retained and percent passing are cumulative ideas.</div>
+          <div><b>Soil index/compaction tests</b><br>Atterberg limits describe consistency of fine-grained soil. Proctor compaction relates dry unit weight to water content; know OMC and maximum dry unit weight.</div>
+        </div>
+      </article>
+
+      <aside class="callout units"><b>Spring recall:</b> more active coils or a larger mean coil diameter makes the spring more flexible; thicker wire makes it much stiffer because <code>d⁴</code> is in the deflection denominator. <code>K<sub>w</sub></code> is the Wahl factor, combining curvature and direct-shear effects. If your course uses separate factors, follow its exact convention and do not apply both the full Wahl factor and an additional direct-shear factor.</aside>
+
+      <aside class="callout caution"><b>Correction to the source note:</b> a cantilever under uniform load has the maximum bending moment at the fixed support, (M_{\text{fixed}}=wL^2/2) in magnitude; the free end moment is zero. Also, for helical springs, (K_s) and Wahl factor notation vary—do not label the simple direct-shear correction factor as the Wahl factor unless the full formula matches your class convention.</aside>
+
+      <aside class="callout units"><b>Unit + sign check</b><br>(\text{N}/\text{mm}^2=\text{MPa}); convert kN to N and GPa to N/mm² before substituting. Tension is usually positive and compression negative under the usual sign convention; follow the problem's convention.</aside>
+    </section>
+    <section id="structures" class="subject">
+      <header class="subject-head">
+        <p class="eyebrow">PSAD · QUICK REVIEW</p>
+        <h2>Theory of Structures</h2>
+        <p>Read the structure, draw the free-body diagram, then use equilibrium. Check the sign and units before choosing an answer.</p>
+      </header>
+
+      <section class="card">
+        <h3>Easy points to lock in</h3>
+        <ul class="quick-list">
+          <li><strong>Pin support:</strong> usually provides (A_x) and (A_y). <strong>Roller:</strong> one reaction normal to its surface. <strong>Fixed support:</strong> two reactions and a moment in a 2D frame.</li>
+          <li><strong>Load resultants:</strong> a uniform load (w) over length (L) becomes (W=wL), acting at the segment midpoint.</li>
+          <li><strong>Beam relations:</strong> (dM/dx=V); with downward load (w), (dV/dx=-w). An extremum of (M) often occurs where (V=0).</li>
+          <li><strong>Sign convention:</strong> sagging moment is commonly positive and hogging negative. Follow the convention used by the question.</li>
+          <li><strong>Truss count:</strong> for a plane pin-jointed truss, (i=m+r-2j). A zero count is necessary for a determinate truss, but geometry must also be stable.</li>
+          <li><strong>Moment distribution:</strong> (DF_i=k_i/sum k); for a prismatic member with far end fixed, (k=4EI/L), and carry-over factor (=1/2).</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Simply supported beam under full-span UDL</h3>
+        <p>For a beam of span (L) with uniform load (w):</p>
+        <div class="eq">\[R_A=R_B=\frac{wL}{2},\qquad V(x)=\frac{wL}{2}-wx,\qquad M(x)=\frac{wL}{2}x-\frac{wx^2}{2}.\]</div>
+        <figure class="diagram">
+          <svg viewBox="0 0 360 184" role="img" aria-labelledby="beam-title beam-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="beam-title">Simply supported beam with a uniform load</title>
+            <desc id="beam-desc">A beam supported by a pin at the left and roller at the right carries a uniform downward load. The shear diagram slopes linearly from positive to negative and the bending moment diagram is a positive parabola with a maximum at midspan.</desc>
+            <defs><marker id="arr-down" viewBox="0 0 10 10" refX="5" refY="8" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 0L5 10Z" fill="#53789a"/></marker></defs>
+            <g fill="none" stroke="#243b53" stroke-width="2">
+              <path d="M38 46H322"/>
+              <path d="M38 50L28 64H48Z" fill="#d9e5ef"/><path d="M312 50L302 64H322Z" fill="#d9e5ef"/><circle cx="307" cy="68" r="3" fill="#d9e5ef"/><circle cx="317" cy="68" r="3" fill="#d9e5ef"/>
+              <path d="M55 18V37M90 18V37M125 18V37M160 18V37M195 18V37M230 18V37M265 18V37M300 18V37" stroke="#53789a" marker-end="url(#arr-down)"/>
+              <path d="M38 93H322M38 93L322 93" stroke="#9aa9b7" stroke-dasharray="3 3"/>
+              <path d="M38 93L322 145" stroke="#bd5b41"/>
+              <path d="M38 166Q180 110 322 166" stroke="#287b66"/>
+            </g>
+            <g fill="#526579" font-size="12" font-family="system-ui,sans-serif">
+              <text x="166" y="14">w downward</text><text x="30" y="82">+V</text><text x="323" y="150">−V</text>
+              <text x="31" y="178">+M</text><text x="164" y="124">max M</text><text x="168" y="178">SFD / BMD (shapes)</text>
+              <text x="32" y="77">A</text><text x="316" y="77">B</text>
+            </g>
+          </svg>
+          <figcaption>For full-span UDL, the SFD is linear and the BMD is parabolic. Here the peak moment is at midspan because (V=0) there.</figcaption>
+        </figure>
+      </section>
+
+      <section class="card worked">
+        <p class="tag">WORKED · UDL BEAM</p>
+        <h3>Find the reactions and maximum moment</h3>
+        <p>A simply supported (6\,\text{m}) beam carries (4\,\text{kN/m}) over the full span. Find (R_A), (R_B), and the maximum moment.</p>
+        <ol class="solution">
+          <li><strong>Replace the UDL:</strong> (W=wL=4(6)=24\,\text{kN}), acting at (3\,\text{m}) from A.</li>
+          <li><strong>Use symmetry or moments:</strong> (R_A=R_B=24/2=12\,\text{kN}).</li>
+          <li><strong>Locate the peak:</strong> (V(x)=12-4x=0\Rightarrow x=3\,\text{m}).</li>
+          <li><strong>Evaluate moment:</strong> (M(3)=12(3)-4(3^2)/2=\boxed{18\,\text{kN}\!\cdot\!\text{m}}).</li>
+        </ol>
+        <p class="takeaway">Quick check: reactions add to (24\,\text{kN}), the total applied load.</p>
+      </section>
+
+      <section class="card worked">
+        <p class="tag">WORKED · TRUSS COUNT</p>
+        <h3>Is the simple triangular truss determinate?</h3>
+        <p>A triangular plane truss has (j=3) joints, (m=3) members, and a pin plus roller ((r=3) reaction components).</p>
+        <ol class="solution">
+          <li>Apply the plane-truss count: (i=m+r-2j).</li>
+          <li>Substitute: (i=3+3-2(3)=\boxed{0}). The count says statically determinate.</li>
+          <li>Check the shape too: a non-collinear triangle is geometrically stable. A zero count alone would not prove stability for every layout.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h3>Influence lines: the easy distinction</h3>
+        <p>An influence line tracks the value of one response as a <em>unit load moves</em>. For reactions on a simple span, the lines are straight. For moment at a section (C), (AC=a), (CB=b), and (L=a+b):</p>
+        <div class="eq">\[y_M(x)=\begin{cases}\dfrac{xb}{L},&0\le x\le a,\\[4pt]\dfrac{a(L-x)}{L},&a\le x\le L.\end{cases}\]</div>
+        <p>The moment ordinate is zero at both supports and peaks at (C), with ordinate (ab/L).</p>
+        <p class="callout"><strong>Do not confuse shear and reaction influence lines.</strong> Shear at a section has a jump at the section; its exact signs depend on the adopted shear convention. The simple 0-to-1 triangle is the reaction influence line, not a general shear influence line.</p>
+      </section>
+
+      <section class="card correction">
+        <h3>Two formula checks from the source outline</h3>
+        <ul class="quick-list">
+          <li>For a cantilever with full-span UDL, the <strong>fixed-support</strong> moment magnitude is (wL^2/2); the free-end moment is zero. The free-end deflection magnitude is (wL^4/(8EI)).</li>
+          <li>For a simply supported beam, “ordinate 1 at the support and 0 at the opposite support” describes a support-reaction influence line, not the shear line at an arbitrary section.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Quick formulas from the source outline</h3>
+        <details>
+          <summary>Cantilever · full-span uniform load</summary>
+          <p>For downward UDL (w) over cantilever length (L), with sagging positive:</p>
+          <div class="eq">\[M_{\text{fixed}}=-\frac{wL^2}{2},\qquad M_{\text{free}}=0,\qquad \delta_{\text{free}}=\frac{wL^4}{8EI}\;\text{(downward)}.\]</div>
+          <p>The fixed-end reaction moment has magnitude (wL^2/2); the internal section-moment sign depends on the chosen convention.</p>
+        </details>
+        <details>
+          <summary>Moment distribution · stiffness and carry-over</summary>
+          <div class="eq">\[DF_i=\frac{k_i}{\sum_j k_j},\qquad k=\begin{cases}\dfrac{4EI}{L},&\text{far end fixed},\\[3pt]\dfrac{3EI}{L},&\text{far end hinged.}\end{cases}\]</div>
+          <p>For a prismatic member with the far end fixed, the carry-over factor is (1/2) (same sign). With a hinged far end, carry-over is zero. These stiffnesses assume the near joint rotates while the far-end condition is as stated.</p>
+        </details>
+        <details>
+          <summary>Three-moment equation · two adjacent spans</summary>
+          <p>For spans (AB=L_1) and (BC=L_2), constant (EI) on both spans, no support settlement, and sagging-positive end moments:</p>
+          <div class="eq">\[M_A L_1+2M_B(L_1+L_2)+M_C L_2=-6\left(\frac{A_1\bar{x}_1}{L_1}+\frac{A_2\bar{x}_2}{L_2}\right).\]</div>
+          <p>(A_1,A_2) are areas of the simply supported bending-moment diagrams caused by the span loads considered separately. (\bar{x}_1) is measured from (A); (\bar{x}_2) is measured from (C) (the outer supports). Use signed areas if the chosen moment convention requires them.</p>
+          <p class="callout">The centroid-distance factors are required: an area divided by span length alone is dimensionally incomplete. If (EI) differs between spans or supports settle, use the generalized form with each span's (EI) and settlement terms; do not apply this simplified equation unchanged.</p>
+        </details>
+      </section>
+    </section>
+  </main>
+  <footer>Open on your phone in a browser. Equations use MathJax and need internet the first time; the rest of the page and SVG diagrams are embedded in this file.</footer>
+  <script>
+    // Convert mathematical expressions written in plain parentheses in source fragments to MathJax inline delimiters.
+    (function(){
+      const walker=document.createTreeWalker(document.querySelector('main'),NodeFilter.SHOW_TEXT);
+      const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+      const mathLike=s=>/[\\=^_{}]|\d\s*(?:[*/]|×)|\b(?:MPa|GPa|kN|N|mm|m|Pa|Hz|kN\s*\\cdot\s*m)\b/.test(s);
+      for(const n of nodes){n.nodeValue=n.nodeValue.replace(/\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\(([^()\n]{1,140})\)/g,(whole,inner)=>{if(whole.startsWith('\\[')||whole.startsWith('\\('))return whole;return inner&&mathLike(inner)?'\\('+inner+'\\)':whole;});}
+      if(window.MathJax&&MathJax.typesetPromise) MathJax.typesetPromise();
+    })();
+  </script>
+</body>
+</html>
