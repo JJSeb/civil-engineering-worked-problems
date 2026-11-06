@@ -10,9 +10,7 @@
 
 **Solution:** For inverse-square variation,
 
-\[
-I=k/x^2
-\]
+$I=k/x^2$
 
 . The scan gives $I=80$ foot-candles at $x=2$ ft, hence $k=80(2^2)=320$. At $I=5$, $x=\sqrt{320/5}=8$ ft. **Answer: 8 ft (C).**
 
@@ -22,15 +20,11 @@ I=k/x^2
 
 **Solution:** The printed model is
 
-\[
-y=\dfrac{1883}{1+7.892(1.097^{-t})}
-\]
+$y=\dfrac{1883}{1+7.892(1.097^{-t})}$
 
 , with \(t\) years after 1980. For 2020,
 
-\[
-t=40
-\]
+$t=40$
 
 , giving
 
@@ -40,9 +34,7 @@ y\approx1576
 
 . The table gives 1137 for 2007, so
 
-\[
-1576-1137=439
-\]
+$1576-1137=439$
 
 . **Answer: 439 (A).** A subtraction line has a typo (1337); the stated result uses 1137.
 
@@ -52,15 +44,11 @@ y\approx1576
 
 **Solution:** Their combined rate is
 
-\[
-1/26+1/39=5/78
-\]
+$1/26+1/39=5/78$
 
  house/h. Thus
 
-\[
-t=1/(5/78)=15.6
-\]
+$t=1/(5/78)=15.6$
 
  h. **Answer: 15.6 h (C).**
 
@@ -70,21 +58,15 @@ t=1/(5/78)=15.6
 
 **Solution:** The scan gives
 
-\[
-h(t)=-16t^2+1125
-\]
+$h(t)=-16t^2+1125$
 
  ft. At
 
-\[
-t=6
-\]
+$t=6$
 
  s,
 
-\[
-h=1125-16(36)=549
-\]
+$h=1125-16(36)=549$
 
  ft. **Answer: 549 ft (A).**
 
@@ -106,21 +88,15 @@ h=1125-16(36)=549
 
 **Solution:** For
 
-\[
-f(x)=3x^4+14x^3+14x^2-8x-8
-\]
+$f(x)=3x^4+14x^3+14x^2-8x-8$
 
 , substitution verifies
 
-\[
-f(-2)=0
-\]
+$f(-2)=0$
 
  and
 
-\[
-f(-2/3)=0
-\]
+$f(-2/3)=0$
 
 , the rational pair listed in choice D. **Answer: D.**
 
@@ -130,75 +106,51 @@ f(-2/3)=0
 
 **Solution:** The scan gives
 
-\[
-L=1000
-\]
+$L=1000$
 
 , with 5 hospitals switched in year 1 and 70 more in year 2, so cumulative
 
-\[
-D_1=5
-\]
+$D_1=5$
 
  at
 
-\[
-t=1
-\]
+$t=1$
 
  and
 
-\[
-D_2=75
-\]
+$D_2=75$
 
  at
 
-\[
-t=2
-\]
+$t=2$
 
 . For
 
-\[
-D=Le^{-ce^{-dt}}
-\]
+$D=Le^{-ce^{-dt}}$
 
 , take logs twice:
 
-\[
-A=\ln[\ln(L/D)]=\ln c-dt
-\]
+$A=\ln[\ln(L/D)]=\ln c-dt$
 
 . Then
 
-\[
-A_1=1.66739
-\]
+$A_1=1.66739$
 
 ,
 
-\[
-A_2=0.95176
-\]
+$A_2=0.95176$
 
 ,
 
-\[
-d=A_1-A_2=0.71563
-\]
+$d=A_1-A_2=0.71563$
 
 , and
 
-\[
-\ln c=A_1+d=2.3830
-\]
+$\ln c=A_1+d=2.3830$
 
 . Thus
 
-\[
-c=10.8376
-\]
+$c=10.8376$
 
 . **Answer: C.**
 
@@ -208,39 +160,27 @@ c=10.8376
 
 **Solution:** For
 
-\[
-y=k/(1+be^{-cx})
-\]
+$y=k/(1+be^{-cx})$
 
 , put
 
-\[
-x=0
-\]
+$x=0$
 
 ,
 
-\[
-y=3
-\]
+$y=3$
 
 , and
 
-\[
-k=105
-\]
+$k=105$
 
 :
 
-\[
-3=105/(1+b)
-\]
+$3=105/(1+b)$
 
 , so
 
-\[
-b=34
-\]
+$b=34$
 
 . **Answer: 34 (D).**
 
@@ -250,9 +190,7 @@ b=34
 
 **Solution:** Over the 12-second common cycle, compare the colors over each 1-second interval. They match during 0–1 s (red), 3–4 s (white), 7–8 s (white), and 11–12 s (white): 4 s total. Thus the fraction is
 
-\[
-4/12=1/3
-\]
+$4/12=1/3$
 
 . **Computed answer: B (1/3).** The printed key and worked solution say A (1/6), but omit three white-on-white intervals.
 
@@ -262,27 +200,19 @@ b=34
 
 **Solution:** The endpoint differences are
 
-\[
-115-25=90
-\]
+$115-25=90$
 
  streets and
 
-\[
-64-8=56
-\]
+$64-8=56$
 
  avenues:
 
-\[
-\sqrt{90^2+56^2}=106
-\]
+$\sqrt{90^2+56^2}=106$
 
  blocks. At 850 ft/block,
 
-\[
-106(850)/5280=17.06
-\]
+$106(850)/5280=17.06$
 
  mi. **Answer: 17 mi (A).**
 
@@ -306,9 +236,7 @@ x+80^\circ
 
 . Thus
 
-\[
-3x+90^\circ=180^\circ
-\]
+$3x+90^\circ=180^\circ$
 
 , so the angles are
 
@@ -330,15 +258,11 @@ x+80^\circ
 
 . Thus
 
-\[
-\tan(49^\circ50')=AB/280
-\]
+$\tan(49^\circ50')=AB/280$
 
 , so
 
-\[
-AB=280\tan(49^\circ50')=331.73
-\]
+$AB=280\tan(49^\circ50')=331.73$
 
  m. **Answer: A.**
 
@@ -348,33 +272,23 @@ AB=280\tan(49^\circ50')=331.73
 
 **Solution:** Snell's law gives
 
-\[
-n_a\sin\theta_i=n_w\sin\theta_r
-\]
+$n_a\sin\theta_i=n_w\sin\theta_r$
 
 . With
 
-\[
-n_a=1.00
-\]
+$n_a=1.00$
 
 ,
 
-\[
-n_w=1.33
-\]
+$n_w=1.33$
 
 , and
 
-\[
-\theta_i=24.5^\circ
-\]
+$\theta_i=24.5^\circ$
 
 ,
 
-\[
-\theta_r=\sin^{-1}(\sin24.5^\circ/1.33)=18.2^\circ
-\]
+$\theta_r=\sin^{-1}(\sin24.5^\circ/1.33)=18.2^\circ$
 
 . **Answer: D.**
 
@@ -384,9 +298,7 @@ n_w=1.33
 
 **Solution:** Let the horizontal distance from the nearer point B to the tower be \(x\), and tower height \(h\). Then
 
-\[
-h=x\tan21.8^\circ=(x+50)\tan19.9^\circ
-\]
+$h=x\tan21.8^\circ=(x+50)\tan19.9^\circ$
 
 ; solving gives
 
@@ -408,27 +320,19 @@ h\approx191
 
 , and
 
-\[
-96\pi=\tfrac12(24)^2\theta
-\]
+$96\pi=\tfrac12(24)^2\theta$
 
 , so
 
-\[
-\theta=\pi/3=60^\circ
-\]
+$\theta=\pi/3=60^\circ$
 
 . The small circle's center lies on the angle bisector; tangency gives
 
-\[
-\sin30^\circ=r/(24-r)
-\]
+$\sin30^\circ=r/(24-r)$
 
 , hence
 
-\[
-r=8
-\]
+$r=8$
 
  m. **Answer: D.**
 
@@ -438,15 +342,11 @@ r=8
 
 **Solution:** Let the square side be
 
-\[
-s=\sqrt{160{,}000}=400
-\]
+$s=\sqrt{160{,}000}=400$
 
  ft and place consecutive corners at
 
-\[
-A=(0,0),B=(400,0),C=(400,400)
-\]
+$A=(0,0),B=(400,0),C=(400,400)$
 
 . The equal
 
@@ -462,9 +362,7 @@ A=(0,0),B=(400,0),C=(400,400)
 
  view at A gives
 
-\[
-h^2=x^2+200^2
-\]
+$h^2=x^2+200^2$
 
 ; the
 
@@ -474,9 +372,7 @@ h^2=x^2+200^2
 
  view at B gives
 
-\[
-h^2=3[(x-400)^2+200^2]
-\]
+$h^2=3[(x-400)^2+200^2]$
 
 . Solving yields the physically relevant
 
@@ -492,9 +388,7 @@ h\approx375
 
  ft. Convert:
 
-\[
-375(0.3048)=114.3
-\]
+$375(0.3048)=114.3$
 
  m. **Answer: B (114.32 m).**
 
@@ -510,21 +404,15 @@ x+9
 
 . From
 
-\[
-2x+(x+9)=93
-\]
+$2x+(x+9)=93$
 
 ,
 
-\[
-x=28
-\]
+$x=28$
 
  cm, so the longest side is
 
-\[
-37
-\]
+$37$
 
  cm. **Answer: A.**
 
@@ -540,9 +428,7 @@ x=28
 
 , so
 
-\[
-A(t)=(5+2t)(7+2t)
-\]
+$A(t)=(5+2t)(7+2t)$
 
  and the original area is
 
@@ -552,15 +438,11 @@ A(t)=(5+2t)(7+2t)
 
 . Set
 
-\[
-(5+2t)(7+2t)=175
-\]
+$(5+2t)(7+2t)=175$
 
 ; the positive root is
 
-\[
-t=3.63
-\]
+$t=3.63$
 
  s. **Answer: C.**
 
@@ -570,15 +452,11 @@ t=3.63
 
 **Solution:** The map distance 15 mm is 1.5 cm, representing
 
-\[
-1.5(40)=60
-\]
+$1.5(40)=60$
 
  m on the ground. With a 1.0 m contour interval,
 
-\[
-S=(1/60)(100\%)=1.667\%
-\]
+$S=(1/60)(100\%)=1.667\%$
 
 . **Answer: C.**
 
@@ -588,9 +466,7 @@ S=(1/60)(100\%)=1.667\%
 
 **Solution:** Area
 
-\[
-=\pi R^2-\pi r^2=\pi(R-r)(R+r)
-\]
+$=\pi R^2-\pi r^2=\pi(R-r)(R+r)$
 
 . **Answer: B.**
 
@@ -608,9 +484,7 @@ S=(1/60)(100\%)=1.667\%
 
 . The cut's distance above the base is
 
-\[
-15-15/\sqrt[3]{2}=3.10
-\]
+$15-15/\sqrt[3]{2}=3.10$
 
  m. **Answer: B.**
 
@@ -620,15 +494,11 @@ S=(1/60)(100\%)=1.667\%
 
 **Solution:** For a sphere of radius
 
-\[
-1080
-\]
+$1080$
 
  mi,
 
-\[
-A=4\pi r^2=4\pi(1080)^2\approx14{,}657{,}415
-\]
+$A=4\pi r^2=4\pi(1080)^2\approx14{,}657{,}415$
 
  mi². **Answer: B.**
 
@@ -650,15 +520,11 @@ A=4\pi r^2=4\pi(1080)^2\approx14{,}657{,}415
 
 . Through
 
-\[
-P=(35,-20)
-\]
+$P=(35,-20)$
 
 , its equation is
 
-\[
-y+20=-\tfrac34(x-35)
-\]
+$y+20=-\tfrac34(x-35)$
 
 . **Answer: B.**
 
@@ -668,21 +534,15 @@ y+20=-\tfrac34(x-35)
 
 **Solution:** For a parabolic cross-section,
 
-\[
-x^2=4fy
-\]
+$x^2=4fy$
 
 . The rim radius is 6 m at depth 2 m, so
 
-\[
-36=4f(2)
-\]
+$36=4f(2)$
 
 , giving focal distance
 
-\[
-f=4.5
-\]
+$f=4.5$
 
  m. **Answer: B.**
 
@@ -698,15 +558,11 @@ f=4.5
 
 ,
 
-\[
-r=\sqrt{(-5)^2+(-5)^2}=5\sqrt2
-\]
+$r=\sqrt{(-5)^2+(-5)^2}=5\sqrt2$
 
 . It lies in quadrant III, so
 
-\[
-\theta=225^\circ=5\pi/4
-\]
+$\theta=225^\circ=5\pi/4$
 
 . **Answer: C.**
 
@@ -722,27 +578,19 @@ r=\sqrt{(-5)^2+(-5)^2}=5\sqrt2
 
 , and height \(h\). Volume gives
 
-\[
-2w^2h=1.78
-\]
+$2w^2h=1.78$
 
 , and open-top area is
 
-\[
-S=2w^2+6wh=2w^2+5.34/w
-\]
+$S=2w^2+6wh=2w^2+5.34/w$
 
 . Setting
 
-\[
-dS/dw=4w-5.34/w^2=0
-\]
+$dS/dw=4w-5.34/w^2=0$
 
  gives
 
-\[
-w=1.101
-\]
+$w=1.101$
 
  m. **Answer: A (1.10 m).**
 
@@ -758,15 +606,11 @@ w=1.101
 
 ; its area is
 
-\[
-A=\tfrac12b\sqrt{25-b^2/4}
-\]
+$A=\tfrac12b\sqrt{25-b^2/4}$
 
 . Maximizing area (and thus fixed-length trough volume) gives
 
-\[
-b=5\sqrt2=7.07
-\]
+$b=5\sqrt2=7.07$
 
  ft. **Answer: D (7.1 ft).**
 
@@ -776,39 +620,27 @@ b=5\sqrt2=7.07
 
 **Solution:** Similar triangles give
 
-\[
-r/h=4/10=0.4
-\]
+$r/h=4/10=0.4$
 
 , so
 
-\[
-V=\tfrac13\pi(0.4h)^2h
-\]
+$V=\tfrac13\pi(0.4h)^2h$
 
 . Differentiate:
 
-\[
-dV/dt=0.16\pi h^2(dh/dt)
-\]
+$dV/dt=0.16\pi h^2(dh/dt)$
 
 . At
 
-\[
-h=5
-\]
+$h=5$
 
  m and
 
-\[
-dV/dt=-15\,\mathrm{m^3/min}
-\]
+$dV/dt=-15\,\mathrm{m^3/min}$
 
 ,
 
-\[
-dh/dt=-15/[0.16\pi(25)]=-1.19\,\mathrm{m/min}
-\]
+$dh/dt=-15/[0.16\pi(25)]=-1.19\,\mathrm{m/min}$
 
 . **Answer: C.**
 
@@ -818,21 +650,15 @@ dh/dt=-15/[0.16\pi(25)]=-1.19\,\mathrm{m/min}
 
 **Solution:** From
 
-\[
-s=-4.9t^2+119.2
-\]
+$s=-4.9t^2+119.2$
 
 ,
 
-\[
-v=ds/dt=-9.8t
-\]
+$v=ds/dt=-9.8t$
 
 ; at 3 s,
 
-\[
-v=-29.4
-\]
+$v=-29.4$
 
  m/s. **Answer: B.**
 
@@ -842,27 +668,19 @@ v=-29.4
 
 **Solution:** At steady speed, the engine must overcome the component of weight down the slope and the stated 750 N resistance:
 
-\[
-F=mg\sin10^\circ+750=1500(9.81)\sin10^\circ+750=3303\,\mathrm N.
-\]
+$F=mg\sin10^\circ+750=1500(9.81)\sin10^\circ+750=3303\,\mathrm N.$
 
 The speed is
 
-\[
-80/3.6=22.22\,\mathrm{m/s}
-\]
+$80/3.6=22.22\,\mathrm{m/s}$
 
 , so
 
-\[
-P=Fv=73.4\,\mathrm{kW}
-\]
+$P=Fv=73.4\,\mathrm{kW}$
 
 . Converting with
 
-\[
-1\,\mathrm{hp}=0.746\,\mathrm{kW}
-\]
+$1\,\mathrm{hp}=0.746\,\mathrm{kW}$
 
  gives
 
@@ -880,15 +698,11 @@ P=Fv=73.4\,\mathrm{kW}
 
 **Solution:** The box drops vertically by
 
-\[
-5\sin30^\circ=2.5
-\]
+$5\sin30^\circ=2.5$
 
  m. The potential-energy change is
 
-\[
-\Delta PE=mg(h_f-h_i)=-5(9.81)(2.5)=-122.6\,\mathrm J
-\]
+$\Delta PE=mg(h_f-h_i)=-5(9.81)(2.5)=-122.6\,\mathrm J$
 
 . **Answer: D (−123 J).** Friction and initial speed do not affect this gravitational potential-energy change.
 
@@ -898,33 +712,23 @@ P=Fv=73.4\,\mathrm{kW}
 
 **Solution:** For ideal isothermal compression,
 
-\[
-P=p_1\dot V\ln(p_2/p_1)
-\]
+$P=p_1\dot V\ln(p_2/p_1)$
 
 . Use inlet absolute pressure
 
-\[
-p_1=0.101\,\mathrm{MPa}
-\]
+$p_1=0.101\,\mathrm{MPa}$
 
 , outlet absolute pressure
 
-\[
-p_2=8.01\,\mathrm{bar}=0.801\,\mathrm{MPa}
-\]
+$p_2=8.01\,\mathrm{bar}=0.801\,\mathrm{MPa}$
 
 , and inlet flow
 
-\[
-\dot V=2.8/60=0.04667\,\mathrm{m^3/s}
-\]
+$\dot V=2.8/60=0.04667\,\mathrm{m^3/s}$
 
 :
 
-\[
-P=(0.101\times10^6)(0.04667)\ln(0.801/0.101)=9.75\,\mathrm{kW}.
-\]
+$P=(0.101\times10^6)(0.04667)\ln(0.801/0.101)=9.75\,\mathrm{kW}.$
 
 **Answer: A (9.7 kW).**
 
@@ -934,21 +738,15 @@ P=(0.101\times10^6)(0.04667)\ln(0.801/0.101)=9.75\,\mathrm{kW}.
 
 **Solution:** The electrical input is
 
-\[
-200(0.746)/0.85=175.53\,\mathrm{kW}
-\]
+$200(0.746)/0.85=175.53\,\mathrm{kW}$
 
 . Annual energy cost is
 
-\[
-175.53(400)(\mathrm{Php}\,4)=\mathrm{Php}\,280{,}848
-\]
+$175.53(400)(\mathrm{Php}\,4)=\mathrm{Php}\,280{,}848$
 
 . Add annual maintenance of Php5,000 and divide by 12:
 
-\[
-C_m=(280{,}848+5{,}000)/12=\mathrm{Php}\,23{,}820.67\text{/month}.
-\]
+$C_m=(280{,}848+5{,}000)/12=\mathrm{Php}\,23{,}820.67\text{/month}.$
 
 Rounded to the printed value, **Answer: D (Php23,820.50).** The prompt asks for monthly operating power and maintenance cost; it does not ask to include capital recovery.
 
@@ -958,33 +756,23 @@ Rounded to the printed value, **Answer: D (Php23,820.50).** The prompt asks for 
 
 **Solution:** The capacity exponent table gives
 
-\[
-n=0.57
-\]
+$n=0.57$
 
  for a small refinery. Scale total cost using
 
-\[
-C_1=C_2(Q_1/Q_2)^n
-\]
+$C_1=C_2(Q_1/Q_2)^n$
 
 , with
 
-\[
-C_2=Php190
-\]
+$C_2=Php190$
 
  million at
 
-\[
-Q_2=2
-\]
+$Q_2=2$
 
  million barrels/year. Then divide each estimated total cost by its capacity:
 
-\[
-\frac{C}{Q}=\mathrm{Php}\,95(2/Q)^{0.43}.
-\]
+$\frac{C}{Q}=\mathrm{Php}\,95(2/Q)^{0.43}.$
 
 This gives approximately Php128, Php95, and Php80 per barrel/year for capacities 1M, 2M, and 3M. **Answer: C.**
 
@@ -1006,9 +794,7 @@ P(\ge1\text{ defective})=1-\frac{\binom{95}{5}}{\binom{100}{5}}=0.231\text{ (app
 
 **Solution:** Standardize the 57-inch threshold:
 
-\[
-z=(57-50)/4=1.75
-\]
+$z=(57-50)/4=1.75$
 
 . The upper tail is
 
@@ -1024,15 +810,11 @@ P(Z>1.75)\approx0.0401
 
 **Solution:** The statement says the message passes if all four relays are closed. With independent relay probabilities
 
-\[
-0.5,0.7,0.8,0.8
-\]
+$0.5,0.7,0.8,0.8$
 
 ,
 
-\[
-P=0.5(0.7)(0.8)(0.8)=0.224.
-\]
+$P=0.5(0.7)(0.8)(0.8)=0.224.$
 
 **Answer: A (0.224).**
 
@@ -1042,15 +824,11 @@ P=0.5(0.7)(0.8)(0.8)=0.224.
 
 **Solution:** For Father–Champion–Father, the chance of at least two consecutive wins is
 
-\[
-0.8(0.4)+0.4(0.8)-0.8(0.4)(0.8)=0.384
-\]
+$0.8(0.4)+0.4(0.8)-0.8(0.4)(0.8)=0.384$
 
 . For Champion–Father–Champion it is
 
-\[
-0.4(0.8)+0.8(0.4)-0.4(0.8)(0.4)=0.512
-\]
+$0.4(0.8)+0.8(0.4)-0.4(0.8)(0.4)=0.512$
 
 . Choose the second sequence. **Answer: D.** The scan duplicates one option label, but D states Champion–Father–Champion with probability 0.512.
 
@@ -1060,9 +838,7 @@ P=0.5(0.7)(0.8)(0.8)=0.224.
 
 **Solution:** The adjusted triangle angles are A=52°25′, B=53°04′, C=74°31′, and azimuth AB=54°10′. Reverse to get BA=234°10′. Taking the triangle interior at B gives BC=234°10′−53°04′=181°06′; thus CB=1°06′. At C, the direction CA is
 
-\[
-1^\circ06'−74^\circ31'=−73^\circ25'
-\]
+$1^\circ06'−74^\circ31'=−73^\circ25'$
 
 , or
 
@@ -1078,27 +854,19 @@ P=0.5(0.7)(0.8)(0.8)=0.224.
 
 **Solution:** For a deep-water wave, the source uses
 
-\[
-\lambda=gT^2/(2\pi)
-\]
+$\lambda=gT^2/(2\pi)$
 
 . With
 
-\[
-T=7.47
-\]
+$T=7.47$
 
  s,
 
-\[
-\lambda=87.123
-\]
+$\lambda=87.123$
 
  m and
 
-\[
-H=S\lambda=0.14(87.123)=12.20
-\]
+$H=S\lambda=0.14(87.123)=12.20$
 
  m. **Answer by the source method: C.** **Caution:** the question also gives depth 9 m, which is not deep water for this wavelength (deep-water criterion is approximately
 
@@ -1108,9 +876,7 @@ d\ge\lambda/2
 
 ). Using the finite-depth dispersion equation instead gives about
 
-\[
-H=8.75
-\]
+$H=8.75$
 
  m, not among the choices; the keyed choice relies on the deep-water approximation despite the stated depth.
 
@@ -1122,27 +888,19 @@ H=8.75
 
 **Solution:** The calculation treats a deep-water wave at the boundary
 
-\[
-d=\lambda/2
-\]
+$d=\lambda/2$
 
 , so
 
-\[
-\lambda=2(150)=300
-\]
+$\lambda=2(150)=300$
 
  m. Deep-water celerity is
 
-\[
-v=\sqrt{g\lambda/(2\pi)}=\sqrt{g(150)/\pi}=21.64
-\]
+$v=\sqrt{g\lambda/(2\pi)}=\sqrt{g(150)/\pi}=21.64$
 
  m/s, or
 
-\[
-77.9
-\]
+$77.9$
 
  km/h. **Answer: C.** This is an approximation based on the deep-water threshold; the question itself does not provide a period or wavelength.
 
@@ -1152,15 +910,11 @@ v=\sqrt{g\lambda/(2\pi)}=\sqrt{g(150)/\pi}=21.64
 
 **Solution:** Basic time is observed time times performance rating:
 
-\[
-7(0.90)=6.30
-\]
+$7(0.90)=6.30$
 
  min. With an 8% allowance on standard time,
 
-\[
-T_s=6.30/(1-0.08)=6.85
-\]
+$T_s=6.30/(1-0.08)=6.85$
 
  min. **Answer: B (6.30 min; 6.85 min).**
 
@@ -1170,33 +924,23 @@ T_s=6.30/(1-0.08)=6.85
 
 **Solution:** Average observed time for “Empty bins” is
 
-\[
-(1.00+0.90+0.75+1.20+1.40+0.60+0.80)/7=0.95
-\]
+$(1.00+0.90+0.75+1.20+1.40+0.60+0.80)/7=0.95$
 
  min; normal time is
 
-\[
-0.95(0.90)=0.855
-\]
+$0.95(0.90)=0.855$
 
  min. Average for “Vacuum Floor” is
 
-\[
-(3.00+4.50+3.50+3.00+3.75+4.25+4.25)/7=3.75
-\]
+$(3.00+4.50+3.50+3.00+3.75+4.25+4.25)/7=3.75$
 
  min; normal time is
 
-\[
-3.75(1.25)=4.6875
-\]
+$3.75(1.25)=4.6875$
 
  min. Total normal time is 5.5425 min. With 15% allowance, standard time is
 
-\[
-5.5425/(1-0.15)=6.521
-\]
+$5.5425/(1-0.15)=6.521$
 
  min. **Answer: D.**
 
@@ -1206,15 +950,11 @@ T_s=6.30/(1-0.08)=6.85
 
 **Solution:** Basic cycle time for average material is 0.50 min. From the low-resolution travel chart, 61 m one-way distance at 6% grade gives about 0.30 min for haul and return, so the cycle is about 0.80 min. Effective cycles per hour are
 
-\[
-50/0.80=62.5
-\]
+$50/0.80=62.5$
 
 , and production is
 
-\[
-2.68(62.5)=167.5
-\]
+$2.68(62.5)=167.5$
 
  loose m³/h. **Answer: C (168 Lm³/h).** The chart reading is approximate.
 
@@ -1237,9 +977,7 @@ T_s=6.30/(1-0.08)=6.85
 
 **Solution:** Use the provided relation
 
-\[
-P=C\,S\,V\,B\,E
-\]
+$P=C\,S\,V\,B\,E$
 
 : 250 cycles/h, swing-depth factor 1.00, bucket capacity 0.57 m³, fill factor 0.95, and efficiency
 
@@ -1249,9 +987,7 @@ P=C\,S\,V\,B\,E
 
 . Thus
 
-\[
-P=250(1.00)(0.57)(0.95)(50/60)=112.8
-\]
+$P=250(1.00)(0.57)(0.95)(50/60)=112.8$
 
  Lm³/h. **Answer: A (113 Lm³/h).**
 
@@ -1274,39 +1010,27 @@ D=\frac{10}{2}[(0+100)+(100+300)+(300+250)+(250+150)+(150+0)]
 
 **Solution:** The hint gives
 
-\[
-C=2L/s
-\]
+$C=2L/s$
 
 , where \(L\) is block length and
 
-\[
-s=50/3.6=13.89
-\]
+$s=50/3.6=13.89$
 
  m/s. For the 140 m North–South block,
 
-\[
-C=20.16
-\]
+$C=20.16$
 
  s, rounded to 20 s; speed is
 
-\[
-(2L/C)(3.6)=50.4
-\]
+$(2L/C)(3.6)=50.4$
 
  km/h. For the 240 m East–West block,
 
-\[
-C=34.56
-\]
+$C=34.56$
 
  s, rounded to 35 s; speed is
 
-\[
-(2L/C)(3.6)=49.4
-\]
+$(2L/C)(3.6)=49.4$
 
  km/h. None of the listed pairs gives both values. **Printed key: C (50.4, 43.2 km/h); the East–West value conflicts with the stated cycle method.**
 
@@ -1316,9 +1040,7 @@ C=34.56
 
 **Solution:** Wall volume is
 
-\[
-28.6(1.22)(0.305)=10.642\,\mathrm{m^3}
-\]
+$28.6(1.22)(0.305)=10.642\,\mathrm{m^3}$
 
 . Absolute non-air batch volume is
 
@@ -1328,15 +1050,11 @@ V_b=\frac{136}{2.60(1000)}+\frac{95}{2.65(1000)}+\frac{42.5}{3.25(1000)}+\frac{2
 
 With 5% air, yield per mix is
 
-\[
-0.12373/0.95=0.13025\,\mathrm{m^3}
-\]
+$0.12373/0.95=0.13025\,\mathrm{m^3}$
 
 , so
 
-\[
-10.642/0.13025=81.7
-\]
+$10.642/0.13025=81.7$
 
  mixes. **Answer: A (81.7 unit mixes).**
 

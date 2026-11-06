@@ -11,15 +11,11 @@ Worked solutions for all 55 May 2022 MSTC questions. Faint values, ambiguous wor
 
 **Solution:** With
 
-\[
-A+B=100{,}000
-\]
+$A+B=100{,}000$
 
 , the annual return is
 
-\[
-0.15A+0.10B=10{,}000+0.05A
-\]
+$0.15A+0.10B=10{,}000+0.05A$
 
 . Earning
 
@@ -29,9 +25,7 @@ A+B=100{,}000
 
  requires
 
-\[
-A=60{,}000
-\]
+$A=60{,}000$
 
 , but the prompt caps A at
 
@@ -58,15 +52,11 @@ x,x+2,x+4
 
  ft. Their sum gives
 
-\[
-3x+6=213
-\]
+$3x+6=213$
 
 , hence lengths 69, 71, and 73 ft. The cut locations measured from one end are 69 and
 
-\[
-69+71=140
-\]
+$69+71=140$
 
  ft. The choices list “69 and 73,” apparently the first and last piece lengths rather than the two cut positions. **Key: A (69 and 73); the wording “where should he make the cuts?” is imprecise.**
 
@@ -75,15 +65,11 @@ x,x+2,x+4
 
 **Solution:** Set ground height h = 0:
 
-\[
--16t^2-20t+180=0
-\]
+$-16t^2-20t+180=0$
 
 . The positive root is
 
-\[
-t=\frac{-20+\sqrt{11920}}{32}\approx2.80
-\]
+$t=\frac{-20+\sqrt{11920}}{32}\approx2.80$
 
  s. The displayed equation's negative signs correctly represent downward initial velocity and gravity. **Answer: B (2.8 s). Key check: B.**
 
@@ -97,21 +83,15 @@ t=\frac{-20+\sqrt{11920}}{32}\approx2.80
 
 **Solution:** The problem gives
 
-\[
-y=100(2.7)^{-t/14}
-\]
+$y=100(2.7)^{-t/14}$
 
  percent. At
 
-\[
-t=30
-\]
+$t=30$
 
 ,
 
-\[
-y=100(2.7)^{-30/14}\approx14.3\%
-\]
+$y=100(2.7)^{-30/14}\approx14.3\%$
 
 . The answer choices continue at the top of the next scan and read 6%, 7%, 4%, 5%; none matches this literal evaluation. The exponent is faint, so the model reading is uncertain. **Key check: D (5%); source expression/options do not reconcile on the readable scan.**
 
@@ -120,15 +100,11 @@ y=100(2.7)^{-30/14}\approx14.3\%
 
 **Solution:** (A=\tfrac12
 
-\[
-42
-\]
+$42$
 
 
 
-\[
-42
-\]
+$42$
 
 \sin115^\circ\approx799\,\mathrm{ft^2}). **Answer: A. Key check: A.**
 
@@ -165,9 +141,7 @@ y=100(2.7)^{-30/14}\approx14.3\%
 
 . With
 
-\[
-BC=928
-\]
+$BC=928$
 
  m, the triangle's third angle is
 
@@ -206,9 +180,7 @@ AC\tan32^\circ30'\approx168
 
 **Solution:** For an open belt with center distance
 
-\[
-C=4
-\]
+$C=4$
 
  in, shaft radius (r) (faint), and large radius (R), belt length is approximately (2C+\pi\(R+r\)+(R-r)^2/C). The printed contact length appears to be 8.5 in, but the small shaft radius cannot be read reliably; the belt-length equation therefore does not determine a defensible unique (R) from this scan transcription. **Key check: D
 
@@ -225,15 +197,11 @@ C=4
 
 **Solution:** The focus is 9 km north of the harbor origin, and the direct-east line is the directrix
 
-\[
-y=0
-\]
+$y=0$
 
 ; the vertex is halfway, ((0,4.5)), with vertical axis. Thus (x^2=-18(y-4.5)), or
 
-\[
-x^2+18y-81=0
-\]
+$x^2+18y-81=0$
 
 . This does not exactly match the scanned choices, which use coefficient 24 and constant 72; the stated focus/directrix distances may be represented differently in the source. **Key check: A; geometry/equation discrepancy.**
 
@@ -253,15 +221,11 @@ x^2+18y-81=0
 
 ). Then
 
-\[
-dA/dx=12-4x=0
-\]
+$dA/dx=12-4x=0$
 
 , giving
 
-\[
-x=3
-\]
+$x=3$
 
  cm. **Answer: B. Key check: B.**
 
@@ -270,27 +234,19 @@ x=3
 
 **Solution:**
 
-\[
-x=2t^2+3
-\]
+$x=2t^2+3$
 
 , so
 
-\[
-v_x=dx/dt=4t
-\]
+$v_x=dx/dt=4t$
 
 . At
 
-\[
-t=5
-\]
+$t=5$
 
 ,
 
-\[
-v_x=20
-\]
+$v_x=20$
 
 . **Answer: C. Key check: C.**
 
@@ -299,21 +255,15 @@ v_x=20
 
 **Solution:** For (h(t)=-16t^2+16t), the peak is at
 
-\[
-t=0.5
-\]
+$t=0.5$
 
  s and
 
-\[
-h_{max}=4
-\]
+$h_{max}=4$
 
  ft. At 75% peak, solve
 
-\[
-h=3
-\]
+$h=3$
 
 : (16t
 
@@ -323,9 +273,7 @@ h=3
 
 =3), giving
 
-\[
-t=0.25,0.75
-\]
+$t=0.25,0.75$
 
 . Time spent there is 0.50 s. **Answer: C. Key check: C.**
 
@@ -334,15 +282,11 @@ t=0.25,0.75
 
 **Solution:** Newton cooling gives
 
-\[
-T=70+230e^{-kt}
-\]
+$T=70+230e^{-kt}$
 
 . From (T
 
-\[
-3
-\]
+$3$
 
 =200), (k=\ln
 
@@ -373,21 +317,15 @@ T=70+230e^{-kt}
 
 **Solution:** Expected payout is (100{,}000
 
-\[
-0.2
-\]
+$0.2$
 
 +500{,}000
 
-\[
-0.05
-\]
+$0.05$
 
 =45{,}000) pesos. Subtract the annual premium of 60,000 to get expected gain of 15,000 pesos, or expected underwriting profit of 15,000 if “make” means premium less claims. No choice gives 15,000; the key says D
 
-\[
-35,000
-\]
+$35,000$
 
 . The scan may intend a different major-claim probability/wording, but it is legible as 0.05. **Key check: D; calculation/key conflict.**
 
@@ -396,9 +334,7 @@ T=70+230e^{-kt}
 
 **Solution:** The payments form an arithmetic gradient: first payment 1,555 at year 1, then +35 per year for 8 years,
 
-\[
-i=6\%
-\]
+$i=6\%$
 
 . Present worth is (1555
 
@@ -450,9 +386,7 @@ A/F,14\%,5
 
 **Solution:** 1996 is five years after 1991. (P=1{,}000{,}000
 
-\[
-1.06
-\]
+$1.06$
 
 ^5=Php1{,}338{,}226). But the wording says “In 1991” and asks “in 1996,” which is chronologically coherent; the prior premise reported as reversed is not visible in this scan. **Answer: B. Key check: B.**
 
@@ -461,15 +395,11 @@ A/F,14\%,5
 
 **Solution:** Spring stiffness
 
-\[
-k=200g/0.03
-\]
+$k=200g/0.03$
 
 . For 300 kg total, equilibrium compression is
 
-\[
-x=300g/k=0.045
-\]
+$x=300g/k=0.045$
 
  m. **Answer: C. Key check: C.**
 
@@ -478,33 +408,23 @@ x=300g/k=0.045
 
 **Solution:** Energy balance over total travel
 
-\[
-h+x=0.55+0.15=0.70
-\]
+$h+x=0.55+0.15=0.70$
 
  m: (mg\(h+x\)=\tfrac12kx^2). Thus (k=2
 
-\[
-2.60
-\]
+$2.60$
 
 
 
-\[
-9.81
-\]
+$9.81$
 
 
 
-\[
-0.70
-\]
+$0.70$
 
 /
 
-\[
-0.15
-\]
+$0.15$
 
 ^2\approx1{,}587.04\,\mathrm{N/m}). The options/key list 1,585 N/m (D), a small numerical discrepancy. **Calculated: 1,587.04 N/m. Key check: D
 
@@ -519,21 +439,15 @@ h+x=0.55+0.15=0.70
 
 **Solution:** At constant speed, (F=\mu mg=0.2
 
-\[
-50
-\]
+$50$
 
 
 
-\[
-9.81
-\]
+$9.81$
 
 =98.1) N. (P=Fv=98.1
 
-\[
-1
-\]
+$1$
 
 =98.1) W. **Answer: B
 
@@ -548,21 +462,15 @@ h+x=0.55+0.15=0.70
 
 **Solution:** Two revolutions per second gives
 
-\[
-omega=4\pi
-\]
+$omega=4\pi$
 
  rad/s. (a_c=\omega^2r=
 
-\[
-4\pi
-\]
+$4\pi$
 
 ^2
 
-\[
-0.6
-\]
+$0.6$
 
 =94.75\,\mathrm{m/s^2}). **Answer: D. Key check: D.**
 
@@ -571,9 +479,7 @@ omega=4\pi
 
 **Solution:** Choose one drummer, one trumpet player, and one pianist:
 
-\[
-3\cdot4\cdot5=60
-\]
+$3\cdot4\cdot5=60$
 
 . **Answer: B. Key check: B.**
 
@@ -599,9 +505,7 @@ omega=4\pi
 
 **Solution:** Each answer is correct with
 
-\[
-p=1/3
-\]
+$p=1/3$
 
 ; pass with at least 4 of 6: (\sum_{k=4}^6{6\choose k}
 
@@ -617,9 +521,7 @@ p=1/3
 
 ^{6-k}=73/729\approx0.1001). **Answer: D
 
-\[
-0.1001
-\]
+$0.1001$
 
 . Key check: D.**
 
@@ -647,9 +549,7 @@ about 677.9 m
 
 **Solution:** Applying both stated factors gives
 
-\[
-3.92(0.90)(0.60)=2.12\,\mathrm{BCM}
-\]
+$3.92(0.90)(0.60)=2.12\,\mathrm{BCM}$
 
 . This value is not among the choices. The keyed A value,
 
@@ -670,21 +570,15 @@ about 677.9 m
 
 **Solution:** Scraper rolling resistance is
 
-\[
-50(45.5)=2{,}275\,\mathrm{kgf}
-\]
+$50(45.5)=2{,}275\,\mathrm{kgf}$
 
 . Grade resistance is based on the full combined mass:
 
-\[
-0.04(36{,}000+45{,}500)=3{,}260\,\mathrm{kgf}
-\]
+$0.04(36{,}000+45{,}500)=3{,}260\,\mathrm{kgf}$
 
 . Total resistance is
 
-\[
-2{,}275+3{,}260=5{,}535\,\mathrm{kgf}
-\]
+$2{,}275+3{,}260=5{,}535\,\mathrm{kgf}$
 
 . **Answer: D.**
 
@@ -693,9 +587,7 @@ about 677.9 m
 
 **Solution:** The table gives a 0.05-min fixed cycle, 3.2 km/h push speed for loose material over 61 m, and 8 km/h reverse speed. Thus
 
-\[
-t_c=0.05+60(0.061/3.2+0.061/8)=1.65
-\]
+$t_c=0.05+60(0.061/3.2+0.061/8)=1.65$
 
  min. With 50 min/h efficiency, production is
 
@@ -710,21 +602,15 @@ t_c=0.05+60(0.061/3.2+0.061/8)=1.65
 
 **Solution:** (P=250
 
-\[
-1.00
-\]
+$1.00$
 
 
 
-\[
-0.57
-\]
+$0.57$
 
 
 
-\[
-0.95
-\]
+$0.95$
 
 
 
