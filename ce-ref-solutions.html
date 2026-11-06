@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#17324d">
-  <title>CE REF HPGE Solutions | CVE 405 Correlation 1</title>
+  <title>November 2021 HPGE Problems</title>
   <style>
     :root{--navy:#17324d;--teal:#087e8b;--ink:#203040;--muted:#617182;--line:#dce4ea;--paper:#fff;--bg:#f3f6f8}
     *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -18,9 +18,9 @@
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
-  <header><p><a href="ce-ref.html">← CE REF index</a></p><p>CVE 405 · Correlation 1</p><h1>CE REF Volume 5 · November 2021 HPGE</h1><p>Independent worked derivations, checked against the scanned problem set and its key.</p></header>
+  <header><p><a href="ce-ref.html">← All problem sets</a></p><h1>November 2021 · HPGE</h1><p>Worked solutions for all 50 questions.</p></header>
   <main><section id="content" class="panel">Loading solutions…</section></main>
-  <footer>Source scans remain local; page references use the printed pagination in Volume 5.</footer>
+  <footer>Worked problems · Equations rendered with MathJax</footer>
   <script>
     fetch('ce-ref-solutions.md').then(r=>{if(!r.ok)throw Error('Could not load the solution file');return r.text()}).then(md=>{
       const prepared=md.replace(/\\\(([^\n]*?)\\\)/g,(_,eq)=>'<span class="math-inline">$'+eq+'$</span>').replace(/\\\[([\s\S]*?)\\\]/g,(_,eq)=>'<div class="math">\\['+eq.trim()+'\\]</div>').replace(/\$\$\s*([\s\S]*?)\s*\$\$/g,(_,eq)=>'<div class="math">\\['+eq.trim()+'\\]</div>');
