@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17324d">
+  <title>CE REF MSTC Solutions | November 2021</title>
+  <style>
+    :root{--navy:#17324d;--teal:#087e8b;--ink:#203040;--muted:#617182;--line:#dce4ea;--paper:#fff;--bg:#f3f6f8}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    header{background:var(--navy);color:#fff;padding:24px max(20px,calc((100% - 920px)/2))}header a{color:#fff}main{max-width:920px;margin:auto;padding:20px}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}h1{line-height:1.15;margin:.2em 0}h2,h3{color:var(--navy)}
+    .answer{border-left:4px solid var(--teal);padding:8px 12px;background:#edf8f5}.figure{display:block;width:min(100%,660px);height:auto;margin:14px auto;background:#fbfcfd;border:1px solid var(--line);border-radius:10px}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+    .math{overflow-x:auto;text-align:center}mjx-container[display="true"]{overflow-x:auto;max-width:100%}footer{text-align:center;color:var(--muted);padding:20px;font-size:.85rem}
+  </style>
+  <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"],["$$","$$"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <header><p><a href="ce-ref.html">← CE REF index</a></p><p>CE REF Volume 5 · MSTC</p><h1>November 2021 · Questions 1–69</h1><p>Worked calculations, concise concept explanations, and checks against the scanned answer key.</p></header>
+  <main><section id="content" class="panel">Loading solutions…</section></main>
+  <footer>Scan references identify the source images in work/images/ce-ref-v5.</footer>
+  <script>
+    fetch('ce-ref-mstc-nov2021.md').then(r=>{if(!r.ok)throw Error('Could not load the solution file');return r.text()}).then(md=>{
+      const prepared=md.replace(/\\\(([^\n]*?)\\\)/g,(_,eq)=>'<span class="math-inline">$'+eq+'$</span>').replace(/\\\[([\s\S]*?)\\\]/g,(_,eq)=>'<div class="math">\\['+eq.trim()+'\\]</div>').replace(/\$\$\s*([\s\S]*?)\s*\$\$/g,(_,eq)=>'<div class="math">\\['+eq.trim()+'\\]</div>');
+      document.getElementById('content').innerHTML=marked.parse(prepared);
+      if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise();
+    }).catch(e=>{document.getElementById('content').textContent=e.message});
+  </script>
+</body>
+</html>

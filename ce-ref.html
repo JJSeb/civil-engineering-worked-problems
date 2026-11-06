@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17324d">
+  <title>CE REF Index | CVE 405 Correlation 1</title>
+  <style>
+    :root{--navy:#17324d;--ink:#203040;--muted:#617182;--line:#dce4ea;--paper:#fff;--bg:#f3f6f8}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    header{background:var(--navy);color:#fff;padding:24px max(20px,calc((100% - 920px)/2))}header a{color:#fff}main{max-width:920px;margin:auto;padding:20px}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}h1{line-height:1.15;margin:.2em 0}h2,h3{color:var(--navy)}
+    table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:#edf3f7}
+    footer{text-align:center;color:var(--muted);padding:20px;font-size:.85rem}
+  </style>
+  <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"],["$$","$$"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <header><p><a href="index.html">← Reviewer home</a></p><p>CVE 405 · Correlation 1</p><h1>CE REF coverage index</h1><p>Exam dates, subjects, answer keys and worked-solution locations across the five scanned reference volumes.</p><p>Worked solutions: <a href="ce-ref-solutions.html" style="color:#fff">Nov 2021 HPGE</a> · <a href="ce-ref-mstc-nov2021.html" style="color:#fff">Nov 2021 MSTC</a> · <a href="ce-ref-hpge-may2022.html" style="color:#fff">May 2022 HPGE</a> · <a href="ce-ref-mstc-may2022.html" style="color:#fff">May 2022 MSTC</a></p></header>
+  <main><section id="content" class="panel">Loading index…</section></main>
+  <footer>Image-only source scans are kept locally. This index distinguishes confirmed mappings from sections still being checked.</footer>
+  <script>
+    fetch('ce-ref-index.md').then(r=>{if(!r.ok)throw Error('Could not load the CE REF index');return r.text()}).then(md=>{
+      document.getElementById('content').innerHTML=marked.parse(md);
+      if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise();
+    }).catch(e=>{document.getElementById('content').textContent=e.message});
+  </script>
+</body>
+</html>
