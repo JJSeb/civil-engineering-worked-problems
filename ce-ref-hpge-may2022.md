@@ -2,7 +2,7 @@
 
 **Questions 1–47 · Worked solutions**
 
-Each item begins with a paraphrased problem prompt, followed by its worked solution. Ambiguous wording and answer-key conflicts are noted where relevant. Use \(g=9.81\,\mathrm{m/s^2}\), \(\gamma_w=9.81\,\mathrm{kN/m^3}\), and water density \(1000\,\mathrm{kg/m^3}\), unless stated otherwise.
+Each item begins with a paraphrased problem prompt, followed by its worked solution. Inline figures are explanatory schematics reconstructed from the stated problem data, not facsimiles of the exam artwork. Ambiguous wording and answer-key conflicts are noted where relevant. Use \(g=9.81\,\mathrm{m/s^2}\), \(\gamma_w=9.81\,\mathrm{kN/m^3}\), and water density \(1000\,\mathrm{kg/m^3}\), unless stated otherwise.
 
 **Answer notes:** Q1 asks for an increase, but climbing to higher altitude reduces pressure; the pressure change is \(-48\) kPa (a 48 kPa decrease), matching the key's magnitude and choice B. Q18 has a unit-label typo: the buoy weight is **1,751 N** (1.751 kN), matching choice C. Q21's key is D and the trajectory calculation confirms 1.883 s. Q42–44 use the stated layering to the clay midpoint; the values agree when computed consistently.
 
@@ -22,6 +22,8 @@ The pressure decreases by 48 kPa. **Key check:** B gives 48 kPa as a magnitude; 
 ### Q2 — D · 4.72 kPa
 **Problem:** Water of depth 0.400 m is in an elevator accelerating upward at 2 m/s². Find the gauge pressure at the bottom.
 
+<figure><svg viewBox="0 0 420 150" role="img" aria-label="Elevator accelerating upward with a 0.400 metre water column and bottom gauge-pressure point"><title>Water in an upward-accelerating elevator</title><rect x="125" y="25" width="170" height="105" fill="#f7fbff" stroke="#243447" stroke-width="3"/><path d="M129 65H291V126H129Z" fill="#a8d9f0"/><path d="M125 65H295" stroke="#1676a3" stroke-width="2"/><text x="207" y="55" text-anchor="middle" font-size="14">free surface</text><text x="207" y="98" text-anchor="middle" font-size="15">water, h = 0.400 m</text><circle cx="207" cy="126" r="4" fill="#b33"/><text x="304" y="123" font-size="13">gauge point</text><path d="M345 108V49" stroke="#243447" stroke-width="3"/><path d="m337 59 8-13 8 13" fill="none" stroke="#243447" stroke-width="3"/><text x="354" y="77" font-size="13">a ↑</text><text x="210" y="147" text-anchor="middle" font-size="11">Schematic; acceleration direction is stated in the problem.</text></svg></figure>
+
 **Solution:** For a liquid in an elevator accelerating upward, effective gravity is (g+a), so bottom gauge pressure is \(p=\rho(g+a)h=\gamma_w h(1+a/g)\). With \(h=0.400\) m and \(a=2\,\mathrm{m/s^2}\):
 
 \[
@@ -33,13 +35,15 @@ p=9.81(0.400)\left(1+\frac{2}{9.81}\right)=4.72\,\mathrm{kPa}.
 ### Q3 — A · 1.48 kg lead
 **Problem:** A 0.07 m square, 1.5 m long wood piece (specific gravity 0.65) floats with 0.25 m above water. Find the lead mass attached at its lower end to produce this condition; lead specific gravity is 11.2.
 
+<figure><svg viewBox="0 0 420 205" role="img" aria-label="Wood float with one-sixth of its length above water, five-sixths submerged, and lead attached below"><title>Floating wood with attached lead</title><rect x="75" y="20" width="220" height="175" fill="#a8d9f0"/><path d="M35 48H385" stroke="#1683aa" stroke-width="3"/><text x="40" y="38" font-size="13">water surface</text><rect x="145" y="20" width="78" height="140" fill="#d8b27c" stroke="#493b2d" stroke-width="2"/><line x1="184" y1="160" x2="184" y2="170" stroke="#333" stroke-width="3"/><rect x="169" y="170" width="30" height="16" fill="#777" stroke="#333"/><text x="235" y="37" font-size="13">wood: 1.50 m total</text><text x="235" y="103" font-size="13">1.25 m submerged</text><text x="235" y="180" font-size="13">lead attached below</text><text x="210" y="201" text-anchor="middle" font-size="10">Submergence ratio is to scale; wood width and lead are schematic.</text></svg></figure>
+
 **Solution:** Wood volume is \(0.07^2(1.5)=0.00735\,\mathrm{m^3}\); the extra 0.25 m protruding above water leaves \(1.25\) m of the wood submerged. Set upward buoyancy equal to wood plus lead weight, with lead volume \(V_L=m_L/\rho_L\):
 
 \[
 \rho_w g(0.07^2)(1.25)=0.65\rho_wg(0.07^2)(1.5)+m_Lg\left(1-\frac{1}{11.2}\right).
 \]
 
-Solving gives \(m_L\approx1.48\,\mathrm{kg}\). **Key check:** A.
+Using \(\rho_w=1000\,\mathrm{kg/m^3}\), \(\rho_L=11.2\rho_w\), and \(g=9.81\,\mathrm{m/s^2}\), the equation gives \(m_L=[1000(0.07^2)(1.25)-0.65(1000)(0.07^2)(1.5)]/[1-1/11.2]=1.48\,\mathrm{kg}\). **Key check:** A.
 
 ### Q4 — C · 3.06 m draft
 **Problem:** A 6 m by 15 m barge weighs 400 kN and carries 6,000 bags of cement, 40 kg each, in water of specific gravity 1.02. Determine its draft.
@@ -54,6 +58,8 @@ d=\frac{2754.4}{10.0062(6)(15)}=3.059\,\mathrm{m}\approx3.06\,\mathrm{m}.
 
 ### Q5 — D · 66.22 kN
 **Problem:** A vertical triangular gate has a 1.5 m horizontal base and 3 m height; its top edge is 2 m below the water surface. Find the hydrostatic resultant force.
+
+<figure><svg viewBox="0 0 420 185" role="img" aria-label="Vertical triangular gate with 1.5 metre horizontal top edge, 2 metres below the free surface, and 3 metre height; proportions shown to scale"><title>Triangular vertical gate, Q5–Q7</title><path d="M25 35H390" stroke="#1683aa" stroke-width="3"/><text x="30" y="25" font-size="13">free surface</text><path d="M193.5 79H226.5L210 145Z" fill="#d7e8f4" stroke="#243447" stroke-width="3"/><line x1="280" y1="35" x2="280" y2="79" stroke="#333"/><path d="m276 41 4-7 4 7m-8 31 4 7 4-7" fill="none" stroke="#333"/><text x="288" y="61" font-size="12">2 m</text><text x="210" y="75" text-anchor="middle" font-size="12">1.5 m</text><text x="228" y="116" font-size="12">3 m</text><text x="210" y="173" text-anchor="middle" font-size="10">In-plane dimensions are proportional to the stated values.</text></svg></figure>
 
 **Solution:** The vertical triangular gate has base \(b=1.5\) m, height \(h=3\) m, and its horizontal top edge is 2 m below the free surface. Its area is \(A=bh/2=2.25\,\mathrm{m^2}\). The centroid of a triangle is \(h/3=1\) m below its base, so its depth is \(\bar h=3\) m.
 
@@ -88,6 +94,8 @@ h_{cp}=3+0.1667=3.167\,\mathrm{m}.
 ### Q8 — B · 268.4 kN
 **Problem:** A vertical rectangular gate 2 m wide and 3.6 m high has its top 2 m below the water surface. Find the hydrostatic resultant force.
 
+<figure><svg viewBox="0 0 420 180" role="img" aria-label="Vertical rectangular gate 2 metres wide and 3.6 metres high, top 2 metres below the water surface; in-plane proportions shown to scale"><title>Rectangular vertical gate, Q8–Q10</title><path d="M25 38H390" stroke="#1683aa" stroke-width="3"/><text x="30" y="28" font-size="13">free surface</text><rect x="190" y="78" width="40" height="72" fill="#d7e8f4" stroke="#243447" stroke-width="3"/><line x1="275" y1="38" x2="275" y2="78" stroke="#333"/><path d="m271 44 4-7 4 7m-8 27 4 7 4-7" fill="none" stroke="#333"/><text x="283" y="62" font-size="12">2 m</text><text x="210" y="119" text-anchor="middle" font-size="12">3.6 m</text><text x="210" y="163" text-anchor="middle" font-size="12">width = 2 m (into page)</text><text x="210" y="176" text-anchor="middle" font-size="10">Gate width, height, and top depth use one scale.</text></svg></figure>
+
 **Solution:** The rectangular gate is \(2\) m wide by \(3.6\) m high, with top at depth 2 m. Thus \(A=7.2\,\mathrm{m^2}\) and centroid depth \(\bar h=2+3.6/2=3.8\) m.
 
 \[
@@ -121,6 +129,8 @@ h_{cp}=2+1.8+0.284=4.084\,\mathrm{m}.
 ### Q11 — B · 2.35 kN
 **Problem:** A vertical triangular gate has a 0.5 m horizontal base and 1.2 m height, with its vertex at the free surface and base horizontal. Find the resultant water force.
 
+<figure><svg viewBox="0 0 420 175" role="img" aria-label="Vertical triangular gate with vertex at free surface, horizontal 0.5 metre base, and 1.2 metre height; dimensions proportional"><title>Triangular vertical gate, Q11–Q13</title><path d="M25 35H390" stroke="#1683aa" stroke-width="3"/><text x="30" y="25" font-size="13">free surface</text><path d="M210 35L195 107H225Z" fill="#d7e8f4" stroke="#243447" stroke-width="3"/><text x="210" y="128" text-anchor="middle" font-size="12">base = 0.5 m</text><text x="230" y="79" font-size="12">height = 1.2 m</text><text x="210" y="163" text-anchor="middle" font-size="10">In-plane gate dimensions are proportional to the prompt.</text></svg></figure>
+
 **Solution:** The triangular gate has base \(0.5\) m and height \(1.2\) m, with its vertex at the surface and base horizontal. Its area is \(0.30\,\mathrm{m^2}\), and centroid depth is \(2h/3=0.8\) m.
 
 \[
@@ -153,6 +163,8 @@ h_{cp}=0.8+0.10=0.90\,\mathrm{m}.
 
 ### Q14 — A · 4.75 m
 **Problem:** A vertical square plate is 3 m on each side. Its center of pressure is 0.12 m below its centroid. Find the depth of the plate’s top edge.
+
+<figure><svg viewBox="0 0 420 165" role="img" aria-label="Vertical 3 metre square plate showing centroid, center of pressure 0.12 metre below centroid, and unknown top depth"><title>Square vertical plate, Q14–Q16</title><path d="M25 34H390" stroke="#1683aa" stroke-width="3"/><text x="30" y="24" font-size="13">free surface</text><rect x="155" y="49" width="90" height="90" fill="#d7e8f4" stroke="#243447" stroke-width="3"/><circle cx="200" cy="94" r="4" fill="#126b91"/><text x="252" y="92" font-size="12">centroid</text><circle cx="200" cy="98" r="4" fill="#b33"/><text x="252" y="112" font-size="12">CP 0.12 m below</text><text x="200" y="147" text-anchor="middle" font-size="12">3 m × 3 m</text><text x="200" y="162" text-anchor="middle" font-size="10">Top depth is the unknown; schematic only.</text></svg></figure>
 
 **Solution:** For the square plate, \(A=9\,\mathrm{m^2}\), \(I_G=3(3^3)/12=6.75\,\mathrm{m^4}\). The given offset is \(e=0.12\) m, so from \(e=I_G/(A\bar h)\),
 
@@ -220,6 +232,8 @@ F=(SG_{liq}-SG_{wood})\gamma_wV=(0.85-0.75)(9.81)(0.2380)=0.2335\,\mathrm{kN}=23
 ### Q20 — A · 2.5 m
 **Problem:** Water exits a nozzle under a 5 m head with velocity coefficient 1 and at 45° above horizontal. Find the jet’s maximum rise above the nozzle.
 
+<figure><svg viewBox="0 0 420 155" role="img" aria-label="Water jet exits a nozzle at 45 degrees under 5 metre head; apex rise measured above nozzle"><title>Oblique free jet, Q20</title><path d="M35 122H125V50H170" fill="none" stroke="#43566b" stroke-width="8"/><circle cx="170" cy="50" r="5" fill="#1683aa"/><path d="M170 50Q220 0 320 50" fill="none" stroke="#1683aa" stroke-width="4" stroke-dasharray="7 4"/><path d="M170 50h50m-12-7 12 7-12 7" fill="none" stroke="#333" stroke-width="2"/><path d="M205 50A35 35 0 0 0 194 25" fill="none" stroke="#333"/><text x="210" y="38" font-size="12">45°</text><line x1="245" y1="25" x2="290" y2="25" stroke="#333" stroke-dasharray="3 3"/><line x1="170" y1="50" x2="290" y2="50" stroke="#333" stroke-dasharray="3 3"/><line x1="290" y1="29" x2="290" y2="46" stroke="#333" stroke-width="2"/><path d="m286 33 4-8 4 8m-8 9 4 8 4-8" fill="none" stroke="#333" stroke-width="2"/><text x="298" y="63" font-size="12">maximum rise</text><text x="38" y="143" font-size="11">head = 5 m; apex height is measured above nozzle.</text><text x="214" y="15" text-anchor="middle" font-size="10">Trajectory schematic; not to scale.</text></svg></figure>
+
 **Solution:** The jet leaves with speed \(v=C_v\sqrt{2gH}=\sqrt{2(9.81)(5)}=9.905\,\mathrm{m/s}\), directed 45° above horizontal. Vertical speed is \(v_y=9.905\sin45^\circ=7.004\,\mathrm{m/s}\). At its apex, \(v_y=0\):
 
 \[
@@ -230,6 +244,8 @@ y_{max}=\frac{v_y^2}{2g}=\frac{7.004^2}{2(9.81)}=2.50\,\mathrm{m}.
 
 ### Q21 — D · 1.88 s
 **Problem:** A tank contains 8 m of water; its orifice is 5 m below the surface and 3 m above the tank bottom. The bottom is 1.2 m above ground. For a jet leaving at 45° under a 5 m head, find the time until it reaches ground.
+
+<figure><svg viewBox="0 0 420 190" role="img" aria-label="Tank with 8 metre water depth, orifice 5 metres below water surface and 3 metres above tank bottom, tank bottom 1.2 metres above ground, jet at 45 degrees"><title>Tank, orifice and ground reference, Q21–Q22</title><path d="M75 25V127H205V25" fill="none" stroke="#43566b" stroke-width="4"/><path d="M79 53H201V124H79Z" fill="#a8d9f0"/><path d="M79 53H201" stroke="#1683aa" stroke-width="2"/><circle cx="205" cy="99" r="5" fill="#b33"/><path d="M210 99Q260 49 370 108" fill="none" stroke="#1683aa" stroke-width="3" stroke-dasharray="6 4"/><line x1="45" y1="53" x2="45" y2="99" stroke="#333"/><text x="9" y="78" font-size="12">5 m</text><line x1="45" y1="99" x2="45" y2="127" stroke="#333"/><text x="9" y="118" font-size="12">3 m</text><line x1="75" y1="127" x2="205" y2="127" stroke="#333"/><path d="M48 139H384" stroke="#333" stroke-width="3"/><line x1="222" y1="128" x2="222" y2="138" stroke="#333"/><path d="m219 132 3-5 3 5m-6 2 3 5 3-5" fill="none" stroke="#333"/><text x="230" y="138" font-size="12">1.2 m</text><text x="90" y="43" font-size="12">8 m water depth</text><text x="222" y="94" font-size="12">orifice, 45°</text><text x="210" y="184" text-anchor="middle" font-size="10">Bottom is 1.2 m above ground; schematic.</text></svg></figure>
 
 **Solution:** The 8 m water depth is divided by the diagram into a 5 m head above the orifice and 3 m from the orifice to the tank bottom; the ground is another 1.2 m below the bottom. Thus the ground is 4.2 m below the orifice, so \(y=-4.2\) m. With \(v_y=7.004\,\mathrm{m/s}\),
 
@@ -253,7 +269,9 @@ x=v_xt=7.004(1.883)=13.19\,\mathrm{m}\approx13.2\,\mathrm{m}.
 ### Q23 — B · 1.42 m
 **Problem:** A trapezoidal channel has bottom width 6 m, flow depth 1.2 m, side slope 2H:1V, and discharge 20.8 m³/s. Find the specific energy.
 
-**Solution:** The trapezoidal section has \(b=6\) m, \(y=1.2\) m, side slope (2H:1V), and top width \(T=6+2(2)(1.2)=10.8\) m. Area \(A=(6+10.8)(1.2)/2=10.08\,\mathrm{m^2}\); velocity \(V=Q/A=20.8/10.08=2.0635\,\mathrm{m/s}\).
+<figure><svg viewBox="0 0 470 180" role="img" aria-label="Trapezoidal channel cross-section; flow depth 1.2 metres, bottom width 6 metres, and side slopes 2 horizontal to 1 vertical"><title>Trapezoidal channel, Q23–Q25</title><path d="M10 45H460L360 95H110Z" fill="#a8d9f0" stroke="#243447" stroke-width="3"/><path d="M10 45H460" stroke="#1683aa" stroke-width="3"/><text x="235" y="28" text-anchor="middle" font-size="12">free surface</text><text x="235" y="132" text-anchor="middle" font-size="13">bottom b = 6 m</text><line x1="425" y1="48" x2="425" y2="92" stroke="#333"/><path d="m421 54 4-7 4 7m-8 32 4 7 4-7" fill="none" stroke="#333"/><text x="315" y="83" font-size="11">y = 1.2 m</text><text x="15" y="116" font-size="11">2H:1V</text><text x="408" y="116" font-size="11">2H:1V</text><text x="235" y="166" text-anchor="middle" font-size="10">Proportions follow b:y:side run = 6:1.2:2.4.</text></svg></figure>
+
+**Solution:** The trapezoidal section has \(b=6\) m, \(y=1.2\) m, side slopes 2H:1V on both banks, and top width \(T=6+2(2)(1.2)=10.8\) m. Area \(A=(6+10.8)(1.2)/2=10.08\,\mathrm{m^2}\); velocity \(V=Q/A=20.8/10.08=2.0635\,\mathrm{m/s}\).
 
 \[
 E=y+\frac{V^2}{2g}=1.2+\frac{2.0635^2}{2(9.81)}=1.417\,\mathrm{m}\approx1.42\,\mathrm{m}.
@@ -286,6 +304,8 @@ V=\frac1nR^{2/3}S^{1/2}\quad\Longrightarrow\quad S=\left(\frac{Vn}{R^{2/3}}\righ
 
 ### Q26 — C · 20.1 N
 **Problem:** An 8 m/s water jet from a 0.020 m diameter nozzle strikes a stationary plate and turns through 90°. Find the force on the plate.
+
+<figure><svg viewBox="0 0 420 150" role="img" aria-label="Stationary plate turns an 8 metres per second water jet through 90 degrees"><title>Jet turning at a plate, Q26–Q28</title><path d="M30 75H175" stroke="#1683aa" stroke-width="7"/><path d="m160 67 16 8-16 8" fill="#1683aa"/><rect x="180" y="35" width="9" height="82" fill="#697989"/><path d="M189 75Q226 75 226 40V20" fill="none" stroke="#1683aa" stroke-width="6"/><path d="m218 34 8-15 8 15" fill="#1683aa"/><text x="58" y="60" font-size="12">V = 8 m/s</text><text x="230" y="39" font-size="12">turned flow</text><text x="200" y="139" text-anchor="middle" font-size="10">90° turn; plate motion is stated separately in Q27–Q28.</text></svg></figure>
 
 **Solution:** For a stationary plate that turns the jet through 90°, the jet's incoming normal momentum is removed. Nozzle diameter \(D=0.020\) m gives \(A=\pi D^2/4=3.142\times10^{-4}\,\mathrm{m^2}\); \(V=8\,\mathrm{m/s}\), \(\rho=1000\,\mathrm{kg/m^3}\).
 
@@ -433,7 +453,9 @@ S=\frac{wG_s}{e}=\frac{0.12(2.3)}{0.431}=0.640=64.0\%.
 ### Q39 — A · 290 Pa
 **Problem:** A 50 mm diameter direct-shear specimen has normal/shear loads (134, 68.5) N and (206, 105) N. Determine cohesion from the Mohr–Coulomb failure relation.
 
-**Solution:** For the direct-shear specimen, diameter \(d=50\) mm gives area \(A=\pi d^2/4=1963.5\,\mathrm{mm^2}\). Convert force/area from N/mm² to kPa (multiply by 1000). Data \(P,V)=(134,68.5),(206,105)\) N give normal stresses \(68.24,104.9\) kPa and shear stresses \(34.89,53.48\) kPa. Mohr–Coulomb relation \(\tau=c+\sigma\tan\phi\); the intercept is
+<figure><svg viewBox="0 0 420 155" role="img" aria-label="Plan view of 50 millimetre circular direct-shear specimen; normal load P acts into the plane and shear load V acts in the plane"><title>Direct-shear specimen plan and load directions, Q39–Q41</title><circle cx="205" cy="82" r="38" fill="#e8edf2" stroke="#243447" stroke-width="3"/><circle cx="205" cy="82" r="11" fill="white" stroke="#b33" stroke-width="2"/><path d="M199 76L211 88M211 76L199 88" stroke="#b33" stroke-width="2"/><text x="250" y="70" font-size="12">P (normal)</text><path d="M310 98H250m10-7-10 7 10 7" stroke="#1676a3" stroke-width="3" fill="none"/><text x="316" y="103" font-size="13">V</text><line x1="167" y1="128" x2="243" y2="128" stroke="#333"/><path d="m172 124-5 4 5 4m66-8 5 4-5 4" fill="none" stroke="#333"/><text x="205" y="148" text-anchor="middle" font-size="12">specimen diameter = 50 mm</text></svg></figure>
+
+**Solution:** For the direct-shear specimen, diameter \(d=50\) mm gives area \(A=\pi d^2/4=1963.5\,\mathrm{mm^2}\). Convert force/area from N/mm² to kPa (multiply by 1000). Data \((P,V)=(134,68.5),(206,105)\) N give normal stresses \(68.24,104.9\) kPa and shear stresses \(34.89,53.48\) kPa. Mohr–Coulomb relation \(\tau=c+\sigma\tan\phi\); the intercept is
 
 \[
 c=\frac{(104.9)(34.89)-(68.24)(53.48)}{104.9-68.24}=0.286\,\mathrm{kPa}=286\,\mathrm{Pa}\approx290\,\mathrm{Pa}.
@@ -465,6 +487,8 @@ This matches choice A and the printed key. **Key check:** A.
 
 ### Q42 — D · 142.1 kPa effective pressure
 **Problem:** A lake has 3 m of water over 6 m saturated sand (unit weight 25 kN/m³), then clay (20 kN/m³). Find effective vertical stress at the midpoint of the clay layer, 5 m into it.
+
+<figure><svg viewBox="0 0 420 205" role="img" aria-label="Soil profile: 3 metres lake water, 6 metres saturated sand, and 5 metres of clay down to the evaluation midpoint"><title>Layered profile to clay midpoint, Q42–Q44</title><rect x="112" y="28" width="185" height="35" fill="#a8d9f0" stroke="#243447"/><rect x="112" y="63" width="185" height="62" fill="#d9c69d" stroke="#243447"/><rect x="112" y="125" width="185" height="52" fill="#b8a8a0" stroke="#243447"/><line x1="100" y1="177" x2="310" y2="177" stroke="#b33" stroke-width="2" stroke-dasharray="6 4"/><text x="204" y="49" text-anchor="middle" font-size="13">water: 3 m</text><text x="204" y="97" text-anchor="middle" font-size="13">saturated sand: 6 m</text><text x="204" y="153" text-anchor="middle" font-size="12">clay: 5 m to midpoint</text><text x="320" y="181" font-size="12">point</text><text x="205" y="200" text-anchor="middle" font-size="10">Layer thicknesses and evaluation depth taken from the prompt.</text></svg></figure>
 
 **Solution:** At clay mid-height, depth below lake surface is \(z=3+6+5=14\) m. Inputs: water layer 3 m, saturated sand 6 m at \(25\,\mathrm{kN/m^3}\), and clay above midpoint 5 m at \(20\,\mathrm{kN/m^3}\). Total vertical stress is
 
@@ -504,6 +528,8 @@ u=\gamma_wz=9.81(14)=137.34\,\mathrm{kPa}\approx137.4\,\mathrm{kPa}.
 
 ### Q45 — B · 198.8 kPa
 **Problem:** Using the stated Westergaard point-load equation, find vertical stress directly below a 2.5 MN load at depth 2 m. The figure/input does not supply a nonzero radial offset.
+
+<figure><svg viewBox="0 0 420 175" role="img" aria-label="Vertical point load Q above a subsurface point at depth z and radial offset r; Q45 and Q46 use r equals zero"><title>Point-load stress geometry, Q45–Q47</title><path d="M35 40H385" stroke="#6c7d8c" stroke-width="3"/><path d="M210 8V40" stroke="#333" stroke-width="3"/><path d="m202 24 8 16 8-16" fill="#333"/><text x="220" y="21" font-size="13">Q = 2.5 MN</text><circle cx="210" cy="140" r="5" fill="#b33"/><line x1="210" y1="44" x2="210" y2="135" stroke="#333" stroke-dasharray="5 4"/><text x="218" y="98" font-size="13">z</text><circle cx="300" cy="140" r="5" fill="#1676a3"/><line x1="215" y1="153" x2="295" y2="153" stroke="#333"/><path d="m222 149-7 4 7 4m66-8 7 4-7 4" fill="none" stroke="#333"/><text x="254" y="170" text-anchor="middle" font-size="12">r</text><text x="310" y="139" font-size="12">stress point</text><text x="210" y="59" text-anchor="middle" font-size="10">For Q45–Q46, r = 0; Q47 uses r = 3 m.</text></svg></figure>
 
 **Solution:** Use the problem's stated Westergaard equations with \(Q=2.5\,\mathrm{MN}=2500\,\mathrm{kN}\), \(z=2\) m, and \(r=0\). Thus \(N=1/[1+2(0/2)^2]^{1.5}=1\).
 

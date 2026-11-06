@@ -8,17 +8,22 @@ Worked solutions for 23 MSTC problems. Unclear problem wording or answer choices
 
 **Solution:**
 
-Peak A is 1,040 m above sea level. The pilot directly above A is at 2,820 m; hence the vertical leg is 2,820-1,040=1,780 m. The depression angle is 46°12′; the angle between the vertical and line of sight is 43°48′. From the diagram, the other triangle angles are 80° and 56°12′.
+The aircraft is vertically above A, so its height above A is \(2820-1040=1780\) m. Its sight line to B is \(46^\circ12\prime\) below horizontal, or \(43^\circ48\prime\) from the downward vertical. The angle at A is \(80^\circ\), leaving \(56^\circ12\prime\) at B. The schematic below shows this triangulation (not to scale).
+
+<svg viewBox="0 0 520 220" role="img" aria-label="Triangulation from peak A to aircraft and peak B, schematic not to scale" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 30V180M100 180L223 158M100 30L223 158" fill="none" stroke="#26384b" stroke-width="2.5"/><path d="M100 30H250" stroke="#708090" stroke-dasharray="6 5"/>
+  <circle cx="100" cy="30" r="4"/><circle cx="100" cy="180" r="4"/><circle cx="223" cy="158" r="4"/>
+  <text x="48" y="29" font-size="14">Aircraft</text><text x="55" y="202" font-size="14">A: 1,040 m</text><text x="229" y="163" font-size="14">B</text><text x="112" y="110" font-size="14">1,780 m</text><text x="142" y="175" font-size="14">10° elevation</text><text x="250" y="48" font-size="14">46°12′ depression</text>
+</svg>
 
 $$
-\frac{AB}{\sin 43^\circ48'}=\frac{1780}{\sin 56^\circ12'}
-\quad\Longrightarrow\quad AB\approx1482.60\text{ m}.
+AB=1780\frac{\sin43^\circ48\prime}{\sin56^\circ12\prime}=1482.6\text{ m}.
 $$
 
 The line from A to B is 10° above horizontal, so its vertical rise is:
 
 $$
-z_B=1040+(1482.60)\sin10^\circ=1297.45\text{ m above sea level}.
+z_B=1040\text{ m}+(1482.6\text{ m})\sin10^\circ=1297.5\text{ m above sea level}.
 $$
 
 ## Question 2 — Minimum triangular sale from a square field
@@ -34,23 +39,21 @@ $$
 \qquad \theta\approx26.27^\circ.
 $$
 
-The offsets along and perpendicular to the 2,261 yd side are:
+Use the corner shared by the two measured distances as the right-angle triangle origin. Let \(x\) be the projection of the tree along the 2,261 yd side from the 1,009 yd corner, and \(y\) its perpendicular offset. This construction follows the source diagram; schematic, not to scale.
+
+<svg viewBox="0 0 500 190" role="img" aria-label="Square corner, tree, and minimum fence geometry from source dimensions; schematic not to scale" xmlns="http://www.w3.org/2000/svg"><path d="M80 35V150H400" fill="none" stroke="#26384b" stroke-width="3"/><path d="M80 150L115 97" stroke="#087e8b" stroke-width="3"/><path d="M80 44L115 97L150 150" fill="none" stroke="#bd4a36" stroke-width="3"/><path d="M115 97V150" stroke="#64748b" stroke-dasharray="5 4"/><circle cx="115" cy="97" r="5" fill="#111827"/><text x="43" y="32" font-size="14">A</text><text x="61" y="168" font-size="14">C</text><text x="121" y="92" font-size="14">Tree</text><text x="124" y="130" font-size="13">fence</text><text x="87" y="125" font-size="13">1,009 yd</text><text x="83" y="58" font-size="13">1,898 yd</text><text x="154" y="169" font-size="13">side = 2,261 yd</text></svg>
+
+The tree coordinates measured from the 1,009 yd corner are \(x=2261-1898\cos\theta=559\,\mathrm{yd}\) along the side and \(y=1898\sin\theta=840\,\mathrm{yd}\) perpendicular to it. For a fence with intercepts \(u,v\) on those perpendicular sides, passage through the tree requires \(x/u+y/v=1\). Minimizing the triangular area \(uv/2\) gives \(u=2x\), \(v=2y\); the tree is the midpoint of the fence as indicated by the source construction.
 
 $$
-b=1898\sin\theta\approx840\text{ yd},\qquad a=2261-1898\cos\theta\approx559\text{ yd}.
-$$
-
-For the minimum-area fence through the tree, the intercepts on the perpendicular field sides are \(2a\) and \(2b\).
-
-$$
-A=\frac{(2a)(2b)}2=2ab\approx2(559)(840)=\boxed{939{,}120\text{ yd}^2},
+A_{min}=\frac{(2x)(2y)}2=2xy=2(559)(840)=\boxed{939{,}120\text{ yd}^2},
 $$
 
 $$
-L=\sqrt{(2a)^2+(2b)^2}\approx\boxed{2018\text{ yd}}.
+L=\sqrt{(2x)^2+(2y)^2}=\sqrt{(1118\text{ yd})^2+(1680\text{ yd})^2}=\boxed{2018\text{ yd}}.
 $$
 
-These are approximate because the component lengths are rounded before the final calculation.
+The result assumes the triangular portion is at the corner with the 1,009 yd tree distance, matching the source diagram.
 
 ## Question 3 — Minimum roadway curve radius
 
@@ -58,7 +61,7 @@ These are approximate because the component lengths are rounded before the final
 
 **Solution:**
 
-Use the metric highway-design relation (R=V^2/[127(e+f)]), with (V=100 km/h), superelevation (e=0.12), and side-friction factor (f=0.12):
+For a level-road curve at limiting superelevation and side friction, use \(R=V^2/[127(e+f)]\). The given values are \(V=100\,\mathrm{km/h}\), \(e=0.12\), and \(f=0.12\):
 
 $$
 R=\frac{100^2}{127(0.12+0.12)}=328.08\text{ m}.
@@ -104,7 +107,7 @@ $$
 
 **Solution:**
 
-The librarian orders volumes by spelling out their numbers. “Ten,” “thirteen,” “three,” and “twelve” occur alphabetically in that sequence. **Volume 13 goes between Volumes 10 and 3.**
+Sort the spelled-out names: “ten,” “thirteen,” “three,” “twelve.” Thus **Volume 13 goes between Volumes 10 and 3.**
 
 ## Question 7 — Water required to raise room relative humidity
 
@@ -133,7 +136,7 @@ so the added water mass is 9.31 mol × 18 g/mol ≈ 168 g, about **0.168 L of li
 
 **Solution:**
 
-For an exponential waiting time with mean μ=23 s), λ=1/23 s^-1. The survival probability is
+For an exponential waiting time, \(\lambda=1/\mu=1/(23\,\mathrm{s})\). The survival relation is \(P(X\ge t)=e^{-\lambda t}\), so
 
 $$
 P(X\ge25)=e^{-25/23}\approx\boxed{0.337\;(33.7\%)}.
@@ -145,7 +148,9 @@ $$
 
 **Solution:**
 
-Take counterclockwise positive. From the diagram, the 28 N force at radius 0.24 m is counterclockwise; 18 N at 0.24 m and 35 N at 0.12 m are clockwise:
+Take counterclockwise positive. From the source diagram, the 28 N force at radius 0.24 m is counterclockwise; 18 N at 0.24 m and 35 N at 0.12 m are clockwise. The sketch retains the shown directions and radii (not to scale).
+
+<svg viewBox="0 0 420 220" role="img" aria-label="Wheel torque diagram with source force directions, 24 centimeter outer radius, and 12 centimeter inner radius" xmlns="http://www.w3.org/2000/svg"><circle cx="185" cy="115" r="72" fill="none" stroke="#26384b" stroke-width="3"/><circle cx="185" cy="115" r="36" fill="none" stroke="#64748b" stroke-width="2"/><circle cx="185" cy="115" r="4"/><path d="M257 115V35M113 187H30M160 90L95 25" stroke="#087e8b" stroke-width="3"/><path d="M249 44l8-10 8 10M40 179l-10 8 10 8M102 32l-8-8 11-1" fill="none" stroke="#087e8b" stroke-width="2"/><text x="267" y="40" font-size="14">28 N, 24 cm</text><text x="20" y="210" font-size="14">18 N, 24 cm</text><text x="20" y="24" font-size="14">35 N, 12 cm</text><text x="193" y="120" font-size="13">axle</text></svg>
 
 $$
 \tau_{applied}=28(0.24)-18(0.24)-35(0.12)=-1.80\text{ N·m}.
@@ -233,7 +238,7 @@ If the requested width spans the symmetric arch, \(W=2\sqrt{91}\approx19.08\) un
 
 **Solution:**
 
-There are (5·4·4=80) ordered flags with adjacent rows different. Reversal fixes the 20 flags with identical top and bottom colors (5 choices for that color and 4 for the middle). Burnside’s count is
+There are \(5\cdot4\cdot4=80\) ordered flags with adjacent rows different. Turning the flag upside down fixes those with matching top and bottom rows: \(5\cdot4=20\). Burnside’s count is
 
 $$
 N=\frac{80+20}{2}=\boxed{50}.
@@ -285,7 +290,7 @@ The diagram’s delay label is faint; the written work uses the stated 2.5-hour 
 
 **Solution:**
 
-With PA)=0.87, PB)=0.36, and PAcap B)=0.29:
+Let \(A\) denote engine repair and \(B\) drivetrain repair. Given \(P(A)=0.87\), \(P(B)=0.36\), and \(P(A\cap B)=0.29\), inclusion–exclusion gives:
 
 $$
 P(A\cup B)=P(A)+P(B)-P(A\cap B)=0.87+0.36-0.29
@@ -346,7 +351,7 @@ $$
 
 **Solution:**
 
-Bringing the surface to the specified grade is **leveling** (choice C).
+The governing operation is to strike off and redistribute concrete to the specified grade while bringing mortar to the surface: **leveling** (choice C). The prompt supplies no numerical quantities.
 
 ## Question 23 — Premolded inserts for shrinkage cracking
 
@@ -354,7 +359,7 @@ Bringing the surface to the specified grade is **leveling** (choice C).
 
 **Solution:**
 
-Installing premolded inserts to control shrinkage cracking is **jointing** (choice A).
+The operation forms contraction joints that guide shrinkage cracking: **jointing** (choice A). The prompt supplies no numerical quantities.
 
 # HPGE — Hydraulics and Geotechnical Engineering
 
@@ -366,7 +371,11 @@ Worked solutions for 40 HPGE problems. Unclear problem wording or answer choices
 
 **Solution:**
 
-The sand is 15.2 m thick, the clay is 7.6 m thick, and the point is at the clay midpoint, 3.8 m below its top. Use γ_w=9.81 kN/m^3. From the difference between saturated and dry sand unit weights:
+The profile is 15.2 m of sand over 7.6 m of clay; the point is 3.8 m into the clay. The sketch shows the stated water-table cases, not to scale. Use \(\gamma_w=9.81\,\mathrm{kN/m^3}\).
+
+<svg viewBox="0 0 470 205" role="img" aria-label="Soil profile with 15.2 meters of sand over 7.6 meters of clay and stress point at clay midpoint" xmlns="http://www.w3.org/2000/svg"><rect x="125" y="28" width="200" height="90" fill="#e8d9b5" stroke="#574b36"/><rect x="125" y="118" width="200" height="60" fill="#b8a7a0" stroke="#574b36"/><path d="M125 39H325" stroke="#087e8b" stroke-width="3"/><path d="M225 117V148" stroke="#bd4a36" stroke-width="2" stroke-dasharray="5 4"/><circle cx="225" cy="148" r="5" fill="#bd4a36"/><text x="180" y="82" font-size="15">Sand: 15.2 m</text><text x="176" y="154" font-size="14">Clay: 7.6 m</text><text x="334" y="153" font-size="13">midpoint</text><text x="18" y="64" font-size="13">Water table varies by case</text></svg>
+
+The sand void ratio follows from the given dry and saturated unit weights:
 
 $$
 21.2-18.2=(eγ_w)/(1+e)\quad\Rightarrow\quad e≈0.440,
@@ -442,7 +451,9 @@ $$
 
 **Solution:**
 
-The radius is 0.300 m, the centroid depth is 2.00+0.300=2.300 m, and the plate area is calculated below.
+The circular plate has radius 0.300 m; its top is 2.00 m below the free surface, so its centroid is \(2.00+0.300=2.300\,\mathrm m\) deep. Geometry schematic, not to scale:
+
+<svg viewBox="0 0 420 200" role="img" aria-label="Vertical circular plate below water surface, with top depth two meters and centroid at 2.3 meters" xmlns="http://www.w3.org/2000/svg"><path d="M40 35H380" stroke="#087e8b" stroke-width="3"/><circle cx="220" cy="115" r="48" fill="#d8edf1" stroke="#26384b" stroke-width="3"/><circle cx="220" cy="115" r="4" fill="#bd4a36"/><path d="M110 35V67M103 35H117M103 67H117" stroke="#64748b" stroke-width="1.5"/><path d="M110 35V115M103 115H117" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3"/><text x="48" y="55" font-size="13">2.0 m to top</text><text x="270" y="116" font-size="13">centroid</text><text x="210" y="184" font-size="13">R = 0.300 m</text></svg>
 
 $$
 A=\pi(0.300)^2=0.2827\text{ m}^2,\qquad
@@ -467,7 +478,11 @@ The prompt gives force in kPa, but the dimensional result is force in kN.
 
 **Solution:**
 
-Use \(p=0.477QN/z^2\), where \(N=[1+(r/z)^2]^{-5/2}\). Directly below the load, \(r=0\) and \(N=1\):
+Use the Boussinesq point-load relation \(p=0.477QN/z^2\), where \(N=[1+(r/z)^2]^{-5/2}\). The sketch shows depth \(z\) and horizontal offset \(r\) (not to scale):
+
+<svg viewBox="0 0 440 190" role="img" aria-label="Surface point load and subsurface stress points with depth z and horizontal offset r" xmlns="http://www.w3.org/2000/svg"><path d="M35 45H405" stroke="#087e8b" stroke-width="3"/><path d="M110 20V45" stroke="#bd4a36" stroke-width="3"/><path d="M102 36L110 48L118 36" fill="none" stroke="#bd4a36" stroke-width="2"/><circle cx="110" cy="145" r="5" fill="#26384b"/><circle cx="200" cy="145" r="5" fill="#26384b"/><path d="M110 52V137M200 52V137M115 158H195" stroke="#64748b" stroke-dasharray="5 4"/><text x="119" y="32" font-size="14">Q</text><text x="88" y="105" font-size="13">z</text><text x="145" y="178" font-size="13">r</text><text x="220" y="150" font-size="13">stress point</text></svg>
+
+Directly below the load, \(r=0\) and \(N=1\):
 
 $$
 p_{z=3}=\frac{0.477(2500)(1)}{3^2}=132.5\text{ kPa},\qquad
@@ -502,7 +517,11 @@ $$
 
 **Solution:**
 
-The radius is \(R=1.3/2=0.65\) m. Convert the rotation rate and calculate the center-to-rim free-surface difference:
+The vessel radius is \(R=1.3/2=0.65\,\mathrm m\). At rigid-body rotation the free surface is parabolic; at spill onset it reaches the rim. Cross-section sketch (not to scale):
+
+<svg viewBox="0 0 470 190" role="img" aria-label="Rotating open cylinder with parabolic water surface touching rim at spill onset; schematic not to scale" xmlns="http://www.w3.org/2000/svg"><path d="M90 25V160Q235 178 380 160V25" fill="none" stroke="#26384b" stroke-width="3"/><path d="M91 25Q235 135 379 25" fill="none" stroke="#087e8b" stroke-width="3"/><path d="M235 25V135M90 25H380" stroke="#64748b" stroke-dasharray="5 4"/><path d="M235 135V25" stroke="#bd4a36" stroke-width="2"/><text x="245" y="132" font-size="14">Δh</text><text x="120" y="48" font-size="14">rim spill level</text><text x="160" y="183" font-size="13">diameter 1.3 m</text></svg>
+
+Convert the rotation rate and calculate the center-to-rim free-surface difference:
 
 $$
 \omega=87\left(\frac{2\pi}{60}\right)=9.11\text{ rad/s},\qquad
@@ -524,7 +543,9 @@ The printed solution gives 259 L; the difference is rounding.
 
 **Solution:**
 
-The horizontal tank has diameter 1.5 m and length 5 m. Its pressure-head increase from front to rear is the acceleration head. Following the pressure reference drawn in the diagram, the head at the rear circular end centroid is the full longitudinal head change plus the 0.75 m radius:
+The stated tank has diameter \(1.5\,\mathrm m\), length \(5\,\mathrm m\), and forward acceleration \(4\,\mathrm{m/s^2}\). The source pressure sketch is interpreted to place the rear-end centroid head at the longitudinal acceleration head plus the 0.75 m radius. The redrawn sketch identifies the acceleration direction and inferred rear-end pressure reference; it is schematic, not a pressure distribution:
+
+<svg viewBox="0 0 520 200" role="img" aria-label="Accelerating horizontal full tank; longitudinal acceleration head and rear-end centroid pressure reference inferred from source diagram" xmlns="http://www.w3.org/2000/svg"><path d="M85 60H400A55 55 0 0 1 400 170H85A55 55 0 0 1 85 60Z" fill="#e6f3f5" stroke="#26384b" stroke-width="3"/><path d="M103 115H382" stroke="#087e8b" stroke-width="2" stroke-dasharray="6 4"/><path d="M120 40H245" stroke="#bd4a36" stroke-width="3"/><path d="M236 32L250 40L236 48" fill="none" stroke="#bd4a36" stroke-width="3"/><circle cx="400" cy="115" r="4" fill="#bd4a36"/><path d="M420 115V170" stroke="#64748b" stroke-dasharray="4 3"/><text x="135" y="32" font-size="14">truck acceleration →</text><text x="187" y="105" font-size="13">L = 5 m</text><text x="421" y="148" font-size="13">r = 0.75 m</text><text x="37" y="190" font-size="13">rear end</text><text x="205" y="145" font-size="13">D = 1.5 m</text></svg>
 
 $$
 Δ h=(aL)/(g)=(4(5))/(9.81)=2.039 m,\qquad
@@ -543,7 +564,7 @@ $$
 
 **Solution:**
 
-Water content is w=M_w/M_s. In organic or very porous soils, water mass can exceed dry-solid mass. **Choice (c): it can be greater than 100%.**
+By definition, \(w=M_w/M_s\). Since no upper bound requires water mass to be less than dry-solids mass, sufficiently organic or porous soil can have \(M_w>M_s\), hence \(w>100\%\). **Choice (c).**
 
 ## Question 10 — SPT range for loose granular soil
 
@@ -551,7 +572,7 @@ Water content is w=M_w/M_s. In organic or very porous soils, water mass can exce
 
 **Solution:**
 
-The classification used here assigns **4–10 blows** to “Loose.” Boundary values overlap neighboring categories in the reproduced table; use the stated loose interval.
+The reproduced soil-consistency table assigns the loose category to \(N=4\)–\(10\) blows. Thus the stated interval is **4–10 blows**; the source table overlaps adjacent classes at boundary values.
 
 ## Question 11 — Dry density of saturated soil
 
@@ -561,10 +582,7 @@ The classification used here assigns **4–10 blows** to “Loose.” Boundary v
 
 Given w=0.30, G_s=2.6, and S=1, Se=wG_s gives e=0.78. With water density 1.00 g/cm^3:
 
-$$
-ρ_d=(G_sρ_w)/(1+e)=(2.6)/(1.78)
-=1.46 g/cm^3.
-$$
+$$e=wG_s/S=(0.30)(2.6)/1=0.78,\qquad\rho_d=\frac{G_s\rho_w}{1+e}=\frac{(2.6)(1.00\,\mathrm{g/cm^3})}{1+0.78}=1.46\,\mathrm{g/cm^3}. $$
 
 ## Question 12 — Coarser particles mixed into clay
 
@@ -572,7 +590,7 @@ $$
 
 **Solution:**
 
-Adding sand/silt generally reduces clay fraction and plasticity: **both liquid limit and plasticity index decrease (choice a).**
+Coarser grains dilute the active clay fraction. The governing qualitative trend is reduced plasticity: **both liquid limit and plasticity index decrease (choice a).** No numerical data are supplied for calculation.
 
 ## Question 13 — Shear strength of a “cohesion soil”
 
@@ -594,13 +612,9 @@ For cohesionless soil c=0, so at fixed effective normal stress strength is propo
 
 **Solution:**
 
-Given f=0.02,L=500 m,Q=0.020 m^3/s,D=0.150 m:
+Darcy–Weisbach with velocity written in terms of \(Q/A\) gives \(h_f=0.0826fLQ^2/D^5\) in SI units. Convert the given values to \(f=0.02\), \(L=500\,\mathrm m\), \(Q=20\,\mathrm{L/s}=0.020\,\mathrm{m^3/s}\), and \(D=150\,\mathrm{mm}=0.150\,\mathrm m\):
 
-$$
-h_f=(0.0826fLQ^2)/(D^5)
-=(0.0826(0.02)(500)(0.020)^2)/((0.150)^5)
-=4.35 m.
-$$
+$$h_f=\frac{0.0826(0.02)(500\,\mathrm m)(0.020\,\mathrm{m^3/s})^2}{(0.150\,\mathrm m)^5}=4.35\,\mathrm m.$$
 
 ## Question 15 — Force on the lower part of a plate crossing oil and water
 
@@ -608,14 +622,18 @@ $$
 
 **Solution:**
 
-The lower half has area \(A=(1.2)(1.0)=1.2\text{ m}^2\). At its centroid, pressure head in water units is the 1 m oil layer plus 0.5 m of water:
+The plate is 1.2 m wide; its upper 1.0 m is in oil and lower 1.0 m in water. The lower-part centroid is 1.0 m into water. Interface and plate configuration (from the prompt, not to scale):
+
+<svg viewBox="0 0 430 210" role="img" aria-label="Vertical plate crossing one meter of oil above one meter of water, with lower segment highlighted" xmlns="http://www.w3.org/2000/svg"><rect x="100" y="30" width="220" height="70" fill="#f4e5c1"/><rect x="100" y="100" width="220" height="70" fill="#c8e9ef"/><rect x="205" y="30" width="35" height="140" fill="#d5d9df" stroke="#26384b" stroke-width="2"/><path d="M100 100H320" stroke="#087e8b" stroke-width="2"/><path d="M270 104V166" stroke="#bd4a36" stroke-width="5"/><text x="25" y="68" font-size="14">Oil, SG 0.84</text><text x="25" y="138" font-size="14">Fresh water</text><text x="252" y="65" font-size="13">1.0 m</text><text x="252" y="145" font-size="13">lower half</text><text x="185" y="190" font-size="13">vertical plate, width 1.2 m</text></svg>
+
+Its equivalent water pressure head is \(h_p=SG_{oil}(1.0\,\mathrm m)+0.50\,\mathrm m\), and its area is \(A=(1.2\,\mathrm m)(1.0\,\mathrm m)=1.2\,\mathrm{m^2}\):
 
 $$
 h_p=(0.84)(1.0)+0.50=1.34\text{ m},\qquad
 F=\gamma_w h_pA=(9.81)(1.34)(1.2)=15.8\text{ kN}.
 $$
 
-The diagram’s oil specific gravity reads 0.84; OCR text misreads it once as 0.64.
+The solution follows the stated oil specific gravity, 0.84; the reproduced diagram/text has a conflicting 0.64 reading.
 
 ## Question 16 — Pressure beneath a rectangular footing
 
@@ -637,9 +655,7 @@ The diagram’s oil specific gravity reads 0.84; OCR text misreads it once as 0.
 
 Load 450 kN, footing 1.5×2.5 m, depth 2.7 m. A 2V:1H spread means horizontal spread on each side = 2.7/2 = 1.35 m. Thus the spread plan dimensions are 1.5 + 2(1.35) = 4.2 m and 2.5 + 2(1.35) = 5.2 m:
 
-$$
-q=(450)/(4.2(5.2))=20.6 kPa.
-$$
+$$q=\frac{P}{A_s}=\frac{450\,\mathrm{kN}}{(4.2\,\mathrm m)(5.2\,\mathrm m)}=20.6\,\mathrm{kPa}. $$
 
 
 
@@ -649,7 +665,9 @@ $$
 
 **Solution:**
 
-For bottom width b=2.50 m, depth y=0.90 m, side slope z=1.5H:1V,
+For the trapezoidal section, bottom width \(b=2.50\,\mathrm m\), flow depth \(y=0.90\,\mathrm m\), side slope \(z=1.5\mathrm H:1\mathrm V\) (section shown schematically):
+
+<svg viewBox="0 0 420 190" role="img" aria-label="Trapezoidal irrigation canal section showing 2.5 meter bottom, 0.9 meter depth, and 1.5 horizontal to 1 vertical sides" xmlns="http://www.w3.org/2000/svg"><path d="M90 45L140 145H280L330 45" fill="#d9eef2" fill-opacity=".75" stroke="#26384b" stroke-width="3"/><path d="M90 45H330" stroke="#087e8b" stroke-width="2"/><path d="M140 160H280M140 154V166M280 154V166" stroke="#64748b"/><path d="M105 115H140M105 115V145" stroke="#bd4a36"/><text x="177" y="164" font-size="13">b = 2.50 m</text><text x="284" y="102" font-size="13">y = 0.90 m</text><text x="71" y="130" font-size="12">1.5H:1V</text><text x="330" y="130" font-size="12">1.5H:1V</text></svg>
 
 $$
 A=y(b+zy)=0.90[2.50+1.5(0.90)]=3.465\text{ m}^2,
@@ -664,11 +682,9 @@ V=\frac{1}{n}R_h^{2/3}S^{1/2}
 \qquad Q=VA=3.129\text{ m}^3/\text{s}.
 $$
 
-At 3.0 L/s per hectare:
+The computed discharge is \(3.129\,\mathrm{m^3/s}=3129\,\mathrm{L/s}\). Dividing by the stated duty \(3.0\,\mathrm{L/(s\cdot ha)}\):
 
-$$
-Area=3129/3=1043 ha.
-$$
+$$A_{served}=\frac{3129\,\mathrm{L/s}}{3.0\,\mathrm{L/(s\cdot ha)}}=1043\,\mathrm{ha}. $$
 
 ## Question 18 — Ship moves from seawater to fresh water
 
@@ -676,11 +692,9 @@ $$
 
 **Solution:**
 
-After unloading, the ship weighs 38 MN and has seawater draft 6.4 m. For the same displacement weight, displaced volume varies inversely with water density. With seawater specific gravity 1.026:
+After unloading, supported weight is \(40-2=38\,\mathrm{MN}\); the corresponding seawater draft is 6.4 m. With vertical sides, equal displacement weights require \(\rho_s d_s=\rho_f d_f\). Thus \(d_f=(\rho_s/\rho_f)d_s=1.026(6.4\,\mathrm m)\):
 
-$$
-d_fresh=1.026(6.4)=6.566 m≈6.57 m.
-$$
+$$d_{fresh}=1.026(6.4\,\mathrm m)=6.57\,\mathrm m.$$
 
 ## Question 19 — Mountain height from barometer readings
 
@@ -768,7 +782,7 @@ $$
 V_1=\frac{1}{0.013}(0.8308)^{2/3}(0.001)^{1/2}=2.148\text{ m/s},\qquad
 Q_1=(6.48)(2.148)=13.92\text{ m}^3/\text{s}.
 $$
-For the most economical rectangular section, \(b=2d\), so \(A=2d^2\), \(P=4d\), and \(R_h=d/2\). Set its Manning discharge equal to 13.92 m³/s:
+Interpret “more hydraulically appropriate” as the most economical rectangular section, for which \(b=2d\). Then \(A=2d^2\), \(P=4d\), and \(R_h=d/2\). Set its Manning discharge equal to the original \(13.92\,\mathrm{m^3/s}\):
 
 $$
 13.92=\frac{1}{0.013}(2d^2)\left(\frac d2\right)^{2/3}(0.001)^{1/2},
@@ -778,6 +792,10 @@ $$
 ## Questions 23–24 — Curved sector gate forces
 
 **Problem (Question 23):** The shown sector gate has a cylindrical surface with radius 8 m and length perpendicular to the page of 10 m. Find the horizontal force on the gate.
+
+**Solution:** The source sector-gate geometry is used as shown: radius 8 m, arc angle 60°, and length 10 m into the page. Schematic inferred from those stated/calculation dimensions, not to scale:
+
+<svg viewBox="0 0 450 220" role="img" aria-label="Curved sector gate schematic with radius 8 meters, 60 degree arc, and 10 meter length into page" xmlns="http://www.w3.org/2000/svg"><path d="M90 170H350M90 170L230 48M90 170L230 170" fill="none" stroke="#64748b" stroke-width="2"/><path d="M230 48A185 185 0 0 1 275 170" fill="none" stroke="#087e8b" stroke-width="5"/><path d="M90 170L230 48" stroke="#bd4a36" stroke-width="2"/><path d="M90 170L230 170" stroke="#bd4a36" stroke-width="2"/><text x="145" y="96" font-size="14">R = 8 m</text><text x="170" y="157" font-size="14">60°</text><text x="286" y="194" font-size="14">L = 10 m into page</text><text x="279" y="68" font-size="13">curved gate</text></svg>
 
 **Solution:** The vertical projection height is \(8\sin60^\circ\), and its centroid depth is half that height. The horizontal component equals the hydrostatic force on the projected rectangle:
 
@@ -964,9 +982,7 @@ $$
 
 **Solution:**
 
-$$
-γ=γ_d(1+w)=15(1+0.25)=18.75 kN/m^3.
-$$
+$$\gamma=\gamma_d(1+w)=(15\,\mathrm{kN/m^3})(1+0.25)=18.75\,\mathrm{kN/m^3}. $$
 
 ## Question 35 — Reservoir head difference
 
@@ -990,9 +1006,7 @@ $$
 
 Velocity increases by one-half its previous value, so V2 = 1.5V1. Velocity head varies as V²:
 
-$$
-((V^2)/(2g))_2=1.5^2(5)=11.25 m.
-$$
+$$\left(\frac{V^2}{2g}\right)_2=(1.5)^2\left(5\,\mathrm m\right)=11.25\,\mathrm m. $$
 
 ## Question 37 — Mean velocity in a trapezoidal channel
 

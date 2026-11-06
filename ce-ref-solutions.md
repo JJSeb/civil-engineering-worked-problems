@@ -9,7 +9,7 @@ Worked solutions for all 50 November 2021 HPGE questions. Each problem includes 
 
 <svg class="figure" viewBox="0 0 640 340" role="img" aria-labelledby="manometer-title manometer-desc" xmlns="http://www.w3.org/2000/svg">
   <title id="manometer-title">U-tube manometer connected to a water conduit</title>
-  <desc id="manometer-desc">Water conduit A connects to the left leg of a U-tube containing heavy liquid B. The right leg is open to atmosphere at D. C marks the water-heavy-liquid interface; h is the level difference from A to D, and d is the heavy-liquid column between D and C.</desc>
+  <desc id="manometer-desc">Water conduit A connects to the left leg of a U-tube containing heavy liquid B. The right leg is open to atmosphere at D. C marks the water-heavy-liquid interface. D is 125 millimeters above A and 375 millimeters above C, so C is 250 millimeters below A. Schematic, not to scale.</desc>
   <rect x="54" y="55" width="165" height="105" rx="30" fill="#e4f2f8" stroke="#34495e" stroke-width="4"/>
   <text x="136" y="103" text-anchor="middle" font-size="22" fill="#243b53">water</text><text x="136" y="132" text-anchor="middle" font-size="24" fill="#243b53">A</text>
   <path d="M219 112 H292 V265 Q292 290 317 290 H412 Q437 290 437 265 V145" fill="none" stroke="#34495e" stroke-width="18" stroke-linejoin="round"/>
@@ -17,26 +17,25 @@ Worked solutions for all 50 November 2021 HPGE questions. Each problem includes 
   <path d="M301 258 V265 Q301 281 317 281 H412 Q428 281 428 265 V145" fill="none" stroke="#d7a34b" stroke-width="10"/>
   <path d="M437 145 V54" stroke="#34495e" stroke-width="4"/><text x="457" y="61" font-size="22" fill="#243b53">open</text>
   <circle cx="292" cy="250" r="7" fill="#087e8b"/><text x="253" y="242" font-size="22" fill="#243b53">C</text><text x="449" y="151" font-size="22" fill="#243b53">D</text>
-  <line x1="500" y1="112" x2="500" y2="145" stroke="#243b53" stroke-width="2"/><path d="M494 120 L500 112 L506 120 M494 137 L500 145 L506 137" fill="none" stroke="#243b53" stroke-width="2"/><text x="515" y="134" font-size="21" fill="#243b53">h</text>
-  <line x1="500" y1="145" x2="500" y2="250" stroke="#243b53" stroke-width="2"/><path d="M494 153 L500 145 L506 153 M494 242 L500 250 L506 242" fill="none" stroke="#243b53" stroke-width="2"/><text x="515" y="205" font-size="21" fill="#243b53">d</text>
+  <line x1="500" y1="112" x2="500" y2="145" stroke="#243b53" stroke-width="2"/><path d="M494 120 L500 112 L506 120 M494 137 L500 145 L506 137" fill="none" stroke="#243b53" stroke-width="2"/><text x="515" y="134" font-size="17" fill="#243b53">125 mm</text>
+  <line x1="500" y1="145" x2="500" y2="250" stroke="#243b53" stroke-width="2"/><path d="M494 153 L500 145 L506 153 M494 242 L500 250 L506 242" fill="none" stroke="#243b53" stroke-width="2"/><text x="515" y="205" font-size="17" fill="#243b53">375 mm</text>
   <text x="365" y="318" text-anchor="middle" font-size="18" fill="#72521f">liquid B (SG 13.6)</text>
 </svg>
 
-**Solution:** Starting at the open mercury surface, balance pressure down through mercury and up through water to the conduit tap:
+**Solution:** Use gauge pressure and move from the atmospheric free surface D down 0.375 m through mercury, then up 0.250 m through water to tap A. The water rise is (0.375-0.125=0.250) m because A is 0.125 m below D:
 
 \[
-p_A=\gamma_w\left[SG_{Hg}d-(h+d)\right]
-=9.81[13.6(0.375)-(0.125+0.375)]
-=45.13\ \text{kPa}.
+p_A=\gamma_w\left[SG_{Hg}(0.375)-(0.375-0.125)\right]
+=9.81\left[13.6(0.375)-0.250\right]
+=47.58\ \text{kPa}.
 \]
 
-**Answer: 45.13 kPa (C).**
+**Answer: 47.58 kPa.** The listed/keyed result 45.13 kPa comes from subtracting a 0.500 m water column; that height is not the interface-to-tap elevation implied by the stated levels.
 
 ### 2. Specific weight of floating timber
 **Problem 2:** A wooden prism with a 250 mm by 250 mm cross-section and length 3.00 m floats upright in water inside a cylindrical container of diameter 1.00 m and height 5.00 m, filled to a depth of 3.00 m. Two-thirds of the timber length is above the water. Determine the timber’s specific weight in kN/m³.
 
 **Solution:**
-
 
 The timber has one-third of its length submerged. For a uniform floating body, submerged volume fraction equals the ratio of its specific weight to water's:
 
@@ -50,7 +49,6 @@ The timber has one-third of its length submerged. For a uniform floating body, s
 **Problem 3:** A 1 m³ volume of water experiences a pressure increase of 20 MPa. If water’s bulk modulus is 2,200 MPa, determine the change in volume in m³.
 
 **Solution:**
-
 
 Bulk modulus gives \(K=\Delta p/(|\Delta V|/V)\). For \(V=1\ \text{m}^3\):
 
@@ -68,7 +66,6 @@ The pressure increase makes the volume decrease.
 
 **Solution:**
 
-
 Since velocity head is proportional to velocity squared, increasing velocity by a factor of 1.5 multiplies the head by \(1.5^2\):
 
 \[
@@ -82,8 +79,7 @@ h_{v2}=5(1.5)^2=11.25\ \text{m}.
 
 **Solution:**
 
-
-A rapid change in moving water's velocity produces a pressure surge known as **water hammer**.
+For a rapid velocity change, the Joukowsky relation is \(\Delta p=\rho a\Delta V\); the resulting pressure wave is called **water hammer**.
 
 **Answer: water hammer (A).**
 
@@ -92,8 +88,7 @@ A rapid change in moving water's velocity produces a pressure surge known as **w
 
 **Solution:**
 
-
-The line joining the elevations of liquid in open piezometer tubes is the **hydraulic grade line**.
+At each piezometer, the water level is the piezometric elevation \(H=z+p/\gamma\). Joining those levels gives the **hydraulic grade line**.
 
 **Answer: hydraulic grade line (D).**
 
@@ -101,7 +96,6 @@ The line joining the elevations of liquid in open piezometer tubes is the **hydr
 **Problem 7:** At an elevation above sea level, a mercury barometer reads 700 mm. Determine the equivalent water-barometer reading in millimeters.
 
 **Solution:**
-
 
 At equal pressure, \(\gamma_{Hg}h_{Hg}=\gamma_wh_w\), so:
 
@@ -116,7 +110,6 @@ h_w=13.6(700\ \text{mm})=9520\ \text{mm}.
 
 **Solution:**
 
-
 \[
 p_{atm}=SG_{Hg}\gamma_wh_{Hg}
 =13.6(9.81)(0.700)=93.39\ \text{kPa}.
@@ -128,7 +121,6 @@ p_{atm}=SG_{Hg}\gamma_wh_{Hg}
 **Problem 9:** At the elevation where a mercury barometer reads 700 mm, estimate the elevation above sea level under normal atmospheric conditions. Neglect vapor pressure and take the unit weight of air as 12 N/m³.
 
 **Solution:**
-
 
 The keyed method uses the local barometer pressure directly:
 
@@ -164,7 +156,6 @@ F=\gamma_w\bar yA=9.81(0.4)(1.2)=4.71\ \text{kN}.
 
 **Solution:**
 
-
 For a triangle with its base at the free surface, \(I_G=bh^3/36\). The centroidal depth is \(\bar y=h/3\), therefore:
 
 \[
@@ -179,7 +170,6 @@ e=\frac{I_G}{A\bar y}
 
 **Solution:**
 
-
 \[
 y_{CP}=\bar y+e=0.400+0.200=0.600\ \text{m}.
 \]
@@ -189,8 +179,13 @@ y_{CP}=\bar y+e=0.400+0.200=0.600\ \text{m}.
 ### 13. Buoy volume above liquid
 **Problem 13:** A wooden buoy with specific gravity 0.75 floats in a liquid with specific gravity 0.85. What percentage of the buoy’s total volume lies above the liquid surface?
 
-**Solution:**
+<svg class="figure" viewBox="0 0 560 180" role="img" aria-labelledby="buoy-title buoy-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="buoy-title">Floating buoy with submerged and exposed volume</title>
+  <desc id="buoy-desc">A buoy floats in a liquid. Its submerged volume is less than its total volume because the buoy specific gravity, 0.75, is below the liquid specific gravity, 0.85. Shape is schematic and is not provided by the problem.</desc>
+  <line x1="45" y1="90" x2="515" y2="90" stroke="#2487a8" stroke-width="4"/><rect x="215" y="38" width="120" height="105" rx="8" fill="#c7b69a" stroke="#34495e" stroke-width="3"/><rect x="219" y="93" width="112" height="46" fill="#8cc8df" opacity=".7"/><text x="275" y="72" text-anchor="middle" font-size="16" fill="#243b53">above</text><text x="275" y="121" text-anchor="middle" font-size="16" fill="#243b53">submerged</text><text x="410" y="78" font-size="16" fill="#243b53">liquid surface</text><text x="275" y="168" text-anchor="middle" font-size="15" fill="#243b53">schematic; not to scale</text>
+</svg>
 
+**Solution:**
 
 The submerged fraction is \(SG_b/SG_l=0.75/0.85=0.88235\). Thus the exposed fraction is:
 
@@ -205,7 +200,6 @@ The submerged fraction is \(SG_b/SG_l=0.75/0.85=0.88235\). Thus the exposed frac
 
 **Solution:**
 
-
 The exposed volume is 0.045 m³, so total volume is \(0.045/0.11765=0.3825\ \text{m}^3\). Then:
 
 \[
@@ -218,7 +212,6 @@ W=SG_b\gamma_wV=0.75(9.81)(0.3825)=2.81\ \text{kN}.
 **Problem 15:** For the buoy described in Problems 13–14, determine the vertical force required to submerge it completely, in kN.
 
 **Solution:**
-
 
 At full immersion, the additional downward force equals the difference between liquid buoyancy and the buoy's weight:
 
@@ -234,8 +227,7 @@ F=(SG_l-SG_b)\gamma_wV
 
 **Solution:**
 
-
-The apparent mass drops by \(45-30=15\ \text{kg}\) on immersion:
+Treat the stated kilogram readings as mass-equivalent weight readings. Their 15 kg difference is the displaced-water mass equivalent, so:
 
 \[
 F_B=15(9.81)=147\ \text{N}.
@@ -247,7 +239,6 @@ F_B=15(9.81)=147\ \text{N}.
 **Problem 17:** For the stone described in Problem 16, determine its volume in cubic meters.
 
 **Solution:**
-
 
 Using fresh-water unit weight \(9810\ \text{N/m}^3\):
 
@@ -262,7 +253,6 @@ V=\frac{F_B}{\gamma_w}=\frac{147}{9810}=0.0150\ \text{m}^3.
 
 **Solution:**
 
-
 The stone mass is 45 kg and its displaced water mass is 15 kg:
 
 \[
@@ -274,33 +264,40 @@ SG_s=\frac{45}{15}=3.0.
 ### 19. Velocity in the larger series pipe
 **Problem 19:** A water-supply line joins a 5,500 m long, 300 mm diameter pipe to a 3,660 m long, 450 mm diameter pipe, connecting a reservoir to the end of the line. The elevation difference from the reservoir water surface to the center of the 300 mm pipe at the outlet is 45.7 m. Neglect outlet velocity head and other entrance losses; use a friction factor of 0.02 for both pipes. Determine the flow velocity in the larger pipe in m/s.
 
+<svg class="figure" viewBox="0 0 680 190" role="img" aria-labelledby="series-pipe-title series-pipe-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="series-pipe-title">Two pipe sizes in series from a reservoir</title>
+  <desc id="series-pipe-desc">A reservoir feeds the 3,660 meter, 450 millimeter pipe and then the 5,500 meter, 300 millimeter pipe, which is identified as the outlet section in the question. Flow rate is common to both. The stated 45.7 meter head difference is used in the energy balance. Schematic, not to scale.</desc>
+  <path d="M25 60H125V160H25Z" fill="#dceef5" stroke="#34495e" stroke-width="3"/><line x1="25" y1="84" x2="125" y2="84" stroke="#2487a8" stroke-width="3"/><text x="75" y="48" text-anchor="middle" font-size="18" fill="#243b53">reservoir</text>
+  <path d="M125 120H330" stroke="#8cc8df" stroke-width="30"/><path d="M330 120H630" stroke="#8cc8df" stroke-width="18"/><line x1="150" y1="120" x2="290" y2="120" stroke="#243b53" stroke-width="2"/><path d="M282 114L294 120L282 126" fill="none" stroke="#243b53" stroke-width="2"/>
+  <text x="228" y="92" text-anchor="middle" font-size="17" fill="#243b53">L = 3,660 m · D = 0.450 m</text><text x="480" y="83" text-anchor="middle" font-size="17" fill="#243b53">L = 5,500 m · D = 0.300 m</text>
+  <line x1="647" y1="84" x2="647" y2="120" stroke="#243b53" stroke-width="2"/><path d="M641 92L647 84L653 92M641 112L647 120L653 112" fill="none" stroke="#243b53" stroke-width="2"/><text x="662" y="108" font-size="16" fill="#243b53">45.7 m</text><text x="620" y="159" text-anchor="end" font-size="16" fill="#243b53">300 mm outlet</text>
+</svg>
+
 **Solution:**
 
-
-Apply Darcy–Weisbach to both series pipes. With \(Q\) common to both, the 45.7 m head difference gives:
+For pipes in series, continuity gives the same discharge \(Q\) in each. With the stated 45.7 m available head assigned to friction and the outlet velocity head neglected, Darcy–Weisbach gives:
 
 \[
 45.7=\frac{8fQ^2}{\pi^2g}\left(\frac{L_1}{D_1^5}+\frac{L_2}{D_2^5}\right),
 \]
 
-where \((L_1,D_1)=(3660\ \text{m},0.45\ \text{m})\), \((L_2,D_2)=(5500\ \text{m},0.30\ \text{m})\), and \(f=0.02\). This gives \(Q\approx0.106\ \text{m}^3/\text{s}\). Therefore:
+where the stated pipe data are \((L,D)=(5500\ \text{m},0.300\ \text{m})\) and \((3660\ \text{m},0.450\ \text{m})\), with \(f=0.02\) and \(g=9.81\ \text{m/s}^2\). Substitution gives \(Q=0.1060\ \text{m}^3/\text{s}\). The larger-pipe area is \(A_{450}=\pi(0.450)^2/4=0.1590\ \text{m}^2\), so:
 
 \[
-v_{450}=\frac{Q}{\pi(0.45)^2/4}\approx0.665\ \text{m/s}.
+v_{450}=\frac{0.1060}{0.1590}=0.666\ \text{m/s}.
 \]
 
-**Answer: 0.665 m/s (D).**
+**Computed answer: 0.666 m/s.** The transcribed key lists 0.665 m/s, consistent to the precision of the problem data.
 
 ### 20. Velocity in the smaller series pipe
 **Problem 20:** For the series pipeline described in Problem 19, determine the flow velocity in the smaller pipe in m/s.
 
 **Solution:**
 
-
-The same discharge passes through the 300 mm pipe:
+Continuity gives \(Q=0.1060\ \text{m}^3/\text{s}\) in the 300 mm pipe. Its area is \(A_{300}=\pi(0.300)^2/4=0.07069\ \text{m}^2\):
 
 \[
-v_{300}=\frac{0.106}{\pi(0.30)^2/4}\approx1.50\ \text{m/s}.
+v_{300}=\frac{0.1060}{0.07069}=1.50\ \text{m/s}.
 \]
 
 **Answer: 1.50 m/s (A).**
@@ -310,11 +307,10 @@ v_{300}=\frac{0.106}{\pi(0.30)^2/4}\approx1.50\ \text{m/s}.
 
 **Solution:**
 
-
-From the head-loss balance in Q19:
+Substitute the two stated pipe data sets, \(f=0.02\), \(g=9.81\ \text{m/s}^2\), and available head \(45.7\ \text{m}\) into the series-pipe head-loss balance from Problem 19:
 
 \[
-Q\approx0.106\ \text{m}^3/\text{s}.
+Q=\sqrt{\frac{45.7\pi^2(9.81)}{8(0.02)\left[5500/(0.300)^5+3660/(0.450)^5\right]}}=0.1060\ \text{m}^3/\text{s}.
 \]
 
 **Answer: 0.106 m³/s (C).**
@@ -322,17 +318,23 @@ Q\approx0.106\ \text{m}^3/\text{s}.
 ### 22. Flow in the 600 mm parallel branch
 **Problem 22:** A 1,500 mm main carries 2.15 m³/s to a junction, where flow divides between a 300 m long, 1,200 mm branch and a 1,220 m long, 600 mm branch; the branches rejoin and continue through a 1,500 mm pipe. The friction factors for the 1,500 mm, 1,200 mm, and 600 mm pipes are 0.02, 0.022, and 0.024, respectively. Determine the discharge in the 600 mm branch in m³/s.
 
+<svg class="figure" viewBox="0 0 680 210" role="img" aria-labelledby="parallel-pipe-title parallel-pipe-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="parallel-pipe-title">Two parallel branches between common junctions</title>
+  <desc id="parallel-pipe-desc">A 1,500 millimeter main carrying 2.15 cubic meters per second splits into a 300 meter, 1,200 millimeter branch and a 1,220 meter, 600 millimeter branch, then rejoins. Schematic; branch layout is illustrative.</desc>
+  <path d="M35 100H160M520 100H645" stroke="#8cc8df" stroke-width="20"/><circle cx="160" cy="100" r="8" fill="#087e8b"/><circle cx="520" cy="100" r="8" fill="#087e8b"/><path d="M160 100C235 100 245 48 320 48S440 100 520 100" fill="none" stroke="#8cc8df" stroke-width="18"/><path d="M160 100C235 100 245 160 320 160S440 100 520 100" fill="none" stroke="#8cc8df" stroke-width="11"/>
+  <text x="94" y="76" text-anchor="middle" font-size="16" fill="#243b53">Q = 2.15 m³/s</text><text x="340" y="35" text-anchor="middle" font-size="16" fill="#243b53">300 m · D = 1.20 m · f = 0.022</text><text x="340" y="194" text-anchor="middle" font-size="16" fill="#243b53">1,220 m · D = 0.60 m · f = 0.024</text>
+</svg>
+
 **Solution:**
 
-
-For parallel branches, head losses are equal. Let \(Q_{1200}+Q_{600}=2.15\ \text{m}^3/\text{s}\). Using Darcy–Weisbach in discharge form and canceling the common factor \(8/(\pi^2g)\):
+The two branches have equal friction head loss and carry the stated total flow, so \(Q_{1200}+Q_{600}=2.15\ \text{m}^3/\text{s}\). Darcy–Weisbach in discharge form (after canceling the common factor \(8/(\pi^2g)\)) gives:
 
 \[
 \frac{(0.022)(300)Q_{1200}^2}{1.2^5}
 =\frac{(0.024)(1220)Q_{600}^2}{0.6^5}.
 \]
 
-Solving with continuity gives \(Q_{1200}\approx1.984\) and \(Q_{600}\approx0.166\ \text{m}^3/\text{s}\).
+Solving the equal-loss equation together with continuity gives \(Q_{1200}=1.984\ \text{m}^3/\text{s}\) and \(Q_{600}=0.1665\ \text{m}^3/\text{s}\).
 
 **Answer: 0.166 m³/s (D).**
 
@@ -341,9 +343,9 @@ Solving with continuity gives \(Q_{1200}\approx1.984\) and \(Q_{600}\approx0.166
 
 **Solution:**
 
-
+Continuity at the junction requires \(Q_{1200}+Q_{600}=2.15\ \text{m}^3/\text{s}\). Using \(Q_{600}=0.1665\ \text{m}^3/\text{s}\) from the equal-head-loss solution in Problem 22:
 \[
-Q_{1200}=2.15-0.166=1.984\ \text{m}^3/\text{s}.
+Q_{1200}=2.15-0.1665=1.984\ \text{m}^3/\text{s}.
 \]
 
 **Answer: 1.984 m³/s (A).**
@@ -353,9 +355,9 @@ Q_{1200}=2.15-0.166=1.984\ \text{m}^3/\text{s}.
 
 **Solution:**
 
-
+For the 600 mm branch, \(A=\pi(0.600)^2/4=0.2827\ \text{m}^2\) and \(Q=0.1665\ \text{m}^3/\text{s}\) from Problem 22:
 \[
-v=\frac{Q}{A}=\frac{0.166}{\pi(0.6)^2/4}=0.589\ \text{m/s}.
+v=\frac{Q}{A}=\frac{0.1665}{0.2827}=0.589\ \text{m/s}.
 \]
 
 **Answer: 0.59 m/s (B).**
@@ -363,16 +365,26 @@ v=\frac{Q}{A}=\frac{0.166}{\pi(0.6)^2/4}=0.589\ \text{m/s}.
 ### 25. Flow in a Hazen–Williams pipeline
 **Problem 25:** A single pipeline connects two junctions with pressure heads of 70 m and 45 m. Three parallel pipes between them have dimensions: pipe 1, 300 mm diameter and 3,000 m long; pipe 2, 200 mm diameter and 1,300 m long; and pipe 3, 250 mm diameter and 2,500 m long. Using the Hazen–Williams formula with C = 110 for all pipes, determine the flow in pipe 1 in m³/s.
 
+<svg class="figure" viewBox="0 0 680 210" role="img" aria-labelledby="hw-pipe-title hw-pipe-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="hw-pipe-title">Three Hazen–Williams pipes in parallel</title>
+  <desc id="hw-pipe-desc">Three separate pipes connect common junctions whose pressure heads are 70 meters and 45 meters. Pipe dimensions are listed on the branches. Schematic, not to scale.</desc>
+  <path d="M55 102H160M520 102H625" stroke="#8cc8df" stroke-width="20"/><circle cx="160" cy="102" r="8" fill="#087e8b"/><circle cx="520" cy="102" r="8" fill="#087e8b"/>
+  <path d="M160 102Q340 36 520 102" fill="none" stroke="#8cc8df" stroke-width="18"/><path d="M160 102H520" fill="none" stroke="#8cc8df" stroke-width="13"/><path d="M160 102Q340 168 520 102" fill="none" stroke="#8cc8df" stroke-width="10"/>
+  <text x="90" y="82" text-anchor="middle" font-size="16" fill="#243b53">70 m</text><text x="590" y="82" text-anchor="middle" font-size="16" fill="#243b53">45 m</text><text x="340" y="35" text-anchor="middle" font-size="16" fill="#243b53">Pipe 1: 3,000 m · 0.300 m</text><text x="340" y="108" text-anchor="middle" font-size="15" fill="#243b53">Pipe 2: 1,300 m · 0.200 m</text><text x="340" y="190" text-anchor="middle" font-size="16" fill="#243b53">Pipe 3: 2,500 m · 0.250 m · C = 110 each</text>
+</svg>
+
 **Solution:**
 
-
-The junction head difference is 25 m. For SI units,
+Both junctions have the stated pressure heads, so the head loss in every parallel branch is \(70-45=25\ \text{m}\). Using SI units and the Hazen–Williams exponent 1.852,
 
 \[
-h_f=\frac{10.67LQ^{1.85}}{C^{1.85}D^{4.87}}.
+h_f=\frac{10.67LQ^{1.852}}{C^{1.852}D^{4.87}}.
 \]
 
-With \(L=3000\ \text{m}\), \(C=110\), and \(D=0.30\ \text{m}\), setting \(h_f=25\ \text{m}\) yields \(Q\approx0.0967\ \text{m}^3/\text{s}\).
+For pipe 1, the prompt gives \(L=3000\ \text{m}\), \(D=0.300\ \text{m}\), and \(C=110\). Solving the equation for discharge:
+\[
+Q_1=\left[\frac{25(110)^{1.852}(0.300)^{4.87}}{10.67(3000)}\right]^{1/1.852}=0.0974\ \text{m}^3/\text{s}.
+\]
 
 **Answer: 0.097 m³/s (B).**
 
@@ -383,39 +395,45 @@ With \(L=3000\ \text{m}\), \(C=110\), and \(D=0.30\ \text{m}\), setting \(h_f=25
 
 **Solution:**
 
-
-Each parallel branch has a 25 m head loss. Hazen–Williams gives
+Each branch connects the same two junctions, so \(h_f=25\ \text{m}\). For pipe 2, \(C=110\), \(D=0.200\ \text{m}\), and \(L=1300\ \text{m}\); rearrange Hazen–Williams:
 
 \[
 Q=\left(\frac{h_fC^{1.852}D^{4.87}}{10.67L}\right)^{1/1.852}.
 \]
 
-For \(C=110\), \(D=0.20\ \text{m}\), and \(L=1300\ \text{m}\), \(Q_2=0.0523\ \text{m}^3/\text{s}\).
+\[
+Q_2=\left[\frac{25(110)^{1.852}(0.200)^{4.87}}{10.67(1300)}\right]^{1/1.852}=0.0527\ \text{m}^3/\text{s}.
+\]
 
-**Answer: 0.052 m³/s (D).**
+**Computed answer: 0.0527 m³/s.**
 
 ### 27. Flow in the 250 mm parallel branch
 **Problem 27:** For the parallel pipeline described in Problem 25, determine the flow in pipe 3 in m³/s.
 
 **Solution:**
 
-
-With the same 25 m head loss, \(D=0.25\ \text{m}\), and \(L=2500\ \text{m}\):
+The common junction head loss is 25 m. For pipe 3, the prompt gives \(C=110\), \(D=0.250\ \text{m}\), and \(L=2500\ \text{m}\):
 
 \[
-Q_3=\left(\frac{25(110)^{1.852}(0.25)^{4.87}}{10.67(2500)}\right)^{1/1.852}
-=0.0660\ \text{m}^3/\text{s}.
+Q_3=\left[\frac{25(110)^{1.852}(0.250)^{4.87}}{10.67(2500)}\right]^{1/1.852}=0.0665\ \text{m}^3/\text{s}.
 \]
 
-**Answer: 0.066 m³/s (B).**
+**Computed answer: 0.0665 m³/s.**
 
 ### 28. Head loss through the channel reach
 **Problem 28:** Water flows at 12 m³/s in an almost level rectangular channel 3 m wide. Over a 5 m reach, the depth increases gradually from 1.0 m to 1.1 m. Determine the head loss in meters.
 
+<svg class="figure" viewBox="0 0 620 190" role="img" aria-labelledby="channel-title channel-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="channel-title">Rectangular channel reach with increasing depth</title>
+  <desc id="channel-desc">A 3 meter wide rectangular channel conveys 12 cubic meters per second over a 5 meter nearly level reach. Flow depth increases from 1.0 to 1.1 meters. Schematic, not to scale.</desc>
+  <path d="M60 130H560" stroke="#34495e" stroke-width="5"/><path d="M60 85H560" stroke="#2487a8" stroke-width="4"/><path d="M60 85L560 65" stroke="#2487a8" stroke-width="4"/><path d="M60 85V130M560 65V130" stroke="#34495e" stroke-width="5"/>
+  <line x1="80" y1="150" x2="540" y2="150" stroke="#243b53" stroke-width="2"/><path d="M88 144L78 150L88 156M532 144L542 150L532 156" fill="none" stroke="#243b53" stroke-width="2"/><text x="310" y="176" text-anchor="middle" font-size="17" fill="#243b53">reach = 5 m · bed nearly level</text>
+  <text x="310" y="52" text-anchor="middle" font-size="17" fill="#243b53">Q = 12 m³/s · width = 3 m</text><text x="65" y="110" font-size="15" fill="#243b53">y₁ = 1.0 m</text><text x="462" y="100" font-size="15" fill="#243b53">y₂ = 1.1 m</text>
+</svg>
+
 **Solution:**
 
-
-For a level bed, the energy loss equals the decrease in depth plus the decrease in velocity head. With \(Q=12\ \text{m}^3/\text{s}\), \(b=3\ \text{m}\), and depths 1.0 m and 1.1 m:
+Apply the energy equation between sections 1 and 2. The bed is nearly level and pressure is hydrostatic, so \(h_L=(y_1-y_2)+(v_1^2-v_2^2)/(2g)\). From the prompt, \(Q=12\ \text{m}^3/\text{s}\), width \(b=3\ \text{m}\), and depths \(y_1=1.0\ \text{m}\), \(y_2=1.1\ \text{m}\):
 
 \[
 v_1=\frac{12}{3(1.0)}=4.00\ \text{m/s},\qquad
@@ -434,7 +452,6 @@ h_L=(1.0-1.1)+\frac{4.00^2-3.636^2}{2g}
 
 **Solution:**
 
-
 Over the 5 m reach,
 
 \[
@@ -448,21 +465,20 @@ S_E=\frac{h_L}{L}=\frac{0.0415}{5}=0.00830.
 
 **Solution:**
 
-
-At depths 1.0 m and 1.1 m, the section areas are \(A_1=3.00\), \(A_2=3.30\ \text{m}^2\), and the hydraulic radii are
+Using the section dimensions from Problem 28, the areas are \(A_1=3.00\) and \(A_2=3.30\ \text{m}^2\); wetted perimeters are \(P_1=3+2(1.0)\) and \(P_2=3+2(1.1)\) m. Thus the hydraulic radii are
 
 \[
 R_1=\frac{3.00}{3+2(1.0)}=0.600\ \text{m},\qquad
 R_2=\frac{3.30}{3+2(1.1)}=0.635\ \text{m}.
 \]
 
-Using the mean-section conveyance with the energy slope from Q29,
+Using mean-section conveyance with \(S_E=0.00830\) from Problem 29 and \(Q=12\ \text{m}^3/\text{s}\),
 
 \[
-Q=\frac{\sqrt{S_E}}{2n}\left(A_1R_1^{2/3}+A_2R_2^{2/3}\right),
+12=\frac{\sqrt{0.00830}}{2n}\left[3.00(0.600)^{2/3}+3.30(0.635)^{2/3}\right],
 \]
 
-which gives \(n\approx0.0172\).
+which gives \(n=0.0174\).
 
 **Answer: 0.017 (D).**
 
@@ -471,8 +487,7 @@ which gives \(n\approx0.0172\).
 
 **Solution:**
 
-
-A rising water table reduces effective stress and can lower the available soil shear resistance.
+In bearing-capacity relations such as \(q_u=cN_c+qN_q+\tfrac12\gamma'BN_\gamma\), a rising water table can reduce the effective surcharge \(q\) and/or effective unit weight \(\gamma'\). The usual result is a lower capacity; the amount depends on the water-table position and soil condition.
 
 **Answer: bearing capacity decreases (C).**
 
@@ -481,8 +496,7 @@ A rising water table reduces effective stress and can lower the available soil s
 
 **Solution:**
 
-
-Soil unit weight, groundwater level, and footing embedment affect bearing capacity. Applied load is compared with capacity in design; it does not determine the soil's capacity.
+Bearing capacity is calculated from soil strength, unit weight, groundwater position, and footing geometry/embedment (for example, \(q_u=cN_c+qN_q+\tfrac12\gamma BN_\gamma\)). The applied load is checked against that capacity; it is not an input defining the soil's capacity.
 
 **Answer: load imposed on the soil (B).**
 
@@ -490,7 +504,6 @@ Soil unit weight, groundwater level, and footing embedment affect bearing capaci
 **Problem 33:** Determine the dry unit weight of soil with void ratio 0.50 and solids specific gravity 2.5, in kN/m³.
 
 **Solution:**
-
 
 \[
 \gamma_d=\frac{G_s\gamma_w}{1+e}
@@ -503,7 +516,6 @@ Soil unit weight, groundwater level, and footing embedment affect bearing capaci
 **Problem 34:** An unconfined compression test on a clay specimen 50 mm in diameter records a failure load of 250 N. Estimate the clay’s cohesion strength in kPa.
 
 **Solution:**
-
 
 For a 50 mm diameter specimen,
 
@@ -519,8 +531,15 @@ For saturated clay in an unconfined test, \(c_u=q_u/2=63.7\ \text{kPa}\).
 ### 35. Offset needed to limit tunnel stress
 **Problem 35:** A subway tunnel is to be built 10 m below ground. A vertical point load of 10 MN acts at the surface. Using Boussinesq’s point-load theory, determine the minimum radial distance between the load line and tunnel alignment so that vertical stress at tunnel level is no more than 5% of the stress directly below the load.
 
-**Solution:**
+<svg class="figure" viewBox="0 0 620 220" role="img" aria-labelledby="tunnel-title tunnel-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="tunnel-title">Point load and tunnel alignment beneath ground</title>
+  <desc id="tunnel-desc">A 10 meganewton vertical point load acts at the ground surface. Tunnel center is 10 meters below ground and horizontally offset by radial distance r. The sketch shows the geometry used in Boussinesq's equation and is not to scale.</desc>
+  <line x1="40" y1="55" x2="580" y2="55" stroke="#607d8b" stroke-width="4"/><text x="48" y="42" font-size="16" fill="#243b53">ground surface</text><line x1="190" y1="15" x2="190" y2="55" stroke="#bd4c45" stroke-width="4"/><path d="M181 43L190 57L199 43" fill="#bd4c45"/><text x="210" y="30" font-size="16" fill="#243b53">P = 10 MN</text>
+  <circle cx="190" cy="165" r="27" fill="#dceef5" stroke="#34495e" stroke-width="3"/><text x="190" y="171" text-anchor="middle" font-size="14" fill="#243b53">tunnel</text><line x1="190" y1="65" x2="190" y2="126" stroke="#243b53" stroke-width="2"/><path d="M184 73L190 63L196 73M184 118L190 128L196 118" fill="none" stroke="#243b53" stroke-width="2"/><text x="202" y="104" font-size="16" fill="#243b53">z = 10 m</text>
+  <line x1="190" y1="205" x2="430" y2="205" stroke="#243b53" stroke-width="2"/><path d="M198 199L188 205L198 211M422 199L432 205L422 211" fill="none" stroke="#243b53" stroke-width="2"/><text x="310" y="199" text-anchor="middle" font-size="16" fill="#243b53">radial offset r</text><circle cx="430" cy="165" r="27" fill="#dceef5" stroke="#34495e" stroke-width="3"/><text x="430" y="171" text-anchor="middle" font-size="14" fill="#243b53">alignment</text>
+</svg>
 
+**Solution:**
 
 For a point load, the Boussinesq stress ratio at equal depth is
 
@@ -543,7 +562,6 @@ The smallest offered distance that meets the limit is **16 m (B)**.
 
 **Solution:**
 
-
 Given \(w=0.32\), \(\gamma=16\ \text{kN/m}^3\), and \(G_s=2.50\):
 
 \[
@@ -564,10 +582,16 @@ S=\frac{wG_s}{e}=0.782.
 **Problem 40:** For the three-layer soil profile described in Problem 39, determine the equivalent vertical permeability in cm/s.
 **Problem 41:** For the three-layer soil profile described in Problem 39, estimate vertical flow per square meter when the hydraulic gradient is 0.50.
 
+<svg class="figure" viewBox="0 0 620 190" role="img" aria-labelledby="layers-title layers-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="layers-title">Three horizontal soil layers</title>
+  <desc id="layers-desc">A profile with three horizontal layers: thicknesses 4, 3, and 5 meters from top to bottom, and the corresponding permeabilities stated in the problem. Horizontal flow is parallel to the layers; vertical flow crosses them in series. Schematic, not to scale.</desc>
+  <rect x="100" y="35" width="420" height="40" fill="#ead7b7" stroke="#715d3a" stroke-width="2"/><rect x="100" y="75" width="420" height="35" fill="#d4e0c4" stroke="#536b48" stroke-width="2"/><rect x="100" y="110" width="420" height="50" fill="#d9c6ae" stroke="#715d3a" stroke-width="2"/>
+  <text x="310" y="61" text-anchor="middle" font-size="15" fill="#243b53">4 m · k₁ = 2.1×10⁻⁴ cm/s</text><text x="310" y="98" text-anchor="middle" font-size="15" fill="#243b53">3 m · k₂ = 3.6×10⁻² cm/s</text><text x="310" y="141" text-anchor="middle" font-size="15" fill="#243b53">5 m · k₃ = 4.2×10⁻⁵ cm/s</text><path d="M30 93H80M80 93L70 87M80 93L70 99" stroke="#087e8b" stroke-width="3" fill="none"/><text x="25" y="80" font-size="14" fill="#243b53">horizontal</text><path d="M565 45V150M559 55L565 45L571 55M559 140L565 150L571 140" stroke="#bd4c45" stroke-width="3" fill="none"/><text x="580" y="103" font-size="14" fill="#243b53">vertical</text>
+</svg>
+
 **Solution:**
 
-
-The scanned table gives thicknesses \(h=(4,3,5)\ \text{m}\) and permeabilities \(k=(2.1\times10^{-4},3.6\times10^{-2},4.2\times10^{-5})\ \text{cm/s}\). The first exponent is faint; reading it as \(-4\) matches the printed key and the following vertical-flow result.
+Using the transcribed thicknesses \(h=(4,3,5)\ \text{m}\) and permeabilities \(k=(2.1\times10^{-4},3.6\times10^{-2},4.2\times10^{-5})\ \text{cm/s}\), the first exponent is taken as \(-4\); it was noted as faint in the prior transcription. The November 2021 source scan is not present among the available images, so that reading cannot be independently checked here.
 
 For flow parallel to layers,
 
@@ -590,7 +614,7 @@ For one square meter and gradient 0.50, using \(1\ \text{m}^2=10^4\ \text{cm}^2\
 
 \[
 Q=k_viA=(8.68\times10^{-5})(0.50)(10^4)
-=0.434\ \text{cm}^3/\text{s}=1.56\ \text{L/h}.
+=0.434\ \text{cm}^3/\text{s}=1.56\ \text{L/h per m}^2.
 \]
 
 **Q40 answer: \(0.000087\) cm/s (D); Q41 answer: 1.562 L/h (B).**
@@ -600,8 +624,13 @@ Q=k_viA=(8.68\times10^{-5})(0.50)(10^4)
 **Problem 43:** For the consolidated-drained triaxial test described in Problem 42, determine shear stress on the failure plane in kPa.
 **Problem 44:** For the consolidated-drained triaxial test described in Problem 42, determine normal stress on the plane of maximum shear in kPa.
 
-**Solution:**
+<svg class="figure" viewBox="0 0 600 230" role="img" aria-labelledby="mohr-title mohr-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="mohr-title">Mohr circle from the stated triaxial stresses</title>
+  <desc id="mohr-desc">Mohr circle on the normal-stress axis, with sigma-three at 240 kilopascals and sigma-one at 690 kilopascals, derived from the stated confining and deviator stresses. The circle shows center 465 kilopascals and radius 225 kilopascals. The zero-cohesion failure-envelope assumption is discussed in the solution.</desc>
+  <line x1="50" y1="165" x2="550" y2="165" stroke="#34495e" stroke-width="2"/><line x1="70" y1="205" x2="70" y2="20" stroke="#34495e" stroke-width="2"/><circle cx="330" cy="165" r="104" fill="#dceef5" fill-opacity=".35" stroke="#087e8b" stroke-width="3"/><circle cx="330" cy="165" r="5" fill="#243b53"/><circle cx="226" cy="165" r="5" fill="#243b53"/><circle cx="434" cy="165" r="5" fill="#243b53"/><text x="226" y="193" text-anchor="middle" font-size="15" fill="#243b53">σ₃ = 240</text><text x="434" y="193" text-anchor="middle" font-size="15" fill="#243b53">σ₁ = 690</text><text x="330" y="153" text-anchor="middle" font-size="15" fill="#243b53">C = 465</text><text x="560" y="171" font-size="15" fill="#243b53">σ (kPa)</text><text x="75" y="26" font-size="15" fill="#243b53">τ</text><text x="330" y="39" text-anchor="middle" font-size="15" fill="#243b53">R = 225 kPa</text>
+</svg>
 
+**Solution:**
 
 The stated confining stress and deviator stress give \(\sigma_3=240\ \text{kPa}\) and \(\sigma_1=240+450=690\ \text{kPa}\). Assuming the zero-cohesion failure envelope used by the source,
 
@@ -617,8 +646,14 @@ The Mohr-circle center and radius are \(C=(690+240)/2=465\ \text{kPa}\) and \(R=
 ### 45. Seepage below the dam
 **Problem 45:** Below a dam, soil permeability is 3 m/day and upstream water is 30 m above downstream water. A flow net has 10 potential drops and 4 flow channels. Determine seepage per meter width of dam in liters per minute.
 
-**Solution:**
+<svg class="figure" viewBox="0 0 640 210" role="img" aria-labelledby="dam-title dam-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="dam-title">Dam foundation with seepage flow-net boundaries</title>
+  <desc id="dam-desc">Upstream water stands 30 meters above downstream water; seepage passes through the permeable foundation beneath the dam. The stated flow net has four flow channels and ten potential drops. No individual flow-net curves are reproduced because their spacing and dam geometry are not supplied. Schematic only.</desc>
+  <path d="M255 55H405L430 150H230Z" fill="#b9c7d1" stroke="#34495e" stroke-width="3"/><path d="M35 80H230V150H35Z" fill="#dceef5" stroke="#34495e" stroke-width="2"/><path d="M430 125H600V150H430Z" fill="#dceef5" stroke="#34495e" stroke-width="2"/><rect x="35" y="150" width="565" height="35" fill="#ead7b7" stroke="#715d3a" stroke-width="2"/>
+  <line x1="70" y1="80" x2="210" y2="80" stroke="#2487a8" stroke-width="3"/><text x="110" y="66" text-anchor="middle" font-size="16" fill="#243b53">upstream</text><text x="510" y="112" text-anchor="middle" font-size="16" fill="#243b53">downstream</text><text x="113" y="47" font-size="16" fill="#243b53">ΔH = 30 m</text><text x="330" y="177" text-anchor="middle" font-size="15" fill="#243b53">permeable foundation · Nf = 4 · Nd = 10</text>
+</svg>
 
+**Solution:**
 
 With hydraulic conductivity \(k=3\ \text{m/day}\), head difference \(H=30\ \text{m}\), four flow channels and ten potential drops:
 
@@ -635,7 +670,6 @@ Converting to liters per minute gives \(36(1000)/(24\cdot60)=25\ \text{L/min per
 
 **Solution:**
 
-
 The upstream pressure is \(9.81(30)=294.3\ \text{kPa}\). With ten equal potential drops, one drop is 29.43 kPa. The heel lies one drop below the upstream boundary:
 
 \[
@@ -649,7 +683,6 @@ p_{heel}=294.3-29.43=264.9\ \text{kPa}.
 
 **Solution:**
 
-
 The 25 m base spans eight of the ten potential drops, leaving one drop on each side of the base. The pressure heads at heel and toe are therefore 27 m and 3 m. The uplift-pressure diagram is trapezoidal:
 
 \[
@@ -662,8 +695,14 @@ U=\gamma_w\left(\frac{27+3}{2}\right)(25)
 ### 48. Uniform bearing pressure under the footing
 **Problem 48:** A circular footing 4 m in diameter supports a column load of 1,800 kN. Determine the bearing pressure exerted on the soil in kPa.
 
-**Solution:**
+<svg class="figure" viewBox="0 0 620 210" role="img" aria-labelledby="footing-title footing-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="footing-title">Circular footing under a centered column load</title>
+  <desc id="footing-desc">A circular footing four meters in diameter supports a centered vertical column load of 1,800 kilonewtons. The plan is schematic.</desc>
+  <circle cx="170" cy="105" r="72" fill="#ead7b7" stroke="#715d3a" stroke-width="3"/><rect x="145" y="80" width="50" height="50" fill="#b9c7d1" stroke="#34495e" stroke-width="2"/><line x1="90" y1="105" x2="250" y2="105" stroke="#243b53" stroke-width="2"/><path d="M98 99L88 105L98 111M242 99L252 105L242 111" fill="none" stroke="#243b53" stroke-width="2"/><text x="170" y="199" text-anchor="middle" font-size="16" fill="#243b53">diameter = 4 m</text>
+  <line x1="170" y1="15" x2="170" y2="63" stroke="#bd4c45" stroke-width="4"/><path d="M161 51L170 65L179 51" fill="#bd4c45"/><text x="188" y="34" font-size="16" fill="#243b53">P = 1,800 kN</text><text x="380" y="93" font-size="17" fill="#243b53">Average bearing pressure:</text><text x="380" y="122" font-size="17" fill="#243b53">q = P / (πD²/4)</text><text x="380" y="151" font-size="16" fill="#243b53">plan · schematic</text>
+</svg>
 
+**Solution:**
 
 The footing area is \(A=\pi(2)^2=12.566\ \text{m}^2\). Thus
 
@@ -678,13 +717,10 @@ q=\frac{1800}{12.566}=143.2\ \text{kPa}.
 
 **Solution:**
 
-
-Using the supplied circular-load relation with \(r=2\ \text{m}\), \(z=6\ \text{m}\):
+For a flexible circular area under uniform pressure, use the supplied relation \(p=q[1-(1+(r/z)^2)^{-3/2}]\). From Problem 48, \(P=1800\ \text{kN}\) and \(A=\pi(2)^2\ \text{m}^2\), so \(q=P/A=143.239\ \text{kPa}\); the radius is \(r=2\ \text{m}\), and the depth is \(z=6\ \text{m}\):
 
 \[
-N=[1+(2/6)^2]^{3/2}=1.171,
-\quad
-p=143.2(1-1/N)=20.9\ \text{kPa}.
+p=143.239\left[1-\frac{1}{[1+(2/6)^2]^{3/2}}\right]=20.94\ \text{kPa}.
 \]
 
 **Answer: 20.94 kPa (D).**
@@ -694,8 +730,7 @@ p=143.2(1-1/N)=20.9\ \text{kPa}.
 
 **Solution:**
 
-
-Set \(p/q=0.10\), so \(1-1/N=0.10\) and \(N=1/0.9\):
+Use the circular-load relation from Problem 49 with \(r=2\ \text{m}\), and set \(p/q=0.10\). Then \(1-[1+(2/z)^2]^{-3/2}=0.10\):
 
 \[
 [1+(2/z)^2]^{3/2}=1/0.9

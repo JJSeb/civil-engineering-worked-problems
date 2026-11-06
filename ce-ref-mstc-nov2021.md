@@ -1,6 +1,6 @@
 # November 2021 MSTC (Questions 1–69)
 
-[← All problem sets](ce-ref.html)
+[← All problem sets](index.html)
 
 ## Questions 1–10
 
@@ -42,15 +42,13 @@ $1576-1137=439$
 
 **Problem:** An experienced roofer can complete a house in 26 hours, while a beginner needs 39 hours for the same house. How long will they take working together?
 
-**Solution:** Their combined rate is
+**Solution:** The governing work-rate relation is $1/t=1/t_1+1/t_2$. For one house, their rates are $1/26$ and $1/39$ house/h, so
 
-$1/26+1/39=5/78$
+\[
+t=\frac{1}{1/26+1/39}=\frac{78}{5}=15.6\text{ h}.
+\]
 
- house/h. Thus
-
-$t=1/(5/78)=15.6$
-
- h. **Answer: 15.6 h (C).**
+**Answer: 15.6 h (C).**
 
 ### 4. Falling object from the Millau Viaduct
 
@@ -99,6 +97,8 @@ $f(-2)=0$
 $f(-2/3)=0$
 
 , the rational pair listed in choice D. **Answer: D.**
+
+More explicitly, synthetic division gives $(x+2)(3x+2)(x^2+2x-2)$. The remaining roots are $-1\pm\sqrt3$, which are irrational, so the only rational roots are $-2$ and $-2/3$.
 
 ### 7. Gompertz model
 
@@ -216,6 +216,8 @@ $106(850)/5280=17.06$
 
  mi. **Answer: 17 mi (A).**
 
+<svg class="figure" viewBox="0 0 520 190" role="img" aria-labelledby="q10-title q10-desc" xmlns="http://www.w3.org/2000/svg"><title id="q10-title">Grid displacement between the intersections</title><desc id="q10-desc">Plan-view schematic, not to scale: the vertical leg is the 90-street difference and the horizontal leg is the 56-avenue difference, each block interval 850 feet. The diagonal denotes straight-line distance, not a driving route.</desc><path d="M65 145H405V42Z" fill="#e8f4f5" stroke="#087e8b" stroke-width="4"/><path d="M385 145v-20h20" fill="none" stroke="#203040" stroke-width="2"/><text x="235" y="174" text-anchor="middle" font-size="18">56 avenue intervals × 850 ft</text><text x="415" y="93" font-size="17">90 street intervals</text><text x="235" y="82" text-anchor="middle" font-size="17">straight-line distance</text></svg>
+
 ## Questions 11–20
 
 ### 11. Triangle angles
@@ -266,6 +268,8 @@ $AB=280\tan(49^\circ50')=331.73$
 
  m. **Answer: A.**
 
+<svg class="figure" viewBox="0 0 430 210" role="img" aria-labelledby="q12-title q12-desc" xmlns="http://www.w3.org/2000/svg"><title id="q12-title">Right-triangle bridge triangulation</title><desc id="q12-desc">The 280 metre offset AC is perpendicular to bridge span AB. Angle ACB is 49 degrees 50 minutes. Schematic, not to scale.</desc><path d="M70 160H203L70 48Z" fill="#edf5f8" stroke="#087e8b" stroke-width="4"/><path d="M70 140h20v20" fill="none" stroke="#203040" stroke-width="2"/><text x="52" y="180" font-size="18">A</text><text x="208" y="180" font-size="18">B</text><text x="50" y="45" font-size="18">C</text><text x="185" y="188" font-size="17">AB bridge span</text><text x="84" y="96" font-size="17">AC = 280 m</text><text x="91" y="77" font-size="16">49°50′</text></svg>
+
 ### 13. Refraction at a water surface
 
 **Problem:** A spotlight beam strikes a pond at an incidence angle of 24.5°. Using Snell’s law, find the refracted angle in water, given refractive indices \(n=1.00\) for air and \(n=1.33\) for water.
@@ -298,15 +302,15 @@ $\theta_r=\sin^{-1}(\sin24.5^\circ/1.33)=18.2^\circ$
 
 **Solution:** Let the horizontal distance from the nearer point B to the tower be \(x\), and tower height \(h\). Then
 
-$h=x\tan21.8^\circ=(x+50)\tan19.9^\circ$
-
-; solving gives
+$h=x\tan21.8^\circ=(x+50)\tan19.9^\circ$. Therefore
 
 \[
-h\approx191
+x=\frac{50\tan19.9^\circ}{\tan21.8^\circ-\tan19.9^\circ}=476.6\text{ ft},\qquad h=x\tan21.8^\circ=190.6\text{ ft}.
 \]
 
- ft. **Answer: C.**
+**Answer: about 191 ft (C).**
+
+<svg class="figure" viewBox="0 0 560 210" role="img" aria-labelledby="q14-title q14-desc" xmlns="http://www.w3.org/2000/svg"><title id="q14-title">Two-station tower geometry</title><desc id="q14-desc">Tower height h is observed at 19.9 degrees from farther station A and 21.8 degrees from nearer station B, 50 feet closer. The drawing uses the calculated dimensions approximately to scale: horizontal distance x from B is 476.6 ft and tower height is 190.6 ft.</desc><path d="M390 75V175M40 175H500M114 175L390 75M140 175L390 75" fill="none" stroke="#087e8b" stroke-width="3"/><path d="M390 160h15v15" fill="none" stroke="#203040" stroke-width="2"/><text x="82" y="200" font-size="16">A (19.9°)</text><text x="136" y="200" font-size="16">B (21.8°)</text><text x="270" y="200" font-size="16">x = 476.6 ft</text><text x="111" y="166" font-size="16">50 ft</text><text x="398" y="130" font-size="17">h = 190.6 ft</text></svg>
 
 ### 15. Circle inscribed in a sector
 
@@ -335,6 +339,8 @@ $\sin30^\circ=r/(24-r)$
 $r=8$
 
  m. **Answer: D.**
+
+<svg class="figure" viewBox="0 0 360 260" role="img" aria-labelledby="q15-title q15-desc" xmlns="http://www.w3.org/2000/svg"><title id="q15-title">Circle tangent inside a sector</title><desc id="q15-desc">A 60 degree sector of radius 24 metres contains a smaller circle tangent to both radial sides and the arc. The circle centre is on the angle bisector. Geometry is drawn to scale.</desc><path d="M65 210L270 210A205 205 0 0 0 167.5 32.4Z" fill="#eef7f5" stroke="#087e8b" stroke-width="3"/><circle cx="183.4" cy="141.7" r="68.3" fill="#fff" stroke="#d79a36" stroke-width="3"/><path d="M65 210L242.6 107.5" stroke="#79909b" stroke-dasharray="5 5"/><text x="170" y="233" text-anchor="middle" font-size="17">R = 24 m</text><text x="190" y="145" font-size="17">r</text><text x="86" y="188" font-size="16">30°</text></svg>
 
 ### 16. Flagstaff height
 
@@ -391,6 +397,8 @@ h\approx375
 $375(0.3048)=114.3$
 
  m. **Answer: B (114.32 m).**
+
+<svg class="figure" viewBox="0 0 440 310" role="img" aria-labelledby="q16-title q16-desc" xmlns="http://www.w3.org/2000/svg"><title id="q16-title">Square courtyard and observer positions</title><desc id="q16-desc">Plan view of a square courtyard with 400 ft sides; O is the inferred observer position, not a source-plotted point. Equal elevation angles at B and C imply equal horizontal distances from O to B and C. The solution places O approximately at (317, 200) ft from A. The corner labels show vertical elevation angles, not plan angles. The square and inferred plan position are drawn to scale; the rays are schematic.</desc><path d="M65 40H305V280H65Z" fill="#f5f8fa" stroke="#087e8b" stroke-width="3"/><circle cx="255.2" cy="160" r="6" fill="#bf6f22"/><path d="M255.2 160L65 40M255.2 160L305 40M255.2 160L305 280" stroke="#79909b" stroke-dasharray="5 5"/><text x="42" y="36" font-size="17">A, elev. 45°</text><text x="309" y="36" font-size="17">B, elev. 60°</text><text x="309" y="300" font-size="17">C, elev. 60°</text><text x="258" y="164" font-size="17">O</text><text x="180" y="32" font-size="16">400 ft</text></svg>
 
 ### 17. Triangle side lengths
 
@@ -488,6 +496,8 @@ $15-15/\sqrt[3]{2}=3.10$
 
  m. **Answer: B.**
 
+<svg class="figure" viewBox="0 0 390 240" role="img" aria-labelledby="q21-title q21-desc" xmlns="http://www.w3.org/2000/svg"><title id="q21-title">Pyramid divided by a parallel cut</title><desc id="q21-desc">A schematic square pyramid of height 15 metres is cut by a plane parallel to its base. The small top pyramid has half the original volume and height 15 divided by cube root of 2; the cut level is measured upward from the base.</desc><path d="M195 25L55 205H335Z" fill="#edf5f8" stroke="#087e8b" stroke-width="3"/><path d="M84 168H306" stroke="#bf6f22" stroke-width="3" stroke-dasharray="7 4"/><path d="M195 25V205" stroke="#79909b" stroke-dasharray="5 4"/><text x="205" y="94" font-size="16">top height = 15/∛2 m</text><text x="205" y="191" font-size="16">cut is 3.10 m above base</text><text x="188" y="227" font-size="16">base</text></svg>
+
 ### 22. Moon surface area
 
 **Problem:** The Moon’s radius is 1,080 miles. Use the sphere relation \(r=\sqrt{A/(4\pi)}\) to find its surface area, rounded to the nearest square mile.
@@ -545,6 +555,8 @@ $36=4f(2)$
 $f=4.5$
 
  m. **Answer: B.**
+
+<svg class="figure" viewBox="0 0 520 220" role="img" aria-labelledby="q24-title q24-desc" xmlns="http://www.w3.org/2000/svg"><title id="q24-title">Parabolic dish cross-section</title><desc id="q24-desc">Parabola vertex at origin, rim at x equals plus or minus 6 metres and y equals 2 metres; focus lies on the axis 4.5 metres above the vertex, beyond the 2 metre rim depth. Cross-section is drawn to a common scale.</desc><path d="M80 120Q260 240 440 120" fill="none" stroke="#087e8b" stroke-width="4"/><path d="M260 185V35" stroke="#79909b" stroke-dasharray="5 5"/><circle cx="260" cy="45" r="6" fill="#bf6f22"/><text x="270" y="50" font-size="17">F, f = 4.5 m</text><text x="220" y="205" font-size="16">vertex; rim depth 2 m</text><text x="42" y="112" font-size="15">rim radius 6 m</text></svg>
 
 ### 25. Vector magnitude and direction
 
@@ -614,6 +626,8 @@ $b=5\sqrt2=7.07$
 
  ft. **Answer: D (7.1 ft).**
 
+<svg class="figure" viewBox="0 0 420 220" role="img" aria-labelledby="q27-title q27-desc" xmlns="http://www.w3.org/2000/svg"><title id="q27-title">Triangular trough end section</title><desc id="q27-desc">Isosceles triangular end has equal sloping sides of 5 feet, top width b and altitude determined by a right triangle. The trough extends 25 feet perpendicular to this section.</desc><path d="M75 45L335 45L205 190Z" fill="#edf5f8" stroke="#087e8b" stroke-width="4"/><path d="M205 45V190M205 175h15v15" stroke="#79909b" stroke-dasharray="5 4" fill="none"/><text x="198" y="32" font-size="17">b</text><text x="104" y="112" font-size="17">5 ft</text><text x="272" y="112" font-size="17">5 ft</text><text x="216" y="123" font-size="16">height</text><text x="205" y="213" text-anchor="middle" font-size="16">section; trough length = 25 ft</text></svg>
+
 ### 28. Falling water level in cone
 
 **Problem:** Water drains from an inverted right circular cone, 10 m high with base radius 4 m, into a right circular cylinder of radius 6 m and height 8 m. The outflow is 15 m³/min. Find the rate at which the water level falls in the cone when its water depth is 5 m.
@@ -643,6 +657,8 @@ $dV/dt=-15\,\mathrm{m^3/min}$
 $dh/dt=-15/[0.16\pi(25)]=-1.19\,\mathrm{m/min}$
 
 . **Answer: C.**
+
+<svg class="figure" viewBox="0 0 460 230" role="img" aria-labelledby="q28-title q28-desc" xmlns="http://www.w3.org/2000/svg"><title id="q28-title">Inverted cone draining into a cylinder</title><desc id="q28-desc">Water depth h is measured upward from the cone tip. The full cone is 10 metres high with 4 metre base radius; outflow is 15 cubic metres per minute. The receiving cylinder is 6 metres radius and 8 metres high. Diagram schematic.</desc><path d="M70 35L112 180L155 35M70 35H155M260 35V180H390V35" fill="none" stroke="#087e8b" stroke-width="3"/><path d="M91 107L133 107L112 180Z" fill="#a9d8e7" stroke="#4b91a7" stroke-width="2"/><text x="43" y="115" font-size="16">h=5 m</text><text x="80" y="25" font-size="15">R=4 m</text><text x="95" y="198" font-size="15">H=10 m</text><text x="270" y="198" font-size="13">cylinder R=6 m, H=8 m</text><text x="197" y="105" font-size="17">15 m³/min →</text></svg>
 
 ### 29. Instantaneous velocity
 
@@ -690,6 +706,8 @@ $1\,\mathrm{hp}=0.746\,\mathrm{kW}$
 
 . **Answer: D (98.5 hp).**
 
+<svg class="figure" viewBox="0 0 420 190" role="img" aria-labelledby="q30-title q30-desc" xmlns="http://www.w3.org/2000/svg"><title id="q30-title">Car climbing a 10 degree slope</title><desc id="q30-desc">A car travels uphill at constant speed on a 10 degree incline. The driving force points uphill; the combined gravitational component mg sine 10 degrees and stated 750 newton retarding force point downhill. Schematic, not to scale.</desc><path d="M45 150L365 93.6" stroke="#087e8b" stroke-width="4"/><rect x="177" y="101" width="54" height="22" rx="4" transform="rotate(-10 204 112)" fill="#dce9ee" stroke="#203040" stroke-width="2"/><circle cx="185" cy="125" r="5" fill="#203040"/><circle cx="224" cy="118" r="5" fill="#203040"/><path d="M205 92L262 82M262 82l-11-3m11 3-9 8" fill="none" stroke="#087e8b" stroke-width="3"/><path d="M205 139L151 149M151 149l10-7m-10 7 11 3" fill="none" stroke="#bf6f22" stroke-width="3"/><text x="263" y="76" font-size="15">driving force</text><text x="48" y="174" font-size="15">10° incline</text><text x="73" y="132" font-size="15">mg sin 10° + 750 N</text></svg>
+
 ## Questions 31–40
 
 ### 31. Loss of gravitational potential energy
@@ -705,6 +723,8 @@ $5\sin30^\circ=2.5$
 $\Delta PE=mg(h_f-h_i)=-5(9.81)(2.5)=-122.6\,\mathrm J$
 
 . **Answer: D (−123 J).** Friction and initial speed do not affect this gravitational potential-energy change.
+
+<svg class="figure" viewBox="0 0 400 190" role="img" aria-labelledby="q31-title q31-desc" xmlns="http://www.w3.org/2000/svg"><title id="q31-title">Box descending a 5 metre incline</title><desc id="q31-desc">A 5 kilogram box moves down a 5 metre incline at 30 degrees. The vertical drop is 5 sine 30 degrees, or 2.5 metres. Schematic; speed and friction are not used for the gravitational potential-energy change.</desc><path d="M55 30L345 197" stroke="#087e8b" stroke-width="4"/><rect x="178" y="86" width="42" height="32" transform="rotate(30 199 102)" fill="#dce9ee" stroke="#203040" stroke-width="2"/><path d="M250 60V145M243 137l7 8 7-8" fill="none" stroke="#bf6f22" stroke-width="3"/><text x="260" y="107" font-size="16">Δy = 2.5 m</text><text x="63" y="70" font-size="16">5 m, 30°</text></svg>
 
 ### 32. Isothermal air-compression power
 
@@ -847,6 +867,8 @@ $1^\circ06'−74^\circ31'=−73^\circ25'$
 \]
 
  modulo 360°. **Answer: B (286°35′).**
+
+<svg class="figure" viewBox="0 0 430 230" role="img" aria-labelledby="q39-title q39-desc" xmlns="http://www.w3.org/2000/svg"><title id="q39-title">Traverse direction calculation at B and C</title><desc id="q39-desc">Triangle ABC has adjusted interior angles. Starting azimuth AB is 54 degrees 10 minutes; reversing gives BA 234 degrees 10 minutes. Applying the adjusted angles gives BC azimuth 181 degrees 06 minutes and CA azimuth 286 degrees 35 minutes. Diagram schematic, not to scale.</desc><path d="M80 160L185 85L183 191Z" fill="#f2f7f8" stroke="#087e8b" stroke-width="3"/><text x="59" y="174" font-size="17">A</text><text x="187" y="78" font-size="17">B</text><text x="185" y="210" font-size="17">C</text><text x="79" y="111" font-size="15">AB 54°10′</text><text x="195" y="137" font-size="15">BC 181°06′</text><text x="95" y="190" font-size="15">CA 286°35′</text><text x="214" y="94" font-size="14">angles adjusted</text></svg>
 
 ### 40. Wave height from steepness
 
@@ -1004,6 +1026,8 @@ D=\frac{10}{2}[(0+100)+(100+300)+(300+250)+(250+150)+(150+0)]
 
 **Answer: A (133 veh·h).**
 
+<svg class="figure" viewBox="0 0 520 230" role="img" aria-labelledby="q47-title q47-desc" xmlns="http://www.w3.org/2000/svg"><title id="q47-title">Queue size over six ten-minute intervals</title><desc id="q47-desc">A queue-size plot starts at zero vehicles at 7:00, then shows period-end queues 0, 100, 300, 250, 150 and 0 at ten-minute spacing through 8:00. The area under the queue curve is accumulated vehicle-minutes; each interval is approximated by a trapezoid.</desc><path d="M55 185H485M55 185L125 185L195 135L265 35L335 60L405 110L475 185" fill="none" stroke="#087e8b" stroke-width="4"/><path d="M55 185L125 185L195 135L265 35L335 60L405 110L475 185Z" fill="#dff0ef"/><text x="52" y="207" font-size="14">7:00</text><text x="450" y="207" font-size="14">8:00</text><text x="72" y="160" font-size="14">0</text><text x="202" y="130" font-size="14">100</text><text x="269" y="30" font-size="14">300</text><text x="337" y="55" font-size="14">250</text><text x="407" y="105" font-size="14">150</text><text x="63" y="25" font-size="14">queue (vehicles)</text><text x="215" y="224" font-size="14">time, 10 min per interval</text></svg>
+
 ### 48. Two-way traffic progression — key conflict
 
 **Problem:** A grid has north–south block length 140 m and east–west block length 240 m. The desired progression speed is 50 km/h east–west. Determine actual two-way progression speeds in both orientations, rounding cycle lengths to the nearest 5 seconds. Use \(C=2NL/s\).
@@ -1033,6 +1057,8 @@ $C=34.56$
 $(2L/C)(3.6)=49.4$
 
  km/h. None of the listed pairs gives both values. **Printed key: C (50.4, 43.2 km/h); the East–West value conflicts with the stated cycle method.**
+
+<svg class="figure" viewBox="0 0 430 210" role="img" aria-labelledby="q48-title q48-desc" xmlns="http://www.w3.org/2000/svg"><title id="q48-title">Rectangular block for traffic progression</title><desc id="q48-desc">Schematic of one rectangular block cell only: 240 metres east-west and 140 metres north-south. The stated desired progression speed is east-west at 50 kilometres per hour. The drawing is to scale.</desc><rect x="95" y="35" width="240" height="140" fill="#f2f7f8" stroke="#087e8b" stroke-width="3"/><path d="M112 65H315M305 59l10 6-10 6" stroke="#bf6f22" stroke-width="3" fill="none"/><text x="215" y="27" text-anchor="middle" font-size="15">east-west = 240 m</text><text x="215" y="198" text-anchor="middle" font-size="15">north-south = 140 m</text><text x="160" y="91" font-size="15">desired progression: 50 km/h →</text></svg>
 
 ### 49. Concrete unit mixes
 
@@ -1180,4 +1206,4 @@ $10.642/0.13025=81.7$
 
 **Solution:** A symmetric histogram need not have one peak, and a symmetric bell-shaped curve need not be normal. A normal curve is bell-shaped and symmetric, so only statement III is true. **Answer: C.**
 
-[← All problem sets](ce-ref.html)
+[← All problem sets](index.html)
