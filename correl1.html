@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MSTC + HPGE Worked Solutions | CVE 405</title>
+  <style>
+    :root{--navy:#17324d;--teal:#087e8b;--ink:#203040;--muted:#617182;--line:#dce4ea;--paper:#fff;--bg:#f3f6f8}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    header{background:var(--navy);color:#fff;padding:28px max(20px,calc((100% - 920px)/2))}header a{color:#fff}
+    main{max-width:920px;margin:auto;padding:20px}.intro,.section,.problem{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+    h1{line-height:1.15;margin:.2em 0}h2{color:var(--navy);margin:0 0 .4em}h3{color:var(--teal);margin:1.2em 0 .3em}
+    .meta{color:#d9e8f2}.note{border-left:4px solid #e2a72e;padding:10px 14px;background:#fff8e8}.answer{font-weight:800;color:#075c68}
+    nav{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}nav a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--navy);text-decoration:none;font-weight:700}
+    #solutions{min-height:300px}.loading{color:var(--muted)}.error{color:#9d1c1c}article.problem{scroll-margin-top:12px}article.problem h3:first-child{margin-top:0}
+    .math{overflow-x:auto}svg{max-width:100%;height:auto}footer{text-align:center;color:var(--muted);padding:20px}
+    @media print{body{background:#fff}header{background:#fff;color:#111;padding:0}header a{color:#111}main{max-width:none;padding:0}.intro,.section,.problem{break-inside:avoid;box-shadow:none}nav{display:none}}
+  </style>
+  <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"],["$$","$$"]],processEscapes:true},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <header><p><a href="index.html">← PSAD Phone Reviewer</a></p><p class="meta">CVE 405 · Correlation 1</p><h1>MSTC + HPGE Worked Solutions</h1><p>Worked calculations from the November 2023 Mathematics and Surveying scan and April 2024 Hydraulics and Geotechnical Engineering scan.</p></header>
+  <main>
+    <section class="intro"><h2>Coverage and source notes</h2><p>The two supplied scans contain 23 MSTC problems and 40 HPGE problems. The MSTC exam document is a partial question set relative to the 75-question, five-hour examination; the HPGE scan is partial relative to the 50-question, four-hour examination. Solutions follow the legible problems in these scans. Values and diagrams were checked against rendered page images; source inconsistencies are called out where found.</p><p>Questions are paraphrased to keep this page focused on solving. Source PDFs and rendered scans are kept out of this public site. Equations use MathJax and need an internet connection to render.</p><nav><a href="#mstc">MSTC · 23 problems</a><a href="#hpge">HPGE · 40 problems</a><a href="#review-notes">Corrections and assumptions</a></nav></section>
+    <section id="solutions" class="section"><p class="loading">Loading solutions…</p></section>
+  </main>
+  <footer>CVE 405 Correlation 1 · Source-page references identify the supplied review scans.</footer>
+  <script>
+    fetch('correl1-solutions.md').then(r=>{if(!r.ok)throw Error('Could not load solution file');return r.text()}).then(md=>{
+      const prepared=md.replace(/\$\$\s*([\s\S]*?)\s*\$\$/g,(_,eq)=>'<div class="math">\\['+eq.trim()+'\\]</div>');
+      document.getElementById('solutions').innerHTML=marked.parse(prepared,{gfm:true,breaks:false});
+      document.querySelectorAll('#solutions h1').forEach((h,i)=>h.id=i===0?'mstc':'hpge');
+      document.querySelectorAll('#solutions h2').forEach(h=>{if(/review notes/i.test(h.textContent))h.id='review-notes'});
+      document.querySelectorAll('#solutions h2').forEach(h=>{if(/^Question/.test(h.textContent))h.classList.add('problem')});
+      if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise();
+      if(location.hash)setTimeout(()=>document.getElementById(location.hash.slice(1))?.scrollIntoView(),250);
+    }).catch(e=>{document.getElementById('solutions').innerHTML='<p class="error">'+e.message+'. Open <a href="correl1-solutions.md">the solution text</a>.</p>'});
+  </script>
+</body>
+</html>
