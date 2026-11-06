@@ -665,6 +665,43 @@ Zero-air-voids line (theoretical full saturation):
 \gamma_{d,ZAV}=\frac{G_s\gamma_w}{1+wG_s}
 \]
 
+Also written as \(\gamma_{ZAV}\), this is the theoretical dry unit weight at \(S_r=1\), for the given water content \(w\) and specific gravity of solids \(G_s\). Use \(w\) as a decimal and \(\gamma_w\) in the desired unit-weight units. The corresponding dry density is
+
+\[
+\rho_{d,ZAV}=\frac{G_s\rho_w}{1+wG_s}
+\]
+
+The measured compaction curve normally lies below the zero-air-voids line. The line is not the laboratory maximum dry unit weight: \(\gamma_{d,\max}\) comes from the compaction test.
+
+**Other saturation levels.** For a specified degree of saturation \(S_r>0\), expressed as a decimal:
+
+\[
+\gamma_d=\frac{G_s\gamma_w}{1+\dfrac{wG_s}{S_r}}
+\]
+
+To recover saturation from measured dry unit weight and water content, first find \(e\), then use the phase relationship:
+
+\[
+e=\frac{G_s\gamma_w}{\gamma_d}-1,\qquad S_r=\frac{wG_s}{e}
+\]
+
+**Air voids.** The fraction of the total specimen volume occupied by air is \(n_a=V_a/V\):
+
+\[
+n_a=1-\frac{\gamma_d}{\gamma_w}\left(\frac{1}{G_s}+w\right)
+\]
+
+Multiply \(n_a\) by 100 for percent air voids. Do not confuse this with the air fraction of the void space, \(V_a/V_v=1-S_r\). A 10% air-voids line is therefore different from a 90% saturation line.
+
+**Example — zero air voids.** If \(G_s=2.70\), \(w=20\%=0.20\), and \(\gamma_w=9.81\,\mathrm{kN/m^3}\):
+
+\[
+\gamma_{d,ZAV}=\frac{2.70(9.81)}{1+0.20(2.70)}
+=17.20\,\mathrm{kN/m^3}
+\]
+
+At this water content, a measured dry unit weight above this value warrants checking the input values, units, and calculations.
+
 Relative compaction:
 
 \[
