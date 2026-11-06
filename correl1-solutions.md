@@ -15,7 +15,11 @@ $$
 \quad\Longrightarrow\quad AB\approx1482.60\text{ m}.
 $$
 
-B is 10° above A’s horizontal level, so its elevation is 1,040 + 1482.60 sin 10° = 1,297.45 m above sea level.
+The line from A to B is 10° above horizontal, so its vertical rise is:
+
+$$
+z_B=1040+(1482.60)\sin10^\circ=1297.45\text{ m above sea level}.
+$$
 
 ## Question 2 — Minimum triangular sale from a square field
 
@@ -23,14 +27,20 @@ B is 10° above A’s horizontal level, so its elevation is 1,040 + 1482.60 sin 
 
 **Solution:**
 
-The field side is 2,261 yd; the tree is 1,898 yd from corner A and 1,009 yd from adjacent corner C. In triangle ABC, the angle (θ) at A follows from the cosine rule:
+Let \(\theta\) be the angle at the corner where the 1,898 yd and 2,261 yd sides meet. The cosine rule gives the angle and the tree’s perpendicular components:
 
 $$
 1009^2=2261^2+1898^2-2(2261)(1898)\cos\theta,
 \qquad \theta\approx26.27^\circ.
 $$
 
-Resolve (AB) relative to side (AC): (b=1898sinθ≈840 yd), and (a=2261-1898cosθ≈559 yd). For the minimum-area fence through the tree, the intercepts on the perpendicular field sides are (2a) and (2b).
+The offsets along and perpendicular to the 2,261 yd side are:
+
+$$
+b=1898\sin\theta\approx840\text{ yd},\qquad a=2261-1898\cos\theta\approx559\text{ yd}.
+$$
+
+For the minimum-area fence through the tree, the intercepts on the perpendicular field sides are \(2a\) and \(2b\).
 
 $$
 A=\frac{(2a)(2b)}2=2ab\approx2(559)(840)=\boxed{939{,}120\text{ yd}^2},
@@ -149,7 +159,19 @@ Friction opposes that clockwise tendency, adding 0.60 N·m; net torque is -1.20 
 
 **Solution:**
 
-The route times include A–B–G–I = 36, A–D–G–I = 32, A–C–E–H = 32, A–C–F–H = 23, and A–C–F–I = 21 time units. The longest route is the critical path: **A-B-G-I**, project duration **36** time units. One route is omitted from the prompt’s list, but it does not affect the longest route.
+Add the durations along each complete route:
+
+$$
+\begin{aligned}
+T_{A-B-G-I}&=7+6+18+5=36,\\
+T_{A-D-G-I}&=7+2+18+5=32,\\
+T_{A-C-E-H}&=7+5+13+7=32,\\
+T_{A-C-F-H}&=7+5+4+7=23,\\
+T_{A-C-F-I}&=7+5+4+5=21.
+\end{aligned}
+$$
+
+The longest route is the critical path: **A-B-G-I**, with project duration **36 time units**. One route is omitted from the prompt’s list, but it does not affect the longest route.
 
 ## Question 11 — Present worth index
 
@@ -174,14 +196,22 @@ $$
 
 **Solution:**
 
-The two curves share radius R; their intersection angles are 42° and 30°, so the tangent lengths are R tan 21° and R tan 15°. The spacing between the PI points is 2,100 ft:
+The two tangent lengths for a common radius are \(T_1=R\tan21^\circ\) and \(T_2=R\tan15^\circ\). The supplied station information and the 2,100 ft spacing used in the prior calculation do not agree transparently, so the station result below retains that stated spacing and flags the station interpretation:
 
 $$
-R(\tan21^\circ+\tan15^\circ)=2100
-\quad\Rightarrow\quad R\approx3221\text{ ft}.
+R=\frac{2100}{\tan21^\circ+\tan15^\circ}=3221\text{ ft},\qquad
+T_1=R\tan21^\circ=1237\text{ ft},\quad T_2=R\tan15^\circ=863\text{ ft}.
 $$
 
-Thus T1 ≈ 1,237 ft and T2 ≈ 863 ft. The first PI is at Sta. 46+00, so PC = 46+00 − 12+37 = 33+63. Curve lengths are L1 ≈ 2,361 ft and L2 ≈ 1,686 ft: **PC ≈33+63, PRC ≈57+24, PT ≈74+10**. Small rounding differences from the printed work are expected.
+Under the prior solution’s first-PI interpretation of Sta. 46+00:
+
+$$
+PC=46+00-12+37=33+63,\quad
+PRC=33+63+23+61=57+24,\quad
+PT=57+24+16+86=74+10.
+$$
+
+The PI stations are stated as 21+00 and 25+00, which do not support the 46+00 interpretation; therefore these stations are conditional on that unresolved interpretation.
 
 ## Question 13 — Gothic-arch width
 
@@ -189,7 +219,13 @@ Thus T1 ≈ 1,237 ft and T2 ≈ 863 ft. The first PI is at Sta. 46+00, so PC = 4
 
 **Solution:**
 
-The diagram gives circle center C=(6,0), radius 10, and point D=(x,3). From (x−6)²+3²=10², x=6−√91≈−3.54 because D is left of the y-axis. If the requested width spans the symmetric arch, W=2√91≈19.08 units. The printed answer doubles 3.54 to report 7.08 ft, which is the width between the y-axis and D mirrored across it; that geometry conflicts with the diagram’s right endpoint at (x=6). The intended width needs clarification.
+The diagram gives circle center \(C=(6,0)\), radius 10, and point \(D=(x,3)\). Since D is left of the y-axis:
+
+$$
+(x-6)^2+3^2=10^2,\qquad x=6-\sqrt{91}\approx-3.54.
+$$
+
+If the requested width spans the symmetric arch, \(W=2\sqrt{91}\approx19.08\) units. The printed answer doubles 3.54 to report 7.08 ft, which is the width between the y-axis and D mirrored across it; that geometry conflicts with the diagram’s right endpoint at \(x=6\). The intended width needs clarification.
 
 ## Question 14 — Three-row flags, upside-down duplicates
 
@@ -264,10 +300,14 @@ The printed work labels 0.65 as the intersection once, then substitutes 0.29. Th
 
 **Solution:**
 
-For a 14 ft by 18 ft room with 8 ft walls, wall area per coat is (2(14)(8)+2(18)(8)=512 ft^2). Two coats require (1,024 ft^2). At 400 ft²/gal:
+Calculate the four-wall area, double it for two coats, then divide by the coverage per gallon:
 
 $$
-V=1024/400=\boxed{2.56\text{ gal}}.
+A_{walls}=2(14)(8)+2(18)(8)=512\text{ ft}^2,\qquad
+A_{2\ coats}=2(512)=1024\text{ ft}^2,
+$$
+$$
+V=\frac{1024\text{ ft}^2}{400\text{ ft}^2/\text{gal}}=2.56\text{ gal}.
 $$
 
 If only whole gallons can be purchased, round up to 3 gallons. No door/window deductions are specified.
@@ -293,11 +333,11 @@ Round up to approximately 43 in. for a whole-inch construction thickness.
 
 **Solution:**
 
-Using 250 cycles/h, 0.57 m³/cycle bucket volume, fill factor 1.0, efficiency 0.95, and 50 productive minutes per hour:
+Use the stated bucket fill factor, cycle output, and productive fraction of each hour:
 
 $$
-Q=250(0.57)(1.0)(0.95)(50)/(60)
-=112.81≈113 loose m^3/h.
+Q=250\,\frac{\text{cycles}}{\text{h}}\,(0.57\,\text{m}^3/\text{cycle})(0.95)\left(\frac{50}{60}\right)
+=112.81\approx113\text{ loose m}^3/\text{h}.
 $$
 
 ## Question 22 — Finishing a screeded concrete surface
@@ -306,7 +346,7 @@ $$
 
 **Solution:**
 
-Bringing the surface to the specified grade is **leveling** (choice c in the scan).
+Bringing the surface to the specified grade is **leveling** (choice C).
 
 ## Question 23 — Premolded inserts for shrinkage cracking
 
@@ -314,7 +354,7 @@ Bringing the surface to the specified grade is **leveling** (choice c in the sca
 
 **Solution:**
 
-Installing premolded inserts to control shrinkage cracking is **jointing** (choice a in the scan).
+Installing premolded inserts to control shrinkage cracking is **jointing** (choice A).
 
 # HPGE — Hydraulics and Geotechnical Engineering
 
@@ -381,15 +421,19 @@ $$
 
 **Solution:**
 
-Confining pressure is σ_3=240 kPa; deviator stress at failure is 450 kPa, so σ_1=690 kPa. Mohr-circle center C=690+240)/2=465 kPa, radius R=690-240)/2=225 kPa. The scan assumes zero cohesion (failure envelope through the origin):
+Confining pressure is \(\sigma_3=240\) kPa and deviator stress at failure is 450 kPa. Assuming zero cohesion (failure envelope through the origin):
 
 $$
-sinφ=R/C=225/465\quad\Rightarrow\quadφ=28.9^\circ.
+\sigma_1=240+450=690\text{ kPa},\qquad C=\frac{690+240}{2}=465\text{ kPa},\qquad R=\frac{690-240}{2}=225\text{ kPa}.
 $$
 
 $$
-τ_f=Rcosφ=225cos28.9^\circ≈197 kPa,
-\qquad σ_n,,max shear=C=465 kPa.
+\sin\phi=\frac{R}{C}=\frac{225}{465},\qquad \phi=28.9^\circ.
+$$
+
+$$
+\tau_f=R\cos\phi=225\cos28.9^\circ\approx197\text{ kPa},\qquad
+\sigma_{n,\,\text{max shear}}=C=465\text{ kPa}.
 $$
 
 ## Question 4 — Hydrostatic force on a vertical circular plate
@@ -398,17 +442,21 @@ $$
 
 **Solution:**
 
-Radius r=0.300 m; the top is 2.0 m below the surface, so centroid depth is bar h=2.30 m, and area A=π0.3)^2=0.2827 m^2.
+The radius is 0.300 m, the centroid depth is 2.00+0.300=2.300 m, and the plate area is calculated below.
 
 $$
-F=γ_w hA=9.81(2.30)(0.2827)=6.38 kN.
+A=\pi(0.300)^2=0.2827\text{ m}^2,\qquad
+F=\gamma_w\bar hA=(9.81)(2.300)(0.2827)=6.38\text{ kN}.
 $$
 
-For a circle, I_G = π(0.6)⁴/64 = 0.006362 m⁴. Center-of-pressure offset below the centroid is
+For a circle, \(I_G=\pi D^4/64\). The center-of-pressure offset is:
 
 $$
-e=(I_G)/(A h)=0.00978 m=9.78 mm,
-\quad h_CP=2.30+0.00978=2310 mm below the surface.
+I_G=\frac{\pi(0.600)^4}{64}=0.006362\text{ m}^4,\qquad
+e=\frac{I_G}{A\bar h}=\frac{0.006362}{(0.2827)(2.300)}=0.00978\text{ m},
+$$
+$$
+h_{CP}=2.300+0.00978=2.310\text{ m below the surface}.
 $$
 
 The prompt gives force in kPa, but the dimensional result is force in kN.
@@ -419,14 +467,19 @@ The prompt gives force in kPa, but the dimensional result is force in kN.
 
 **Solution:**
 
-Use p=0.477QN/z^2, N=[1+r/z)^2]^-2.5, and Q=2500 kN. Directly beneath the load N=1:
+Use \(p=0.477QN/z^2\), where \(N=[1+(r/z)^2]^{-5/2}\). Directly below the load, \(r=0\) and \(N=1\):
 
 $$
-p_z=3=0.477(2500)/3^2=132.5 kPa,
-\qquad p_z=6=0.477(2500)/6^2=33.1 kPa.
+p_{z=3}=\frac{0.477(2500)(1)}{3^2}=132.5\text{ kPa},\qquad
+p_{z=6}=\frac{0.477(2500)(1)}{6^2}=33.1\text{ kPa}.
 $$
 
-At r=3 m,z=6 m, N=[1+3/6)^2]^-2.5=0.5724, so p=0.4772500)0.5724)/36=19.0 kPa.
+At \(r=3\) m and \(z=6\) m:
+
+$$
+N=\left[1+\left(\frac{3}{6}\right)^2\right]^{-5/2}=0.5724,\qquad
+p=\frac{0.477(2500)(0.5724)}{6^2}=19.0\text{ kPa}.
+$$
 
 ## Question 6 — Westergaard point-load stress
 
@@ -434,11 +487,13 @@ At r=3 m,z=6 m, N=[1+3/6)^2]^-2.5=0.5724, so p=0.4772500)0.5724)/36=19.0 kPa.
 
 **Solution:**
 
-For Q=2500 kN,r=3 m,z=6 m, the scan gives N=[1+2r/z)^2]^-1.5 and p=0.318QN/z^2:
+For \(Q=2500\text{ kN}, r=3\text{ m}, z=6\text{ m}\), use the stated Westergaard factors:
 
 $$
-N=[1+2(0.5)^2]^-1.5=0.5443,
-\qquad p=(0.318(2500)(0.5443))/(36)=12.0 kPa.
+N=\left[1+2\left(\frac{r}{z}\right)^2\right]^{-3/2}
+=\left[1+2\left(\frac{3}{6}\right)^2\right]^{-3/2}=0.5443,
+\qquad
+p=\frac{0.318QN}{z^2}=\frac{0.318(2500)(0.5443)}{6^2}=12.0\text{ kPa}.
 $$
 
 ## Question 7 — Water spilled from a rotating open cylinder
@@ -447,13 +502,21 @@ $$
 
 **Solution:**
 
-Diameter 1.3 m, height 2.1 m, initial water depth 2H/3=1.4 m; radius R=0.65 m. Angular speed ω=872π/60)=9.11 rad/s. The center-to-rim free-surface difference is
+The radius is \(R=1.3/2=0.65\) m. Convert the rotation rate and calculate the center-to-rim free-surface difference:
 
 $$
-Δ h=(ω^2R^2)/(2g)=1.787 m.
+\omega=87\left(\frac{2\pi}{60}\right)=9.11\text{ rad/s},\qquad
+\Delta h=\frac{\omega^2R^2}{2g}=\frac{(9.11)^2(0.65)^2}{2(9.81)}=1.787\text{ m}.
 $$
 
-At spill onset, subtract the parabolic depression volume from the cylinder volume to the rim. The initial volume is two-thirds of the cylinder capacity. The resulting loss is approximately **257 L**. The printed solution gives 259 L; the difference is rounding.
+At spill onset, the rim is at the 2.1 m tank height and the parabolic surface has mean depth \(2.1-\Delta h/2\). The initial depth is \( (2/3)(2.1)=1.4\) m, so:
+
+$$
+V_{spill}=\pi R^2\left[1.4-\left(2.1-\frac{1.787}{2}\right)\right]
+=0.257\text{ m}^3\approx257\text{ L}.
+$$
+
+The printed solution gives 259 L; the difference is rounding.
 
 ## Question 8 — Force on rear end of an accelerating tank
 
@@ -488,7 +551,7 @@ Water content is w=M_w/M_s. In organic or very porous soils, water mass can exce
 
 **Solution:**
 
-The scan’s classification table assigns **4–10 blows** to “Loose.” Boundary values overlap neighboring categories in the reproduced table; use the stated loose interval.
+The classification used here assigns **4–10 blows** to “Loose.” Boundary values overlap neighboring categories in the reproduced table; use the stated loose interval.
 
 ## Question 11 — Dry density of saturated soil
 
@@ -545,10 +608,11 @@ $$
 
 **Solution:**
 
-The lower half is 1.0 m high by 1.2 m wide, so A=1.2 m^2. Oil of specific gravity 0.84 lies above fresh water. At the lower-half centroid, pressure head in water units is 0.841.0)+0.50=1.34 m:
+The lower half has area \(A=(1.2)(1.0)=1.2\text{ m}^2\). At its centroid, pressure head in water units is the 1 m oil layer plus 0.5 m of water:
 
 $$
-F=9.81(1.34)(1.2)=15.8 kN.
+h_p=(0.84)(1.0)+0.50=1.34\text{ m},\qquad
+F=\gamma_w h_pA=(9.81)(1.34)(1.2)=15.8\text{ kN}.
 $$
 
 The diagram’s oil specific gravity reads 0.84; OCR text misreads it once as 0.64.
@@ -556,14 +620,6 @@ The diagram’s oil specific gravity reads 0.84; OCR text misreads it once as 0.
 ## Question 16 — Pressure beneath a rectangular footing
 
 **Problem:** A 450 kN column load is carried by a 1.5 m × 2.5 m rectangular footing. Soil pressure spreads at 2 vertical to 1 horizontal. Find pressure 2.7 m below the footing.
-
-**Solution:**
-
-Load 450 kN, footing 1.5×2.5 m, depth 2.7 m. A 2V:1H spread means horizontal spread on each side = 2.7/2 = 1.35 m. Thus the spread plan dimensions are 1.5 + 2(1.35) = 4.2 m and 2.5 + 2(1.35) = 5.2 m:
-
-$$
-q=(450)/(4.2(5.2))=20.6 kPa.
-$$
 
 <svg viewBox="0 0 520 240" role="img" aria-label="Two vertical to one horizontal load spread beneath a rectangular footing" xmlns="http://www.w3.org/2000/svg">
   <rect width="520" height="240" fill="#fff"/>
@@ -576,6 +632,16 @@ $$
   <text x="192" y="36" font-size="15">450 kN</text><text x="110" y="74" font-size="14">1.5 × 2.5 m footing</text>
   <text x="175" y="140" font-size="14">2V : 1H</text><text x="165" y="229" font-size="14">spread area at 2.7 m depth</text>
 </svg>
+
+**Solution:**
+
+Load 450 kN, footing 1.5×2.5 m, depth 2.7 m. A 2V:1H spread means horizontal spread on each side = 2.7/2 = 1.35 m. Thus the spread plan dimensions are 1.5 + 2(1.35) = 4.2 m and 2.5 + 2(1.35) = 5.2 m:
+
+$$
+q=(450)/(4.2(5.2))=20.6 kPa.
+$$
+
+
 
 ## Question 17 — Irrigation hectares served
 
@@ -618,17 +684,24 @@ $$
 
 ## Question 19 — Mountain height from barometer readings
 
-**Problem:** An improvised barometer liquid has weight 0.80 that of mercury. Readings at a mountain base and summit are 950 mm and 600 mm. Find the mountain height in kilometers.
+**Problem:** An improvised barometer liquid has specific weight 0.80 times mercury’s. Readings at a mountain base and summit are 950 mm and 600 mm. If air specific weight is 12 N/m³, find the mountain height in kilometers.
 
 **Solution:**
 
-Barometer liquid specific gravity is 0.80 relative to mercury; readings differ by 0.950-0.600=0.350 m. The liquid specific weight is 0.8013.6)9.81)=106.73 kN/m^3, so pressure difference is 37.36 kPa. With the given constant air specific weight 12 N/m^3=0.012 kN/m^3:
+The barometer reading difference is \(0.950-0.600=0.350\) m. With mercury specific weight \(13.6(9.81)\text{ kN/m}^3\), the improvised liquid and pressure difference are:
+
+$$
+\gamma_L=0.80(13.6)(9.81)=106.73\text{ kN/m}^3,\qquad
+\Delta p=\gamma_L(0.350)=37.36\text{ kPa}.
+$$
+
+Using the given air specific weight \(12\text{ N/m}^3=0.012\text{ kN/m}^3\):
 
 $$
 h=\frac{37.36}{0.012}=3113\text{ m}\approx3.11\text{ km}.
 $$
 
-This follows the problem’s constant-air-density approximation.
+This uses the problem’s constant-air-specific-weight approximation.
 
 ## Question 20 — Weight of floating wood
 
@@ -645,15 +718,6 @@ $$
 ## Question 21 — Force needed to open a hinged gate
 
 **Problem:** A vertical rectangular gate 1.5 m wide and 3 m high is bottom-hinged. Water reaches the top on one side and stands 2 m below the top on the other. Find the horizontal force at the gate top needed to open it.
-
-**Solution:**
-
-Gate width 1.5 m, height 3 m. Left depth is 3 m; right depth is 1 m. Resultants are P_1=9.811.5)3)1.5)=66.22 kN acting 1 m above the bottom, and P_2=9.810.5)1.5)1)=7.36 kN acting 1/3 m above it. Moment equilibrium about the bottom hinge:
-
-$$
-3T+P_2\left(\frac{1}{3}\right)=P_1(1)
-\quad\Rightarrow\quad T=21.26\text{ kN}.
-$$
 
 <svg viewBox="0 0 520 230" role="img" aria-label="Differential water depths and hydrostatic resultants on the hinged vertical gate" xmlns="http://www.w3.org/2000/svg">
   <rect width="520" height="230" fill="#fff"/>
@@ -672,63 +736,77 @@ $$
   <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#bd4a36"/></marker><marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#087e8b"/></marker><marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8b5a1e"/></marker></defs>
 </svg>
 
+**Solution:**
+
+For a vertical rectangular surface of width \(b\) and water depth \(h\), the resultant is \(P=\gamma_wbh^2/2\). The left and right depths are 3 m and 1 m; their resultants act 1 m and 1/3 m above the bottom hinge:
+
+$$
+P_1=9.81(1.5)\frac{3^2}{2}=66.22\text{ kN},\qquad
+P_2=9.81(1.5)\frac{1^2}{2}=7.36\text{ kN}.
+$$
+
+Take moments about the hinge:
+
+$$
+3T+P_2\left(\frac{1}{3}\right)=P_1(1),\qquad
+T=\frac{66.22-7.36/3}{3}=21.26\text{ kN}.
+$$
+
 ## Question 22 — Rectangular canal dimensions at the same discharge
 
 **Problem:** A rectangular irrigation canal is 5.4 m wide and 1.2 m deep, with hydraulic slope 0.001 and roughness 0.013. Find dimensions for a more hydraulically appropriate section that carries the same discharge at the same slope.
 
 **Solution:**
 
-Original section 5.4×1.2 m: A=6.48 m^2,P=7.8 m,R=0.8308 m. Manning gives V=2.148 m/s, so Q=13.92 m^3/s. For the more economical rectangle b=2d: A=2d^2,P=4d,R=d/2. Substitute in Manning’s equation at the same Q,S,n and solve:
+For the original section, calculate the area, wetted perimeter, hydraulic radius, and discharge:
 
 $$
-d≈1.76 m,\qquad b=2d≈3.52 m.
+A_1=(5.4)(1.2)=6.48\text{ m}^2,\quad P_1=5.4+2(1.2)=7.8\text{ m},\quad
+R_1=\frac{6.48}{7.8}=0.8308\text{ m},
+$$
+$$
+V_1=\frac{1}{0.013}(0.8308)^{2/3}(0.001)^{1/2}=2.148\text{ m/s},\qquad
+Q_1=(6.48)(2.148)=13.92\text{ m}^3/\text{s}.
+$$
+For the most economical rectangular section, \(b=2d\), so \(A=2d^2\), \(P=4d\), and \(R_h=d/2\). Set its Manning discharge equal to 13.92 m³/s:
+
+$$
+13.92=\frac{1}{0.013}(2d^2)\left(\frac d2\right)^{2/3}(0.001)^{1/2},
+\qquad d\approx1.76\text{ m},\quad b=2d\approx3.52\text{ m}.
 $$
 
 ## Questions 23–24 — Curved sector gate forces
 
 **Problem (Question 23):** The shown sector gate has a cylindrical surface with radius 8 m and length perpendicular to the page of 10 m. Find the horizontal force on the gate.
 
-**Solution:** The cylindrical gate has radius 8 m, length 10 m, and a 60° sector angle. Its vertical projection height is 8 sin 60° = 6.928 m.
-
-**Horizontal component.** It equals the force on the vertical projected rectangle:
+**Solution:** The vertical projection height is \(8\sin60^\circ\), and its centroid depth is half that height. The horizontal component equals the hydrostatic force on the projected rectangle:
 
 $$
-F_H=\gamma_w\bar h A_{proj}
-=9.81\left(\frac{6.928}{2}\right)(6.928\cdot10)
+h_p=8\sin60^\circ=6.928\text{ m},\qquad
+A_{proj}=(6.928)(10)=69.28\text{ m}^2,
+$$
+$$
+F_H=\gamma_w\bar hA_{proj}
+=9.81\left(\frac{6.928}{2}\right)(69.28)
 =2356\text{ kN}.
 $$
 
 **Problem (Question 24):** For the same shown cylindrical sector gate, radius 8 m and length perpendicular to the page 10 m, find the total vertical force.
 
-**Solution:**
-
-
-
-**Vertical component.** It equals the weight of water above the curved surface. The cross-sectional water area is trapezoid area (4+8)/(2)6.928)=41.57 m^2 minus sector area (60)/(360)π8)^2=33.51 m^2, or 8.06 m². Hence
+**Solution:** The vertical component equals the weight of water above the curved surface. The cross-sectional water area is the trapezoid area minus the 60° sector area:
 
 $$
-F_V=9.81(8.06)(10)=791\text{ kN downward}.
+A_w=\frac{4+8}{2}(6.928)-\frac{60}{360}\pi(8)^2
+=41.57-33.51=8.06\text{ m}^2,
+$$
+$$
+F_V=\gamma_w A_w L=(9.81)(8.06)(10)
+=791\text{ kN downward}.
 $$
 
 ## Question 25 — Inclined-orifice jet range
 
 **Problem:** A water tank has a side inclined 45° to horizontal and water depth 8 m. An orifice on the inclined side is under 5 m head and 3 m vertically above the tank bottom. With velocity coefficient 1.0 and negligible air resistance, find the horizontal ground distance from the orifice center. The diagram and solution give inconsistent vertical distances from the orifice to the ground (the prompt diagram marks a 2 m tank-bottom clearance, while the solution uses 1.2 m); this detail is unresolved.
-
-**Solution:**
-
-The orifice head is 5 m and the velocity coefficient is 1. The jet leaves normal to the 45° tank wall, at 45° above horizontal. The ground is 4.2 m below the orifice (3 m to the tank bottom plus 1.2 m to ground in the diagram).
-
-$$
-v=C_v\sqrt{2gH}=\sqrt{2(9.81)(5)}=9.9045\text{ m/s},\qquad
-v_y=v\sin45^\circ=7.003\text{ m/s}.
-$$
-$$
--4.2=v_yt-\1/2gt^2
-\quad\Rightarrow\quad t=1.88\text{ s},\qquad
-x=v\cos45^\circ t=13.2\text{ m}.
-$$
-
-The diagram below is a schematic redraw of the scanned geometry.
 
 <svg viewBox="0 0 680 250" role="img" aria-label="Redrawn inclined tank, orifice, and projectile path from the source diagram" xmlns="http://www.w3.org/2000/svg">
   <rect width="680" height="250" fill="#fff"/>
@@ -751,6 +829,24 @@ The diagram below is a schematic redraw of the scanned geometry.
   <text x="410" y="230" font-size="15">horizontal range x</text>
   <text x="548" y="210" font-size="14">ground</text>
 </svg>
+
+**Solution:**
+
+The jet speed follows from the 5 m head. It leaves normal to the 45° tank wall, so its launch angle is 45° above horizontal. Using the 4.2 m vertical drop adopted by the diagram and prior calculation:
+
+$$
+v=1.0\sqrt{2(9.81)(5)}=9.9045\text{ m/s},\qquad
+v_y=v\sin45^\circ=7.003\text{ m/s}.
+$$
+$$
+-4.2=v_yt-\frac{1}{2}(9.81)t^2,\qquad
+ t=\frac{v_y+\sqrt{v_y^2+2(9.81)(4.2)}}{9.81}=1.88\text{ s}.
+$$
+$$
+x=v\cos45^\circ t=(9.9045)\cos45^\circ(1.88)=13.2\text{ m}.
+$$
+
+The prompt and diagram give inconsistent orifice-to-ground distances; this result uses the 4.2 m drop shown in the solution schematic.
 
 ## Question 26 — Safe concentric load on a square footing
 

@@ -7,11 +7,6 @@ Worked solutions for all 50 November 2021 HPGE questions. Each problem includes 
 ### 1. Pressure from a mercury manometer
 **Problem 1:** A conduit containing water is connected to a U-tube manometer open to the atmosphere and containing liquid B with specific gravity 13.6. The open-side liquid level is 125 mm above the conduit tap, and the vertical separation between that level and the water–liquid interface is 375 mm. Find the pressure at the conduit tap in kPa.
 
-**Solution:**
-
-
-Starting at the open mercury surface, balance pressure down through mercury and up through water to the conduit tap:
-
 <svg class="figure" viewBox="0 0 640 340" role="img" aria-labelledby="manometer-title manometer-desc" xmlns="http://www.w3.org/2000/svg">
   <title id="manometer-title">U-tube manometer connected to a water conduit</title>
   <desc id="manometer-desc">Water conduit A connects to the left leg of a U-tube containing heavy liquid B. The right leg is open to atmosphere at D. C marks the water-heavy-liquid interface; h is the level difference from A to D, and d is the heavy-liquid column between D and C.</desc>
@@ -26,6 +21,8 @@ Starting at the open mercury surface, balance pressure down through mercury and 
   <line x1="500" y1="145" x2="500" y2="250" stroke="#243b53" stroke-width="2"/><path d="M494 153 L500 145 L506 153 M494 242 L500 250 L506 242" fill="none" stroke="#243b53" stroke-width="2"/><text x="515" y="205" font-size="21" fill="#243b53">d</text>
   <text x="365" y="318" text-anchor="middle" font-size="18" fill="#72521f">liquid B (SG 13.6)</text>
 </svg>
+
+**Solution:** Starting at the open mercury surface, balance pressure down through mercury and up through water to the conduit tap:
 
 \[
 p_A=\gamma_w\left[SG_{Hg}d-(h+d)\right]
@@ -144,17 +141,6 @@ z=\frac{93.39\ \text{kPa}}{0.012\ \text{kN/m}^3}\approx7{,}780\ \text{m}.
 ### 10. Hydrostatic force on a triangular plate
 **Problem 10:** A triangular plate 1.20 m high and 2 m wide is submerged vertically in water, with its base at and parallel to the liquid surface. Determine the total hydrostatic force on one side in kN.
 
-**Solution:**
-
-
-The triangle's base is at the free surface, its area is \(A=bh/2=1.2\ \text{m}^2\), and its centroid is \(h/3=0.4\ \text{m}\) below that surface:
-
-\[
-F=\gamma_w\bar yA=9.81(0.4)(1.2)=4.71\ \text{kN}.
-\]
-
-**Answer: 4.71 kN (D).**
-
 <svg class="figure" viewBox="0 0 560 230" role="img" aria-labelledby="triangle-title triangle-desc" xmlns="http://www.w3.org/2000/svg">
   <title id="triangle-title">Vertical triangular plate with its horizontal base at the water surface</title>
   <desc id="triangle-desc">A vertical triangular plate points downward from a horizontal 2 metre base on the free surface. Its height is 1.2 metres; the centroid lies 0.4 metres below the surface.</desc>
@@ -164,6 +150,14 @@ F=\gamma_w\bar yA=9.81(0.4)(1.2)=4.71\ \text{kN}.
   <line x1="414" y1="60" x2="414" y2="190" stroke="#243b53" stroke-width="2"/><path d="M408 68 L414 60 L420 68 M408 182 L414 190 L420 182" fill="none" stroke="#243b53" stroke-width="2"/><text x="426" y="130" font-size="20" fill="#243b53">h = 1.20 m</text>
   <circle cx="280" cy="103" r="6" fill="#087e8b"/><text x="292" y="109" font-size="18" fill="#243b53">centroid</text>
 </svg>
+
+**Solution:** The triangle's base is at the free surface, its area is \(A=bh/2=1.2\ \text{m}^2\), and its centroid is \(h/3=0.4\ \text{m}\) below that surface:
+
+\[
+F=\gamma_w\bar yA=9.81(0.4)(1.2)=4.71\ \text{kN}.
+\]
+
+**Answer: 4.71 kN (D).**
 
 ### 11. Center-of-pressure offset from centroid
 **Problem 11:** For the triangular plate described in Problem 10, determine the distance of the resultant hydrostatic force from the plate’s centroid in millimeters.
@@ -317,7 +311,11 @@ v_{300}=\frac{0.106}{\pi(0.30)^2/4}\approx1.50\ \text{m/s}.
 **Solution:**
 
 
-From the head-loss balance in Q19, \(Q\approx0.106\ \text{m}^3/\text{s}\).
+From the head-loss balance in Q19:
+
+\[
+Q\approx0.106\ \text{m}^3/\text{s}.
+\]
 
 **Answer: 0.106 m³/s (C).**
 

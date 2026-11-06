@@ -6,7 +6,7 @@
   <title>Standalone MSTC &amp; HPGE Problems</title>
   <style>
     :root{--navy:#17324d;--teal:#087e8b;--ink:#203040;--muted:#617182;--line:#dce4ea;--paper:#fff;--bg:#f3f6f8}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
     header{background:var(--navy);color:#fff;padding:28px max(20px,calc((100% - 920px)/2))}header a{color:#fff}
     main{max-width:920px;margin:auto;padding:20px}.intro,.section,.problem{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
     h1{line-height:1.15;margin:.2em 0}h2{color:var(--navy);margin:0 0 .4em}h3{color:var(--teal);margin:1.2em 0 .3em}
@@ -14,7 +14,24 @@
     nav{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}nav a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--navy);text-decoration:none;font-weight:700}
     #solutions{min-height:300px}.loading{color:var(--muted)}.error{color:#9d1c1c}article.problem{scroll-margin-top:12px}article.problem h3:first-child{margin-top:0}
     .math{overflow-x:auto}svg{max-width:100%;height:auto}footer{text-align:center;color:var(--muted);padding:20px}
+    @media(max-width:600px){.intro nav{display:grid;grid-template-columns:1fr;gap:8px}.intro nav a{width:fit-content;max-width:100%}header h1{overflow-wrap:anywhere}}
     @media print{body{background:#fff}header{background:#fff;color:#111;padding:0}header a{color:#111}main{max-width:none;padding:0}.intro,.section,.problem{break-inside:avoid;box-shadow:none}nav{display:none}}
+
+    .question-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0;box-shadow:0 2px 8px rgba(23,50,77,.045);scroll-margin-top:14px}
+    .question-card>h2,.question-card>h3,.question-card>h4{margin:.1em 0 1rem;color:var(--navy);line-height:1.3}
+    .problem-statement,.worked-solution{border-radius:10px;padding:14px 16px;margin:12px 0;min-width:0}
+    .problem-statement{background:#f5f8fa;border:1px solid var(--line)}
+    .worked-solution{background:#fff;border:1px solid #dce9e7;border-left:4px solid var(--teal)}
+    .problem-statement>:first-child,.worked-solution>:first-child{margin-top:0}
+    .problem-statement>:last-child,.worked-solution>:last-child{margin-bottom:0}
+    .problem-statement>p:first-child>strong:first-child,.worked-solution>p:first-child>strong:first-child{color:var(--navy)}
+    #solutions,.panel,.section,.question-card,.problem-statement,.worked-solution{min-width:0;max-width:100%}
+    .question-card p,.question-card li,header h1,header p{overflow-wrap:anywhere;min-width:0}
+    .question-card mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden}
+    .question-card mjx-container[display="true"]{display:block;text-align:center;padding:.2rem 0}
+    .question-card .math{max-width:100%;overflow-x:auto;overflow-y:hidden;text-align:center}
+    .question-card svg,.question-card img,.question-card figure{display:block;max-width:100%;height:auto;margin:14px auto}
+    @media(max-width:600px){.question-card{padding:14px;margin:12px 0}.problem-statement,.worked-solution{padding:12px}}
   </style>
   <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"],["$$","$$"]],processEscapes:true},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -28,12 +45,58 @@
   </main>
   <footer>Worked problems · Equations rendered with MathJax</footer>
   <script>
+
+  function wrapQuestionCards(root){
+    const questionHeading = h => {
+      const text=h.textContent.trim();
+      if(h.tagName==='H2') return /^Question\s+\d+\b/i.test(text) || /^Questions\s+\d+\s*[–—-]\s*\d+\s*[—–-]\s+\S/i.test(text);
+      return /^(?:Question\s+|Q\s*)?\d+(?:\b|[.)—–-])/i.test(text);
+    };
+    const headings=[...root.querySelectorAll('h2,h3,h4')].filter(questionHeading);
+    let unwrapped=0, missingProblem=0, missingSolution=0;
+    for(const heading of headings){
+      if(heading.parentElement!==root){unwrapped++;continue;}
+      const level=Number(heading.tagName.slice(1));
+      const card=document.createElement('article'); card.className='question-card';
+      root.insertBefore(card,heading);
+      let node=heading;
+      while(node){
+        const next=node.nextSibling;
+        if(node!==heading && node.nodeType===1 && /^H[1-6]$/.test(node.tagName) && Number(node.tagName.slice(1))<=level) break;
+        card.appendChild(node); node=next;
+      }
+      const isLabel=(node,name)=>node.nodeType===1 && node.tagName==='P' && node.firstElementChild && /^(strong|b)$/i.test(node.firstElementChild.tagName) && new RegExp('^'+name+'(?:\\s+\\d+|\\s*\\(Question\\s+\\d+\\))?\\s*:', 'i').test(node.firstElementChild.textContent.trim());
+      const problemLabels=[...card.children].filter(el=>isLabel(el,'Problem')).length;
+      const solutionLabels=[...card.children].filter(el=>isLabel(el,'Solution')).length;
+      if(!problemLabels) missingProblem++;
+      if(!solutionLabels) missingSolution++;
+      const sections=[];
+      let active=null;
+      const makeSection=kind=>{const section=document.createElement('div');section.className=kind==='problem'?'problem-statement':'worked-solution';sections.push(section);active=section;};
+      let current=heading.nextSibling;
+      while(current){
+        const next=current.nextSibling;
+        if(isLabel(current,'Problem')) makeSection('problem');
+        else if(isLabel(current,'Solution')) makeSection('solution');
+        if(!active && current.nodeType===3 && !current.textContent.trim()) card.appendChild(current);
+        else {if(!active) makeSection('problem');active.appendChild(current);}
+        current=next;
+      }
+      sections.forEach(section=>card.appendChild(section));
+    }
+    root.dataset.questionCards=String(headings.length-unwrapped);
+    root.dataset.questionCardsUnwrapped=String(unwrapped);
+    root.dataset.missingProblemLabels=String(missingProblem);
+    root.dataset.missingSolutionLabels=String(missingSolution);
+    if(unwrapped||missingProblem||missingSolution) console.warn('Question layout exceptions', {unwrapped,missingProblem,missingSolution,root});
+    return {cards:headings.length-unwrapped,unwrapped,missingProblem,missingSolution};
+  }
     fetch('correl1-solutions.md').then(r=>{if(!r.ok)throw Error('Could not load solution file');return r.text()}).then(md=>{
       const prepared=md.replace(/\$\$\s*([\s\S]*?)\s*\$\$/g,(_,eq)=>'<div class="math">\\['+eq.trim()+'\\]</div>');
       document.getElementById('solutions').innerHTML=marked.parse(prepared,{gfm:true,breaks:false});
       document.querySelectorAll('#solutions h1').forEach((h,i)=>h.id=i===0?'mstc':'hpge');
       document.querySelectorAll('#solutions h2').forEach(h=>{if(/review notes/i.test(h.textContent))h.id='review-notes'});
-      document.querySelectorAll('#solutions h2').forEach(h=>{if(/^Question/.test(h.textContent))h.classList.add('problem')});
+      wrapQuestionCards(document.getElementById('solutions'));
       if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise();
       if(location.hash)setTimeout(()=>document.getElementById(location.hash.slice(1))?.scrollIntoView(),250);
     }).catch(e=>{document.getElementById('solutions').innerHTML='<p class="error">'+e.message+'. Open <a href="correl1-solutions.md">the solution text</a>.</p>'});
